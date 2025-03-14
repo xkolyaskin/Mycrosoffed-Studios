@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://vwdvd14qjvtn" path="res://Walk cycle 1-1.png.png" id="1_4flbx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
-radius = 70.0286
+radius = 45.1221
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
@@ -14,5 +14,5 @@ shape = SubResource("CircleShape2D_4flbx")
 
 [node name="WalkCycle1-1_png" type="Sprite2D" parent="."]
 position = Vector2(2, -1)
-scale = Vector2(3.625, 2.65625)
+scale = Vector2(1.75, 1.28125)
 texture = ExtResource("1_4flbx")
