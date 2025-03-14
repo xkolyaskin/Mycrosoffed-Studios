@@ -1,9 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://copyelhcc1lnh"]
+[gd_scene load_steps=3 format=3 uid="uid://by3pqdi07jfji"]
 
-[ext_resource type="PackedScene" uid="uid://c7jixi3l206ot" path="res://player.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_wbfu4"]
+[ext_resource type="Texture2D" uid="uid://ba1coitaiomao" path="res://Visual Assets/Snow Background Texture-1.png - Copy.png" id="2_xkndl"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node" type="Node"]
 
-[node name="Node" type="Node" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="SnowBackgroundTexture-1_png-Copy" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 320)
+scale = Vector2(36.3125, 20.4375)
+texture = ExtResource("2_xkndl")
 
 [node name="Player" parent="." instance=ExtResource("1_wbfu4")]
+position = Vector2(583, 317)
