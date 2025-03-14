@@ -1,18 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=5 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://vwdvd14qjvtn" path="res://Walk cycle 1-1.png.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://upnk3iidwaul" path="res://player_animation.gd" id="2_i3pqv"]
+[ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 45.1221
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("2_onrkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4flbx")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+script = ExtResource("2_i3pqv")
 
-[node name="WalkCycle1-1_png" type="Sprite2D" parent="."]
+[node name="PlayerSprite" type="Node2D" parent="."]
+
+[node name="WalkCycle1-1_png" type="Sprite2D" parent="PlayerSprite"]
 position = Vector2(2, -1)
 scale = Vector2(1.75, 1.28125)
 texture = ExtResource("1_4flbx")
