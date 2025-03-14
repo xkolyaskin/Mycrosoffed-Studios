@@ -5,7 +5,10 @@
 
 [node name="Node" type="Node"]
 
-[node name="SnowBackgroundTexture-1_png-Copy" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -10
+
+[node name="SnowBackgroundTexture-1_png-Copy" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(581, 320)
 scale = Vector2(36.3125, 20.4375)
 texture = ExtResource("2_xkndl")
