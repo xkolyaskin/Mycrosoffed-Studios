@@ -5,22 +5,26 @@ var _animatedBody=$AnimatedSprite2D
 var player = get_node("/root/reindeer_herding/Player")
 @onready
 var lichen = get_node("/root/reindeer_herding/lichen")
-var speed = 50
+@onready
+var ice_lichen = get_node("/root/reindeer_herding/iceLichen")
+var speed = 150
 
 func _physics_process(delta):	
 	var overlapping_bodies = $Hurtbox.get_overlapping_bodies()
 	var touching_bodies = $EatBox.get_overlapping_bodies()
 	var l = false
 	var p = false
+	var il = false
 	for body in overlapping_bodies:
 		if body == player:
 			p=true
 	for body in touching_bodies:
 		if body == lichen:
 			l=true
+		if body == ice_lichen:
+			il = true
 	if l:
 		_animatedBody.play("feeding")
-		_animatedBody.stop()
 		_animatedBody.set_frame_and_progress(3,0.5)
 	elif p:
 		_animatedBody.play("walk")
@@ -31,7 +35,10 @@ func _physics_process(delta):
 			_animatedBody.flip_h=true
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
+	elif il: 
+		if _animatedBody.animation != "ice":
+			_animatedBody.play("ice")
+		_animatedBody.set_frame_and_progress(3,0.5)
 	else:
 		_animatedBody.play("walk")
-		_animatedBody.stop()
 		_animatedBody.set_frame_and_progress(3,0.5)
