@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl4o257nq57o4"
-uid="uid://c714g3rl3kjt8"
-path="res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"
+uid="uid://rdgwk4360nj7"
+path="res://.godot/imported/Tree border 128x128.png-fdd0802689384d29a86e02b3fe402fdf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Animals/Reindeer-1.png.png"
-dest_files=["res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"]
+source_file="res://Visual Assets/Backgrounds/Tree border 128x128.png"
+dest_files=["res://.godot/imported/Tree border 128x128.png-fdd0802689384d29a86e02b3fe402fdf.ctex"]
 
 [params]
 

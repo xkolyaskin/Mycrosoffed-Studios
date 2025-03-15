@@ -2,17 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl4o257nq57o4"
-uid="uid://c714g3rl3kjt8"
-path="res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"
+uid="uid://cl4gy6efhq7n8"
+path="res://.godot/imported/Snow Background With Lichen.png-47b4b3c917e9f74a1ab8b8ed02431463.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Animals/Reindeer-1.png.png"
-dest_files=["res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"]
+source_file="res://Visual Assets/Backgrounds/Snow Background With Lichen.png"
+dest_files=["res://.godot/imported/Snow Background With Lichen.png-47b4b3c917e9f74a1ab8b8ed02431463.ctex"]
 
 [params]
 
