@@ -1,9 +1,15 @@
 extends CharacterBody2D
 var fishing = false
+@onready
+var _animatedBody = $PlayerSprite/AnimatedSprite2D
 
 func _physics_process(delta):	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
 	velocity = direction * 200
+	if velocity != Vector2.ZERO:
+		_animatedBody.play("walk")
+	else:
+		_animatedBody.stop()
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
