@@ -84,4 +84,13 @@ func fish(fishing_spot):
 	right_interval.queue_free()
 	fishing_spot.queue_free()
 	
+	#show fish collection icon
+	$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
+	$"SalmonGainIcon-1_png".visible = true
+	for i in range(1,30):
+		await get_tree().create_timer(0.05).timeout
+		$"SalmonGainIcon-1_png".position += Vector2(0,-5)
+	
+	$"SalmonGainIcon-1_png".visible = false
+	
 	fishing = false
