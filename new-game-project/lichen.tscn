@@ -11,6 +11,7 @@ collision_layer = 128
 script = ExtResource("1_ncb38")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
 shape = SubResource("CircleShape2D_6xg6x")
 debug_color = Color(0.947088, 0.212826, 0.235671, 0.42)
 

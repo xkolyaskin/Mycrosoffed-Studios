@@ -1,4 +1,4 @@
 extends Node2D
 
-func _ready() -> void:
-	var hi
+func is_lichen():
+	return
