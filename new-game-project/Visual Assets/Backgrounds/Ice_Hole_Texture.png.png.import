@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kblwwfx56ka8"
-path="res://.godot/imported/Ice_Hole_Texture.png.png-47a2cad6f0f00755dd0dbeaa112f807a.ctex"
+path="res://.godot/imported/Ice_Hole_Texture.png.png-652cb4d51beee39ea38b02b6ebcca53f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Ice_Hole_Texture.png.png"
-dest_files=["res://.godot/imported/Ice_Hole_Texture.png.png-47a2cad6f0f00755dd0dbeaa112f807a.ctex"]
+source_file="res://Visual Assets/Backgrounds/Ice_Hole_Texture.png.png"
+dest_files=["res://.godot/imported/Ice_Hole_Texture.png.png-652cb4d51beee39ea38b02b6ebcca53f.ctex"]
 
 [params]
 
