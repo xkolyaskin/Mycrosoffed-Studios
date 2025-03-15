@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://4k45peewhy1g"]
+
+[ext_resource type="Texture2D" uid="uid://vssfe6kaxya8" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png - Copy - Copy.png" id="1_ew5m6"]
+[ext_resource type="Script" uid="uid://gb22ai38itk3" path="res://fishing_minigame.gd" id="1_xd8tf"]
+[ext_resource type="Texture2D" uid="uid://pib8v0kki37j" path="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png - Copy.png" id="2_ew5m6"]
+[ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="3_edgh5"]
+
+[sub_resource type="Curve2D" id="Curve2D_ew5m6"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 11, 464, 0, 0, 0, 0, 1120, 469)
+}
+point_count = 2
+
+[node name="FishingMinigame" type="Node2D"]
+script = ExtResource("1_xd8tf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="SnowBackgroundTexture-1_png-Copy-Copy" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(567.5, 326.5)
+scale = Vector2(36.1563, 20.5938)
+texture = ExtResource("1_ew5m6")
+
+[node name="WaterBackgroundTexturePlaceholder_png-Copy" type="Sprite2D" parent="."]
+position = Vector2(575, 567.5)
+scale = Vector2(37.25, 7.03125)
+texture = ExtResource("2_ew5m6")
+
+[node name="FishingSpotSpawner" type="Path2D" parent="WaterBackgroundTexturePlaceholder_png-Copy"]
+position = Vector2(-15.4362, -80.7111)
+scale = Vector2(0.0268456, 0.142222)
+curve = SubResource("Curve2D_ew5m6")
+
+[node name="FishingPath" type="PathFollow2D" parent="WaterBackgroundTexturePlaceholder_png-Copy/FishingSpotSpawner"]
+unique_name_in_owner = true
+position = Vector2(11, 464)
+rotation = 0.00450854
+
+[node name="Player" parent="." instance=ExtResource("3_edgh5")]
+position = Vector2(563, 320)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.988
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
