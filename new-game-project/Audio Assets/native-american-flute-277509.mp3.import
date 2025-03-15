@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dbk7nx2cb0jqi"
+path="res://.godot/imported/native-american-flute-277509.mp3-4a9100e7383afcf3b65f628401946214.mp3str"
+
+[deps]
+
+source_file="res://Audio Assets/native-american-flute-277509.mp3"
+dest_files=["res://.godot/imported/native-american-flute-277509.mp3-4a9100e7383afcf3b65f628401946214.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
