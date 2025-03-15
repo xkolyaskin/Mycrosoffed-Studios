@@ -1,4 +1,5 @@
 extends CharacterBody2D
+var fishing = false
 
 func _physics_process(delta):	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
@@ -8,26 +9,35 @@ func _physics_process(delta):
 	if overlapping_bodies.size() > 0:
 		var fishing = false
 		if overlapping_bodies[0].has_method("is_fishing"):
-			if !fishing:
-				fish()
-			fishing = true
+			fish()
 			
 	
 
 
 
 func fish():
-	var fishing_interval = Vector2(0.4,0.6)
+	if fishing:
+		return
+	fishing = true
+	var fishing_interval = 0.2
+	var interval_start = randf_range(0,0.8)
+	var interval_end = interval_start + fishing_interval
 	%FishingBar.visible = true
 	var increasing = true
 	var has_caught = false
-	while (!has_caught):
-		await get_tree().create_timer(0.1).timeout
+	var speed = 3
+	
+
+	while not has_caught:
+		await get_tree().create_timer(0.01).timeout  
+
 		if increasing:
-			%FishingBar.value += %FishingBar.value + 1
-			if %FishingBar.value == %FishingBar.max_value:
-				increasing = false;
+			%FishingBar.value += speed
+			if %FishingBar.value >= 100:
+				%FishingBar.value = 100
+				increasing = false
 		else:
-			%FishingBar.value += %FishingBar.value - 1
-			if %FishingBar.value == %FishingBar.min_value:
-				increasing = true;
+			%FishingBar.value -= speed
+			if %FishingBar.value <= 0:
+				%FishingBar.value = 0
+				increasing = true
