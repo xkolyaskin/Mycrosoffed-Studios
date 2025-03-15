@@ -42,24 +42,20 @@ func fish():
 	var left_interval = fishing_rect.instantiate()
 	
 	
+	# Set the positions along the path
 	%PathFollow2D.progress_ratio = interval_start
-	await get_tree().process_frame
-	left_interval.global_position = %PathFollow2D.global_position
-	%PathFollow2D.add_child(left_interval)
-	
+	left_interval.global_position = %PathFollow2D.position  # Get global position from PathFollow2D
+
 	%PathFollow2D.progress_ratio = interval_end
-	await get_tree().process_frame
-	right_interval.global_position = %PathFollow2D.global_position
-	%PathFollow2D.add_child(right_interval)  
-	
+	right_interval.global_position = %PathFollow2D.position
+
+	# Add them to the scene
+	%PathFollow2D.get_parent().add_child(left_interval)
+	%PathFollow2D.get_parent().add_child(right_interval)
+
+	# Optionally adjust Z index to make sure they're on top
 	left_interval.z_index = 100
 	right_interval.z_index = 100
-	
-	print("Player global position: ", global_position)
-	print("Start position:", left_interval.global_position)
-	print("End position:", right_interval.global_position)
-	
-	
 	
 	while not has_caught:
 		await get_tree().create_timer(0.01).timeout
