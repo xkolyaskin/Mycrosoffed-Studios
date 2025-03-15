@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck2ocisxiwrm"
-path="res://.godot/imported/Tree border 128x128.png-fdd0802689384d29a86e02b3fe402fdf.ctex"
+uid="uid://dcxfvg5enxvqs"
+path="res://.godot/imported/TileTemplate.png-c67abfed67a22450809fdb4fd5704055.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Tree border 128x128.png"
-dest_files=["res://.godot/imported/Tree border 128x128.png-fdd0802689384d29a86e02b3fe402fdf.ctex"]
+source_file="res://Visual Assets/TileTemplate.png"
+dest_files=["res://.godot/imported/TileTemplate.png-c67abfed67a22450809fdb4fd5704055.ctex"]
 
 [params]
 

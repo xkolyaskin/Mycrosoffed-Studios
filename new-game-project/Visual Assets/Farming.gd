@@ -20,7 +20,7 @@ const TILE_GROWN_CROP = {
 func _ready():
 	tilemap = get_parent().find_child("TileMapLayer")
 
-func _process():
+func _process(delta):
 	if Input.is_action_just_pressed("interact"):
 		handle_interaction()
 
