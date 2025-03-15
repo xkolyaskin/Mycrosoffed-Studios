@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://by7cs63w22rig"]
+[gd_scene load_steps=3 format=3 uid="uid://bl1sgskdmudr8"]
 
-[ext_resource type="Texture2D" uid="uid://c714g3rl3kjt8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
+[ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3sw0h"]
 animations = [{

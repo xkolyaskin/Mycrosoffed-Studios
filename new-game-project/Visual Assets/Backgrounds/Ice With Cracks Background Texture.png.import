@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://65018yutcqm8"
-path="res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"
+uid="uid://b8150u3putemt"
+path="res://.godot/imported/Ice With Cracks Background Texture.png-a20ad82fbfba9aaa6b1fa391dedfddd0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Animals/Reindeer-1.png.png"
-dest_files=["res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"]
+source_file="res://Visual Assets/Backgrounds/Ice With Cracks Background Texture.png"
+dest_files=["res://.godot/imported/Ice With Cracks Background Texture.png-a20ad82fbfba9aaa6b1fa391dedfddd0.ctex"]
 
 [params]
 

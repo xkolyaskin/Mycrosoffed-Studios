@@ -20,7 +20,7 @@ const TILE_GROWN_CROP = {
 func _ready():
 	tilemap = get_parent().find_child("TileMapLayer")
 
-func _process(delta):
+func _process():
 	if Input.is_action_just_pressed("interact"):
 		handle_interaction()
 
@@ -58,7 +58,7 @@ func plant_seed(tile_coords):
 	carrying_seed = null
 	print("Planted", crop_growth[tile_coords]["seed_type"], "!")
 
-	# Start crop growth
+	# Start crop growthgit
 
 func grow_crop(tile_coords):
 	var seed_type = crop_growth[tile_coords]["seed_type"]
