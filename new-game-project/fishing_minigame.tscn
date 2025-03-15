@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4k45peewhy1g"]
 
 [ext_resource type="Texture2D" uid="uid://ba1coitaiomao" path="res://Visual Assets/Snow Background Texture-1.png - Copy.png" id="1_cx6uu"]
-[ext_resource type="Texture2D" uid="uid://dflygqjidwoy4" path="res://Visual Assets/Water Background Texture Placeholder.png.png" id="2_edgh5"]
+[ext_resource type="Texture2D" uid="uid://cmg7mqkjljb34" path="res://Visual Assets/Water Background Texture Placeholder.png.png" id="2_edgh5"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="3_edgh5"]
 [ext_resource type="PackedScene" uid="uid://b60j28xhl27hs" path="res://fishing_spot.tscn" id="3_ew5m6"]
 
@@ -15,21 +15,21 @@ position = Vector2(569.5, 323)
 scale = Vector2(35.9688, 20.375)
 texture = ExtResource("1_cx6uu")
 
-[node name="WaterBackgroundTexturePlaceholder_png" type="Sprite2D" parent="CanvasLayer"]
+[node name="WaterBackgroundTexturePlaceholder_png" type="Sprite2D" parent="."]
 position = Vector2(591, 569)
 scale = Vector2(39, 7.375)
 texture = ExtResource("2_edgh5")
 
-[node name="StaticBody2D" parent="CanvasLayer" instance=ExtResource("3_ew5m6")]
+[node name="StaticBody2D" parent="." instance=ExtResource("3_ew5m6")]
 position = Vector2(122, 451)
 
-[node name="StaticBody2D2" parent="CanvasLayer" instance=ExtResource("3_ew5m6")]
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_ew5m6")]
 position = Vector2(354, 450)
 
-[node name="StaticBody2D3" parent="CanvasLayer" instance=ExtResource("3_ew5m6")]
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_ew5m6")]
 position = Vector2(638, 451)
 
-[node name="StaticBody2D4" parent="CanvasLayer" instance=ExtResource("3_ew5m6")]
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_ew5m6")]
 position = Vector2(962, 453)
 
 [node name="Player" parent="." instance=ExtResource("3_edgh5")]
