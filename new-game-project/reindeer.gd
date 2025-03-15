@@ -3,6 +3,8 @@ extends CharacterBody2D
 var _animatedBody=$AnimatedSprite2D
 @onready
 var player = get_node("/root/reindeer_herding/Player")
+@onready
+var lichen = get_node("/root/reindeer_herding/lichen")
 var speed = 50
 
 func _physics_process(delta):	

@@ -1,10 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl1sgskdmudr8"]
+[gd_scene load_steps=7 format=3 uid="uid://bl1sgskdmudr8"]
 
 [ext_resource type="Script" uid="uid://dag78cfxg0cp8" path="res://reindeer.gd" id="1_3sw0h"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
+[ext_resource type="Texture2D" uid="uid://dom1h82w8l8o8" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="2_xqfp4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3sw0h"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xqfp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_t2la6")
+}],
+"loop": true,
+"name": &"feeding",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_t2la6")
