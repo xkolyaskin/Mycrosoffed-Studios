@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://lio6kakb3bdh"]
+[gd_scene load_steps=14 format=4 uid="uid://lio6kakb3bdh"]
 
 [ext_resource type="Script" uid="uid://drun88j4wnmls" path="res://Visual Assets/Farming.gd" id="1_7ejuu"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_gk8fp"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bg6bjvl8c5qsn" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png.png" id="3_unytf"]
 [ext_resource type="Texture2D" uid="uid://cxq5raq3btk7e" path="res://Visual Assets/Backgrounds/seed bag.png" id="4_7ejuu"]
 [ext_resource type="Texture2D" uid="uid://hsgx3u8va71i" path="res://Visual Assets/Backgrounds/farming guy textrue pls.png" id="4_f3a0o"]
+[ext_resource type="Texture2D" uid="uid://rdgwk4360nj7" path="res://Visual Assets/Backgrounds/Tree border 128x128.png" id="6_dw2f1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gbk8"]
 texture = ExtResource("3_unytf")
@@ -27,12 +28,33 @@ texture = ExtResource("2_f3a0o")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w2g6c"]
+texture = ExtResource("6_dw2f1")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_w2g6c"]
 tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_6gbk8")
 sources/2 = SubResource("TileSetAtlasSource_2p100")
 sources/3 = SubResource("TileSetAtlasSource_unytf")
 sources/4 = SubResource("TileSetAtlasSource_7ejuu")
+sources/5 = SubResource("TileSetAtlasSource_w2g6c")
 
 [node name="Farming" type="Node2D"]
 script = ExtResource("1_7ejuu")
