@@ -75,3 +75,5 @@ frame_progress = 0.948771
 [node name="Point" type="Sprite2D" parent="."]
 texture = ExtResource("4_gdh3w")
 offset = Vector2(-1.45, -32.59)
+
+[node name="Happy" type="Sprite2D" parent="."]
