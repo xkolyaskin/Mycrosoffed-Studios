@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://65018yutcqm8"
-path="res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"
+uid="uid://cwx7n7xtcecyo"
+path="res://.godot/imported/Purdue Pete Gain Icon.png-4c257703cfb28b4d6f6d80f658f595eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Animals/Reindeer-1.png.png"
-dest_files=["res://.godot/imported/Reindeer-1.png.png-53df6d6993f6ecdc4d360224d165ab30.ctex"]
+source_file="res://Visual Assets/Item Icons/Purdue Pete Gain Icon.png"
+dest_files=["res://.godot/imported/Purdue Pete Gain Icon.png-4c257703cfb28b4d6f6d80f658f595eb.ctex"]
 
 [params]
 
