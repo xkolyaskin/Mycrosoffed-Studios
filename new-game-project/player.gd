@@ -7,11 +7,9 @@ func _physics_process(delta):
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
-		var fishing = false
 		if overlapping_bodies[0].has_method("is_fishing"):
 			fish()
-			
-	
+
 
 
 
@@ -26,6 +24,18 @@ func fish():
 	var increasing = true
 	var has_caught = false
 	var speed = 3
+	
+	var fishing_rect = preload("res://fishing_rect.tscn")
+	var right_interval = fishing_rect.instantiate()
+	var left_interval = fishing_rect.instantiate()
+	
+	%PathFollow2D.progress_ratio = interval_start
+	left_interval.global_position = %PathFollow2D.global_position
+	add_child(left_interval)
+	
+	%PathFollow2D.progress_ratio = interval_end
+	right_interval.global_position = %PathFollow2D.global_position
+	add_child(right_interval)
 	
 
 	while not has_caught:
