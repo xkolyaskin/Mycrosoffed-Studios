@@ -1,5 +1,8 @@
 extends Node2D
 
+@onready var tile_map : TileMapLayer = $TileMapLayer
+
+
 var carrying_seed = null
 var current_tile = null 
 var tilemap
@@ -16,14 +19,33 @@ const TILE_GROWN_CROP = {
 	"turnip": 6,
 	"cabbage": 7
 }
+
 	
 func _ready():
-	tilemap = get_parent().find_child("TileMapLayer")
+	var tilemap_layer = get_parent().find_child("TileMapLayer")
 
-func _process(delta):
+	if tilemap_layer == null:
+		print("Error: TileMapLayer not found! Check the node name.")
+		return
+
+	# Get the parent TileMap (since TileMapLayer is a child of TileMap)
+	tile_map = tilemap_layer.get_parent() 
+
+	if tile_map == null:
+		print("Error: TileMap not found! Ensure TileMapLayer has a parent TileMap.")
+
+func _process(delta): 
 	if Input.is_action_just_pressed("interact"):
-		handle_interaction()
-
+		var players = get_tree().get_nodes_in_group("player")
+		if players.size() == 0:
+			print("Error: No player found in group!")
+			return  # Exit the function if no player exists
+		var player_pos = players[0].global_position
+		var tile_map_pos : Vector2i = tile_map.local_to_map(player_pos)
+		print("Player Tile:", tile_map_pos)
+		# handle_interaction(tile_map_pos)
+		
+"""
 func handle_interaction():
 	if not tilemap or not current_tile:
 		return
@@ -68,3 +90,4 @@ func grow_crop(tile_coords):
 func harvest_crop(tile_coords, crop_type):
 	tilemap.set_cell(0, tile_coords, TILE_FARMLAND)  # Reset to farmland
 	print("Harvested a", crop_type, "!")
+"""
