@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cttlpel0hgb6y"
-path="res://.godot/imported/Cabbage Gain Icon.png-1c3310784d7410ad235e3aedd2fad1d3.ctex"
+uid="uid://cx75h4nynfjqq"
+path="res://.godot/imported/Ice With Hole Background Texture.png-c7ae47d66fdfb4c36e2a483a6219d8ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Item Icons/Cabbage Gain Icon.png"
-dest_files=["res://.godot/imported/Cabbage Gain Icon.png-1c3310784d7410ad235e3aedd2fad1d3.ctex"]
+source_file="res://Visual Assets/Backgrounds/Ice With Hole Background Texture.png"
+dest_files=["res://.godot/imported/Ice With Hole Background Texture.png-c7ae47d66fdfb4c36e2a483a6219d8ab.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cttlpel0hgb6y"
-path="res://.godot/imported/Cabbage Gain Icon.png-1c3310784d7410ad235e3aedd2fad1d3.ctex"
+uid="uid://dcxfvg5enxvqs"
+path="res://.godot/imported/TileTemplate.png-c67abfed67a22450809fdb4fd5704055.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Item Icons/Cabbage Gain Icon.png"
-dest_files=["res://.godot/imported/Cabbage Gain Icon.png-1c3310784d7410ad235e3aedd2fad1d3.ctex"]
+source_file="res://Visual Assets/TileTemplate.png"
+dest_files=["res://.godot/imported/TileTemplate.png-c67abfed67a22450809fdb4fd5704055.ctex"]
 
 [params]
 
