@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://emqdct23pa42"
-path="res://.godot/imported/Cabbage Bag Background Texture.png-f85f5348885e5a4196f7e02bcea25aa2.ctex"
+uid="uid://badlnf5nk2fx3"
+path="res://.godot/imported/Reindeer Running Frame-2.png.png-fad42c43bbb055423d35a33b95c1fdfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Cabbage Bag Background Texture.png"
-dest_files=["res://.godot/imported/Cabbage Bag Background Texture.png-f85f5348885e5a4196f7e02bcea25aa2.ctex"]
+source_file="res://Visual Assets/Animals/Reindeer Running Frame-2.png.png"
+dest_files=["res://.godot/imported/Reindeer Running Frame-2.png.png-fad42c43bbb055423d35a33b95c1fdfb.ctex"]
 
 [params]
 

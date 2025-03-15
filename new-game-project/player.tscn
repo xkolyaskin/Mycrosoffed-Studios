@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=13 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://nat77olsf8mg" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 1.png" id="2_2hs0m"]
 [ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://es78mthv6rnu" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 3.png" id="4_dw050"]
 [ext_resource type="Texture2D" uid="uid://0ddlaikqkp5f" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 4.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://cj4h6wh0ujq7s" path="res://Visual Assets/Item Icons/Salmon Gain Icon-1.png.png" id="6_2hs0m"]
+[ext_resource type="AudioStream" uid="uid://5rbka2nnrtnr" path="res://Audio Assets/water-splash-46402.mp3" id="7_1jxqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(20, 44)
@@ -67,10 +68,12 @@ sprite_frames = SubResource("SpriteFrames_nvl01")
 animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
 
 [node name="FishingBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 visible = false
+z_index = 13
 offset_left = -75.0
 offset_top = -76.0
 offset_right = 75.0
@@ -92,3 +95,6 @@ visible = false
 position = Vector2(1, -51)
 scale = Vector2(1.875, 1.5625)
 texture = ExtResource("6_2hs0m")
+
+[node name="Water-splash-46402" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_1jxqw")

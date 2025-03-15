@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b60j28xhl27hs"]
+[gd_scene load_steps=5 format=3 uid="uid://b60j28xhl27hs"]
 
 [ext_resource type="Script" uid="uid://b4pywb4musk8w" path="res://fishing_spot.gd" id="1_0rqpe"]
 [ext_resource type="Texture2D" uid="uid://cx75h4nynfjqq" path="res://Visual Assets/Backgrounds/Ice With Hole Background Texture.png" id="2_sx55d"]
+[ext_resource type="Texture2D" uid="uid://cx8yrum6vi5ul" path="res://Visual Assets/Item Icons/Blue Exclamation Mark.png" id="3_34d6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voq3y"]
 size = Vector2(48, 43)
@@ -19,3 +20,14 @@ shape = SubResource("RectangleShape2D_voq3y")
 position = Vector2(-1, 6)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_sx55d")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="BlueExclamationMark" type="Sprite2D" parent="."]
+visible = false
+z_index = 5
+position = Vector2(0, -29)
+texture = ExtResource("3_34d6c")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

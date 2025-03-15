@@ -23,7 +23,7 @@ func _physics_process(delta):
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
-		if overlapping_bodies[0].has_method("is_fishing"):
+		if overlapping_bodies[0].has_method("is_fishing") and overlapping_bodies[0].get_fished():
 			fish(overlapping_bodies[0])
 
 
@@ -59,10 +59,11 @@ func fish(fishing_spot):
 	%PathFollow2D.get_parent().add_child(right_interval)
 	left_interval.z_index = 100
 	right_interval.z_index = 100
-	
+	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	#fishing sequence
 	while not has_caught:
-		if %HurtBox.get_overlapping_bodies().size() == 0:
+		overlapping_bodies = %HurtBox.get_overlapping_bodies()
+		if overlapping_bodies.size() == 0:
 			left_interval.queue_free()
 			right_interval.queue_free()
 			fishing = false
@@ -83,8 +84,9 @@ func fish(fishing_spot):
 		if Input.is_action_just_pressed("interact"):  
 			if (interval_start <= (%FishingBar.value / 100) and 
 			(%FishingBar.value / 100) <= interval_end):
-				emit_signal("fish_caught")  
+				$"Water-splash-46402".play()
 				has_caught = true
+				#show fish collection icon
 				$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
 				$"SalmonGainIcon-1_png".visible = true
 				for i in range(1,15):
@@ -93,14 +95,14 @@ func fish(fishing_spot):
 				
 				$"SalmonGainIcon-1_png".visible = false
 			else:
-				emit_signal("fish_failed")  
+				$"Water-splash-46402".play()
 				has_caught = true  
+	#has caught fish or failed
+	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
+	overlapping_bodies[0].set_fished()
+	
 	%FishingBar.visible = false
 	left_interval.queue_free()
 	right_interval.queue_free()
-	fishing_spot.queue_free()
-	
-	#show fish collection icon
-	
 	
 	fishing = false
