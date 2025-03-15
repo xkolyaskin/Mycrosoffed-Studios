@@ -10,9 +10,9 @@ radius = 40.05
 collision_layer = 128
 script = ExtResource("1_ncb38")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_6xg6x")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6xg6x")
 debug_color = Color(0.947088, 0.212826, 0.235671, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("1_6xg6x")
