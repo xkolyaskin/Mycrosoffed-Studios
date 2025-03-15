@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://4k45peewhy1g"]
+[gd_scene load_steps=3 format=3 uid="uid://4k45peewhy1g"]
 
 [ext_resource type="Texture2D" uid="uid://ba1coitaiomao" path="res://Visual Assets/Snow Background Texture-1.png - Copy.png" id="1_cx6uu"]
-[ext_resource type="PackedScene" uid="uid://bnhoxo3lcqlad" path="res://fishing_hole.tscn" id="2_lmc8y"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="3_edgh5"]
 
 [node name="FishingMinigame" type="Node2D"]
@@ -14,20 +13,5 @@ position = Vector2(569.5, 323)
 scale = Vector2(35.9688, 20.375)
 texture = ExtResource("1_cx6uu")
 
-[node name="FishingHole" parent="." instance=ExtResource("2_lmc8y")]
-position = Vector2(384, 417)
-
-[node name="FishingHole2" parent="." instance=ExtResource("2_lmc8y")]
-position = Vector2(452, 85)
-
-[node name="FishingHole3" parent="." instance=ExtResource("2_lmc8y")]
-position = Vector2(907, 305)
-
 [node name="Player" parent="." instance=ExtResource("3_edgh5")]
 position = Vector2(563, 320)
-
-[node name="FishingHole4" parent="." instance=ExtResource("2_lmc8y")]
-position = Vector2(890, 511)
-
-[node name="FishingHole5" parent="." instance=ExtResource("2_lmc8y")]
-position = Vector2(81, 206)
