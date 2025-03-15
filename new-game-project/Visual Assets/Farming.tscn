@@ -38,11 +38,14 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("5_qhx1n")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Beet"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7y5bs"]
 texture = ExtResource("6_bw6p8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_0 = true
+0:0/0/custom_data_2 = "Beet"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_58vqp"]
 texture = ExtResource("3_wp2du")
@@ -53,11 +56,14 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("7_nqy1b")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Potato"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trh0m"]
 texture = ExtResource("8_kdp5k")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_0 = true
+0:0/0/custom_data_2 = "Potato"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nrxn0"]
 texture = ExtResource("9_8xy50")
@@ -95,20 +101,30 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("15_vh7l4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_1 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1uf6"]
 texture = ExtResource("16_d5xl1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Cabbage"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1jjc6"]
 texture = ExtResource("17_nq3v0")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_0 = true
+0:0/0/custom_data_2 = "Cabbage"
 
 [sub_resource type="TileSet" id="TileSet_w2g6c"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = "Harvestable"
+custom_data_layer_0/type = 1
+custom_data_layer_1/name = "Plantable"
+custom_data_layer_1/type = 1
+custom_data_layer_2/name = "Plant_Name"
+custom_data_layer_2/type = 4
 sources/1 = SubResource("TileSetAtlasSource_6gbk8")
 sources/2 = SubResource("TileSetAtlasSource_2p100")
 sources/3 = SubResource("TileSetAtlasSource_unytf")
