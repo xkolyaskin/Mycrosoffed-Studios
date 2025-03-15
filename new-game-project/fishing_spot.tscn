@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cx75h4nynfjqq" path="res://Visual Assets/Backgrounds/Ice With Hole Background Texture.png" id="2_sx55d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voq3y"]
-size = Vector2(84, 87)
+size = Vector2(48, 43)
 
 [node name="FishingSpot" type="StaticBody2D"]
 collision_layer = 3
@@ -17,5 +17,5 @@ shape = SubResource("RectangleShape2D_voq3y")
 
 [node name="IceWithHoleBackgroundTexture" type="Sprite2D" parent="."]
 position = Vector2(-1, 6)
-scale = Vector2(2.1875, 2.1875)
+scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_sx55d")
