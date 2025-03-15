@@ -10,6 +10,11 @@ func _physics_process(delta):
 		_animatedBody.play("walk")
 	else:
 		_animatedBody.stop()
+		_animatedBody.set_frame_and_progress(3,0.5)
+	if velocity.x < 0:
+		_animatedBody.flip_h=true
+	else:
+		_animatedBody.flip_h=false
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
