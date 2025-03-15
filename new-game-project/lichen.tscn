@@ -10,5 +10,8 @@ radius = 67.42
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6xg6x")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_6xg6x")
+debug_color = Color(0.947088, 0.212826, 0.235671, 0.42)
