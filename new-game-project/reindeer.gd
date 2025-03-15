@@ -17,6 +17,7 @@ var revx = 1
 var revy = 1
 var eating = false
 var timeleft = 100
+var score = 0
 
 func _physics_process(delta):	
 	velocity=Vector2(0,0)
@@ -83,3 +84,5 @@ func _on_timer_timeout():
 		if timeleft==0:
 			eating=false
 			timeleft=100
+			score+=1
+			print(score)
