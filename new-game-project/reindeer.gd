@@ -7,9 +7,12 @@ var player = get_node("/root/reindeer_herding/Player")
 var lichen = get_node("/root/reindeer_herding/lichen")
 @onready
 var ice_lichen = get_node("/root/reindeer_herding/iceLichen")
+@onready
+var point = $Point
 var speed = 150
 
 func _physics_process(delta):	
+	point.hide()
 	var overlapping_bodies = $Hurtbox.get_overlapping_bodies()
 	var touching_bodies = $EatBox.get_overlapping_bodies()
 	var l = false
@@ -36,6 +39,7 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
+		point.show()
 		if _animatedBody.animation != "ice":
 			_animatedBody.play("ice")
 		_animatedBody.set_frame_and_progress(3,0.5)
