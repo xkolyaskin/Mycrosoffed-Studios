@@ -150,9 +150,9 @@ sources/1 = SubResource("TileSetAtlasSource_e3jrk")
 
 [sub_resource type="Curve2D" id="Curve2D_ew5m6"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 11, 464, 0, 0, 0, 0, 1120, 469, 0, 0, 0, 0, 1120, 593, 0, 0, 0, 0, 32, 586, 0, 0, 0, 0, 33, 725, 0, 0, 0, 0, 1098, 710, 0, 0, 0, 0, 1105, 853, 0, 0, 0, 0, 46, 838, 0, 0, 0, 0, 50, 933, 0, 0, 0, 0, 1098, 923, 0, 0, 0, 0, 1101, 1022, 0, 0, 0, 0, 47, 1018, 0, 0, 0, 0, 44, 778, 0, 0, 0, 0, 1068, 786, 0, 0, 0, 0, 1079, 651, 0, 0, 0, 0, 47, 652, 0, 0, 0, 0, 46, 512, 0, 0, 0, 0, 1111, 525, 0, 0, 0, 0, 1110, 429, 0, 0, 0, 0, 44, 423)
+"points": PackedVector2Array(0, 0, 0, 0, 11, 464, 0, 0, 0, 0, 1120, 469, 0, 0, 0, 0, 1120, 593, 0, 0, 0, 0, 32, 586, 0, 0, 0, 0, 33, 725, 0, 0, 0, 0, 1098, 710, 0, 0, 0, 0, 1105, 853, 0, 0, 0, 0, 46, 838, 0, 0, 0, 0, 50, 933, 0, 0, 0, 0, 1098, 923, 0, 0, 0, 0, 44, 778, 0, 0, 0, 0, 1068, 786, 0, 0, 0, 0, 1079, 651, 0, 0, 0, 0, 47, 652, 0, 0, 0, 0, 46, 512, 0, 0, 0, 0, 1111, 525, 0, 0, 0, 0, 1099, 992, 0, 0, 0, 0, 59, 992)
 }
-point_count = 20
+point_count = 18
 
 [node name="FishingMinigame" type="Node2D"]
 script = ExtResource("1_xd8tf")
@@ -165,7 +165,8 @@ tile_set = SubResource("TileSet_b8yci")
 layer = -1
 
 [node name="FishingSpotSpawner" type="Path2D" parent="."]
-position = Vector2(5, -408)
+position = Vector2(13.2083, -408)
+scale = Vector2(0.981064, 1)
 curve = SubResource("Curve2D_ew5m6")
 
 [node name="FishingPath" type="PathFollow2D" parent="FishingSpotSpawner"]
