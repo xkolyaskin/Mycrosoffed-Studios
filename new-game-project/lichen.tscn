@@ -4,18 +4,15 @@
 [ext_resource type="Script" uid="uid://b8telfkb5vy0j" path="res://lichen.gd" id="1_ncb38"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6xg6x"]
-radius = 67.42
+radius = 40.05
 
-[node name="lichen" type="Node2D"]
+[node name="lichen" type="StaticBody2D"]
+collision_layer = 128
 script = ExtResource("1_ncb38")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_6xg6x")
 
-[node name="Hurtbox" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6xg6x")
 debug_color = Color(0.947088, 0.212826, 0.235671, 0.42)

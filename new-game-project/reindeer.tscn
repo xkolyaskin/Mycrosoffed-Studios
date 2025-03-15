@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl1sgskdmudr8"]
+[gd_scene load_steps=8 format=3 uid="uid://bl1sgskdmudr8"]
 
 [ext_resource type="Script" uid="uid://dag78cfxg0cp8" path="res://reindeer.gd" id="1_3sw0h"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
@@ -9,9 +9,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_xqfp4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("1_t2la6")
 }],
 "loop": true,
 "name": &"feeding",
@@ -32,17 +29,21 @@ radius = 126.753
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2la6"]
 size = Vector2(64, 64)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqfp4"]
+radius = 33.0606
+
 [node name="Reindeer" type="CharacterBody2D"]
+collision_mask = 5
 script = ExtResource("1_3sw0h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3sw0h")
-animation = &"walk"
+animation = &"feeding"
+frame_progress = 0.234342
 
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(-1.5, 1)
-collision_layer = 0
-collision_mask = 3
+collision_layer = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_t2la6")
@@ -51,3 +52,9 @@ debug_color = Color(0.935099, 0.236754, 0.249821, 0.42)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_t2la6")
+
+[node name="EatBox" type="Area2D" parent="."]
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EatBox"]
+shape = SubResource("CircleShape2D_xqfp4")
