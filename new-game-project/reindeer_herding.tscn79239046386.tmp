@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://x8ql7yrpxv3g"]
+
+[ext_resource type="PackedScene" uid="uid://eqgu1qy8uh0k" path="res://map.tscn" id="1_5kf8y"]
+[ext_resource type="Script" uid="uid://bn5g7t7usbk4m" path="res://reindeer_herding.gd" id="1_v3yhs"]
+[ext_resource type="PackedScene" uid="uid://cc7frd4fce3u2" path="res://lichen.tscn" id="2_b7c21"]
+[ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="2_sr4t7"]
+[ext_resource type="PackedScene" uid="uid://b4da0jkwpqwna" path="res://ice_lichen.tscn" id="5_l0cmq"]
+
+[node name="reindeer_herding" type="Node2D"]
+script = ExtResource("1_v3yhs")
+
+[node name="map" parent="." instance=ExtResource("1_5kf8y")]
+position = Vector2(-103, -68)
+
+[node name="lichen" parent="." instance=ExtResource("2_b7c21")]
+position = Vector2(617, 281)
+
+[node name="iceLichen" parent="." instance=ExtResource("5_l0cmq")]
+
+[node name="Player" parent="." instance=ExtResource("2_sr4t7")]
+position = Vector2(327, 193)
