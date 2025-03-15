@@ -96,7 +96,7 @@ func fish(fishing_spot):
 	%FishingBar.visible = false
 	left_interval.queue_free()
 	right_interval.queue_free()
-	%HurtBox.get_overlapping_bodies()[0].set
+
 	
 	#show fish collection icon
 	

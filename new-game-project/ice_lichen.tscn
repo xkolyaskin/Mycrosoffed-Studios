@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b4da0jkwpqwna"]
+[gd_scene load_steps=0 format=3 uid="uid://b4da0jkwpqwna"]
 
 [node name="iceLichen" type="StaticBody2D"]
 
