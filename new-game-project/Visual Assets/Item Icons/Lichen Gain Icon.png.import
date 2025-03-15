@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c1wmj3r60df2d"
+=======
+uid="uid://6647gc37snxy"
+>>>>>>> 5167afba1c327313532116479c8c0889d2dd4bd0
 path="res://.godot/imported/Lichen Gain Icon.png-8f45ea0513d5b920d77fda02d8575ea5.ctex"
 metadata={
 "vram_texture": false

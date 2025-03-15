@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 [gd_scene load_steps=2 format=3 uid="uid://dmpgmq3r7fr41"]
 
 [ext_resource type="Texture2D" uid="uid://b8150u3putemt" path="res://Visual Assets/Backgrounds/Ice With Cracks Background Texture.png" id="1_a2ao6"]
+=======
+[gd_scene load_steps=0 format=3 uid="uid://dmpgmq3r7fr41"]
+>>>>>>> 5167afba1c327313532116479c8c0889d2dd4bd0
 
 [node name="FishingCrack" type="StaticBody2D"]
 
