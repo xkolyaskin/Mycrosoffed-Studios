@@ -28,6 +28,7 @@ func _physics_process(delta):
 
 
 func fish(fishing_spot):
+	
 	if fishing:
 		return
 	fishing = true
@@ -59,6 +60,12 @@ func fish(fishing_spot):
 	
 	#fishing sequence
 	while not has_caught:
+		if %HurtBox.get_overlapping_bodies().size() == 0:
+			left_interval.queue_free()
+			right_interval.queue_free()
+			fishing = false
+			%FishingBar.visible = false
+			return
 		await get_tree().create_timer(0.01).timeout
 		if increasing:
 			%FishingBar.value += speed
@@ -83,5 +90,14 @@ func fish(fishing_spot):
 	left_interval.queue_free()
 	right_interval.queue_free()
 	fishing_spot.queue_free()
+	
+	#show fish collection icon
+	$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
+	$"SalmonGainIcon-1_png".visible = true
+	for i in range(1,15):
+		await get_tree().create_timer(0.05).timeout
+		$"SalmonGainIcon-1_png".position += Vector2(0,-5)
+	
+	$"SalmonGainIcon-1_png".visible = false
 	
 	fishing = false
