@@ -78,6 +78,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_onrkg")
 show_percentage = false
 
 [node name="Path2D" type="Path2D" parent="."]
+unique_name_in_owner = true
 curve = SubResource("Curve2D_onrkg")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
