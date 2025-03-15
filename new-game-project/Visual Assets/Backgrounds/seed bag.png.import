@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmg7mqkjljb34"
-path="res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"
+uid="uid://cxq5raq3btk7e"
+path="res://.godot/imported/seed bag.png-912c6a032169209a2a20ad97a8114876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png.png"
-dest_files=["res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"]
+source_file="res://Visual Assets/Backgrounds/seed bag.png"
+dest_files=["res://.godot/imported/seed bag.png-912c6a032169209a2a20ad97a8114876.ctex"]
 
 [params]
 

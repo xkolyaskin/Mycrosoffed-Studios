@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmg7mqkjljb34"
-path="res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"
+uid="uid://gmwikxhectk2"
+path="res://.godot/imported/Potato Gain Icon.png.png-67f09db41f3520a892dad6396df2d126.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png.png"
-dest_files=["res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"]
+source_file="res://Visual Assets/Item Icons/Potato Gain Icon.png.png"
+dest_files=["res://.godot/imported/Potato Gain Icon.png.png-67f09db41f3520a892dad6396df2d126.ctex"]
 
 [params]
 

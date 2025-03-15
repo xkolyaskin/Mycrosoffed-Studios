@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmg7mqkjljb34"
-path="res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"
+uid="uid://e0e6nj3q00vj"
+path="res://.godot/imported/Ice_Hole_Texture.png - Copy.png-5eca9025f9e9b6647ddb0e4eed63ce2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png.png"
-dest_files=["res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"]
+source_file="res://Visual Assets/Backgrounds/Ice_Hole_Texture.png - Copy.png"
+dest_files=["res://.godot/imported/Ice_Hole_Texture.png - Copy.png-5eca9025f9e9b6647ddb0e4eed63ce2a.ctex"]
 
 [params]
 
