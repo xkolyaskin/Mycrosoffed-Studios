@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://4k45peewhy1g"]
 
-[ext_resource type="Texture2D" uid="uid://dtwunsrxp8txq" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png - Copy - Copy.png" id="1_ew5m6"]
-[ext_resource type="Texture2D" uid="uid://biyiytht7h8ja" path="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png - Copy.png" id="2_ew5m6"]
+[ext_resource type="Texture2D" uid="uid://vssfe6kaxya8" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png - Copy - Copy.png" id="1_ew5m6"]
+[ext_resource type="Texture2D" uid="uid://pib8v0kki37j" path="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png - Copy.png" id="2_ew5m6"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="3_edgh5"]
 [ext_resource type="PackedScene" uid="uid://b60j28xhl27hs" path="res://fishing_spot.tscn" id="3_ew5m6"]
 

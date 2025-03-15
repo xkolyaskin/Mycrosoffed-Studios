@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b60j28xhl27hs"]
 
 [ext_resource type="Script" uid="uid://b4pywb4musk8w" path="res://fishing_spot.gd" id="1_0rqpe"]
-[ext_resource type="Texture2D" uid="uid://b8fvch7q2lw3f" path="res://Visual Assets/Backgrounds/Ice_Hole_Texture.png - Copy.png" id="2_sx55d"]
+[ext_resource type="Texture2D" uid="uid://e0e6nj3q00vj" path="res://Visual Assets/Backgrounds/Ice_Hole_Texture.png - Copy.png" id="2_sx55d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voq3y"]
 size = Vector2(46, 41)
