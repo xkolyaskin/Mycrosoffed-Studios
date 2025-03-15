@@ -83,4 +83,5 @@ func fish(fishing_spot):
 	left_interval.queue_free()
 	right_interval.queue_free()
 	fishing_spot.queue_free()
+	
 	fishing = false
