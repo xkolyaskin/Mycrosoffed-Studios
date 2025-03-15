@@ -20,7 +20,6 @@ var timeleft = 100
 
 func _physics_process(delta):	
 	velocity=Vector2(0,0)
-	point.hide()
 	happy.hide()
 	#eating=false
 	var overlapping_bodies = $Hurtbox.get_overlapping_bodies()
@@ -36,6 +35,10 @@ func _physics_process(delta):
 			l=true
 		if body == ice_lichen:
 			il = true
+	if il:
+		point.show()
+	else:
+		point.hide()
 	if l:
 		happy.show()
 		if !eating:
@@ -52,7 +55,7 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
-		point.show()
+		happy.hide()
 		if !eating:
 			eating=true
 			_animatedBody.play("feeding")

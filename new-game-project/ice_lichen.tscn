@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bpn8qvn01t6ir" path="res://Visual Assets/Backgrounds/Frozen Lichen Background Texture.png" id="1_i4pc0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i4pc0"]
-radius = 63.0
+radius = 79.0063
 
 [node name="iceLichen" type="StaticBody2D"]
 collision_layer = 128

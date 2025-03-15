@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://es78mthv6rnu" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 3.png" id="4_dw050"]
 [ext_resource type="Texture2D" uid="uid://0ddlaikqkp5f" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 4.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://cj4h6wh0ujq7s" path="res://Visual Assets/Item Icons/Salmon Gain Icon-1.png.png" id="6_2hs0m"]
-[ext_resource type="AudioStream" uid="uid://5rbka2nnrtnr" path="res://Audio Assets/water-splash-46402.mp3" id="7_1jxqw"]
+[ext_resource type="AudioStream" uid="uid://cx2l0cn8fobwa" path="res://Audio Assets/water-splash-46402.mp3" id="7_1jxqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(20, 44)
