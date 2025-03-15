@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="2_sr4t7"]
 [ext_resource type="PackedScene" uid="uid://bl1sgskdmudr8" path="res://reindeer.tscn" id="4_b7c21"]
 
-[node name="Node2D" type="Node2D"]
+[node name="reindeer_herding" type="Node2D"]
 
 [node name="map" parent="." instance=ExtResource("1_5kf8y")]
 position = Vector2(-103, -68)
@@ -18,3 +18,4 @@ position = Vector2(327, 193)
 
 [node name="Reindeer" parent="." instance=ExtResource("4_b7c21")]
 position = Vector2(498, -70)
+collision_layer = 0
