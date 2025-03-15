@@ -6,13 +6,13 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("2_sr4t7")]
-
 [node name="map" parent="." instance=ExtResource("1_5kf8y")]
 position = Vector2(-103, -68)
+
+[node name="Player" parent="." instance=ExtResource("2_sr4t7")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
 
 [node name="Node2D" parent="CanvasLayer" instance=ExtResource("3_xt1qu")]
-position = Vector2(172, -163)
+position = Vector2(120, -144)
