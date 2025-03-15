@@ -1,10 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bl1sgskdmudr8"]
+[gd_scene load_steps=14 format=3 uid="uid://bl1sgskdmudr8"]
 
 [ext_resource type="Script" uid="uid://dag78cfxg0cp8" path="res://reindeer.gd" id="1_3sw0h"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="2_xqfp4"]
+[ext_resource type="Texture2D" uid="uid://badlnf5nk2fx3" path="res://Visual Assets/Animals/Reindeer Running Frame-2.png.png" id="4_4pe0e"]
 [ext_resource type="Texture2D" uid="uid://cx8yrum6vi5ul" path="res://Visual Assets/Item Icons/Blue Exclamation Mark.png" id="4_gdh3w"]
+[ext_resource type="Texture2D" uid="uid://dn836mjgj70ex" path="res://Visual Assets/Animals/Reindeer Running Frame-1.png.png" id="5_30yed"]
 [ext_resource type="Texture2D" uid="uid://nrgd5rilugpa" path="res://Visual Assets/Item Icons/Lichen Gain Icon.png" id="5_ia5g7"]
+[ext_resource type="Texture2D" uid="uid://cunud7qtkwxkr" path="res://Visual Assets/Animals/Reindeer Running Frame-3.png.png" id="6_dpdrw"]
+[ext_resource type="Texture2D" uid="uid://cuufed82nn1xk" path="res://Visual Assets/Animals/Reindeer Running Frame-4.png.png" id="7_30yed"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t2la6"]
 radius = 126.753
@@ -28,17 +32,23 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_t2la6")
-}, {
-"duration": 1.0,
-"texture": ExtResource("2_xqfp4")
 }],
 "loop": true,
-"name": &"ice",
-"speed": 1.0
+"name": &"idle",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_t2la6")
+"texture": ExtResource("5_30yed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4pe0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dpdrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_30yed")
 }],
 "loop": true,
 "name": &"walk",
@@ -51,7 +61,7 @@ script = ExtResource("1_3sw0h")
 
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(-1.5, 1)
-collision_layer = 128
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_t2la6")
@@ -62,6 +72,7 @@ position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_t2la6")
 
 [node name="EatBox" type="Area2D" parent="."]
+collision_layer = 0
 collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EatBox"]
@@ -69,9 +80,8 @@ shape = SubResource("CircleShape2D_xqfp4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3sw0h")
-animation = &"ice"
-frame = 1
-frame_progress = 0.948771
+animation = &"idle"
+frame_progress = 0.449525
 
 [node name="Point" type="Sprite2D" parent="."]
 texture = ExtResource("4_gdh3w")

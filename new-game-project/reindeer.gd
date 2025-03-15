@@ -55,11 +55,10 @@ func _physics_process(delta):
 		point.show()
 		if !eating:
 			eating=true
-			if _animatedBody.animation != "ice":
-				_animatedBody.play("ice")
+			_animatedBody.play("feeding")
 			_animatedBody.set_frame_and_progress(3,0.5)
 	else:
-		_animatedBody.play("walk")
+		_animatedBody.play("idle")
 		_animatedBody.set_frame_and_progress(3,0.5)
 
 func _on_timer_timeout():
