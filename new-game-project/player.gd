@@ -21,7 +21,7 @@ func _physics_process(delta):
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
-		if overlapping_bodies[0].has_method("is_fishing"):
+		if overlapping_bodies[0].has_method("is_fishing") and overlapping_bodies[0].get_fished():
 			fish(overlapping_bodies[0])
 
 
@@ -102,10 +102,5 @@ func fish(fishing_spot):
 	%FishingBar.visible = false
 	left_interval.queue_free()
 	right_interval.queue_free()
-	
-
-	
-	
-	
 	
 	fishing = false
