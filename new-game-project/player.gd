@@ -91,12 +91,12 @@ func fish(fishing_spot):
 				
 				$"SalmonGainIcon-1_png".visible = false
 			else:
-				emit_signal("fish_failed")  
+				emit_signal("fish_failed")
 				has_caught = true  
 	%FishingBar.visible = false
 	left_interval.queue_free()
 	right_interval.queue_free()
-	fishing_spot.queue_free()
+	%HurtBox.get_overlapping_bodies()[0].set
 	
 	#show fish collection icon
 	
