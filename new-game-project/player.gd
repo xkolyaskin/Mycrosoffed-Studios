@@ -30,16 +30,29 @@ func fish():
 	var left_interval = fishing_rect.instantiate()
 	
 	%PathFollow2D.progress_ratio = interval_start
+	await get_tree().process_frame
 	left_interval.global_position = %PathFollow2D.global_position
-	add_child(left_interval)
+	%PathFollow2D.get_parent().add_child(left_interval)  # instead of just add_child
 	
 	%PathFollow2D.progress_ratio = interval_end
+	await get_tree().process_frame
 	right_interval.global_position = %PathFollow2D.global_position
-	add_child(right_interval)
+	%PathFollow2D.get_parent().add_child(right_interval)  
 	
-
+	left_interval.z_index = 100
+	right_interval.z_index = 100
+	
+	print("Start position:", left_interval.global_position)
+	print("End position:", right_interval.global_position)
+	
+	var label := Label.new()
+	label.text = "HERE"
+	label.global_position = left_interval.global_position
+	label.z_index = 100
+	add_child(label)
+	
 	while not has_caught:
-		await get_tree().create_timer(0.01).timeout  
+		await get_tree().create_timer(0.01).timeout
 
 		if increasing:
 			%FishingBar.value += speed
