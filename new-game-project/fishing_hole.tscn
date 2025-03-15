@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnhoxo3lcqlad"]
+[gd_scene load_steps=3 format=3 uid="uid://bnhoxo3lcqlad"]
+
+[ext_resource type="Texture2D" uid="uid://kblwwfx56ka8" path="res://Visual Assets/Ice_Hole_Texture.png.png" id="1_67wn1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2sl56"]
 radius = 35.2278
@@ -7,3 +9,7 @@ radius = 35.2278
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_2sl56")
+
+[node name="IceHoleTexture_png" type="Sprite2D" parent="."]
+scale = Vector2(1.375, 1.4375)
+texture = ExtResource("1_67wn1")

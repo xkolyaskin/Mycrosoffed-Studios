@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=4 uid="uid://eqgu1qy8uh0k"]
+
+[ext_resource type="Texture2D" uid="uid://diet3nfp8atw7" path="res://Visual Assets/tile_set.png" id="1_c7s6e"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wijl4"]
+texture = ExtResource("1_c7s6e")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_e0an3"]
+sources/0 = SubResource("TileSetAtlasSource_wijl4")
+
+[node name="Map" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAIAAAABAAAAAAABAAIAAAAAAP7/AAABAAIAAAACAP7/AAABAAIAAAADAAEAAAABAAIAAAAAAAIAAAAAAAEAAAD//wEAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAP//AAAAAAEAAAABAP7/AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAD+////AAAAAAEAAAD+//z/AAAAAAEAAAAHAAIAAAAAAAEAAAAEAP3/AAAAAAEAAAAGAP3/AAAAAAEAAAAFAP//AAAAAAEAAAD9/wIAAAACAAIAAAD9/wAAAAABAAAAAAA=")
+tile_set = SubResource("TileSet_e0an3")
