@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://x8ql7yrpxv3g"]
+[gd_scene load_steps=5 format=3 uid="uid://x8ql7yrpxv3g"]
 
 [ext_resource type="PackedScene" uid="uid://eqgu1qy8uh0k" path="res://map.tscn" id="1_5kf8y"]
 [ext_resource type="PackedScene" uid="uid://cc7frd4fce3u2" path="res://lichen.tscn" id="2_b7c21"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="2_sr4t7"]
-[ext_resource type="PackedScene" uid="uid://47537fa2mf68" path="res://Visual Assets/background.tscn" id="3_xt1qu"]
 [ext_resource type="PackedScene" uid="uid://by7cs63w22rig" path="res://reindeer.tscn" id="4_b7c21"]
 
 [node name="Node2D" type="Node2D"]
@@ -12,13 +11,10 @@
 position = Vector2(-103, -68)
 
 [node name="lichen" parent="." instance=ExtResource("2_b7c21")]
+position = Vector2(617, 281)
 
 [node name="Player" parent="." instance=ExtResource("2_sr4t7")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="Node2D" parent="CanvasLayer" instance=ExtResource("3_xt1qu")]
-position = Vector2(120, -144)
+position = Vector2(355, 162)
 
 [node name="Reindeer" parent="." instance=ExtResource("4_b7c21")]
+position = Vector2(498, -70)
