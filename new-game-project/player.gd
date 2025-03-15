@@ -8,8 +8,13 @@ func _physics_process(delta):
 	velocity = direction * 200
 	if velocity != Vector2.ZERO:
 		_animatedBody.play("walk")
+		if velocity.x < 0:
+			_animatedBody.flip_h=true
+		elif velocity.x > 0:
+			_animatedBody.flip_h=false
 	else:
 		_animatedBody.stop()
+		_animatedBody.set_frame_and_progress(3,0.5)
 	move_and_slide()
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	if overlapping_bodies.size() > 0:
