@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cx8yrum6vi5ul" path="res://Visual Assets/Item Icons/Blue Exclamation Mark.png" id="3_34d6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voq3y"]
-size = Vector2(48, 43)
+size = Vector2(42, 39)
 
 [node name="FishingSpot" type="StaticBody2D"]
 collision_layer = 3

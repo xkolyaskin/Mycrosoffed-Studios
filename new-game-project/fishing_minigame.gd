@@ -1,5 +1,6 @@
 extends Node2D
 
+var timer = 45
 var score = 0
 
 func _ready():
@@ -36,4 +37,7 @@ func _on_timer_timeout():
 	create_crack();
 	
 func _on_timeleft_inc():
-	
+	timer -= 1
+	$CanvasLayer/TimeLeft.text = "Timer: " + str(timer)
+	if timer == 0:
+		emit_signal("end_fishing")
