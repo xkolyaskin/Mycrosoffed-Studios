@@ -3,6 +3,7 @@ var fishing = false
 @onready
 var _animatedBody = $PlayerSprite/AnimatedSprite2D
 
+
 func _physics_process(delta):	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
 	velocity = direction * 200
@@ -40,27 +41,21 @@ func fish():
 	var right_interval = fishing_rect.instantiate()
 	var left_interval = fishing_rect.instantiate()
 	
+	
+	# Set the positions along the path
 	%PathFollow2D.progress_ratio = interval_start
-	await get_tree().process_frame
-	left_interval.global_position = %PathFollow2D.global_position
-	%PathFollow2D.get_parent().add_child(left_interval)  # instead of just add_child
-	
+	left_interval.global_position = %PathFollow2D.position  # Get global position from PathFollow2D
+
 	%PathFollow2D.progress_ratio = interval_end
-	await get_tree().process_frame
-	right_interval.global_position = %PathFollow2D.global_position
-	%PathFollow2D.get_parent().add_child(right_interval)  
-	
+	right_interval.global_position = %PathFollow2D.position
+
+	# Add them to the scene
+	%PathFollow2D.get_parent().add_child(left_interval)
+	%PathFollow2D.get_parent().add_child(right_interval)
+
+	# Optionally adjust Z index to make sure they're on top
 	left_interval.z_index = 100
 	right_interval.z_index = 100
-	
-	print("Start position:", left_interval.global_position)
-	print("End position:", right_interval.global_position)
-	
-	var label := Label.new()
-	label.text = "HERE"
-	label.global_position = left_interval.global_position
-	label.z_index = 100
-	add_child(label)
 	
 	while not has_caught:
 		await get_tree().create_timer(0.01).timeout
