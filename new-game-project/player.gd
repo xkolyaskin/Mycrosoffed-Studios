@@ -100,6 +100,7 @@ func fish(fishing_spot):
 	#has caught fish or failed
 	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
 	overlapping_bodies[0].set_fished()
+	get_parent().inc_score()
 	
 	%FishingBar.visible = false
 	left_interval.queue_free()
