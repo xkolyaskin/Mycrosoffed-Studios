@@ -83,6 +83,13 @@ func fish(fishing_spot):
 			(%FishingBar.value / 100) <= interval_end):
 				emit_signal("fish_caught")  
 				has_caught = true
+				$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
+				$"SalmonGainIcon-1_png".visible = true
+				for i in range(1,15):
+					await get_tree().create_timer(0.05).timeout
+					$"SalmonGainIcon-1_png".position += Vector2(0,-5)
+				
+				$"SalmonGainIcon-1_png".visible = false
 			else:
 				emit_signal("fish_failed")  
 				has_caught = true  
@@ -92,12 +99,6 @@ func fish(fishing_spot):
 	fishing_spot.queue_free()
 	
 	#show fish collection icon
-	$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
-	$"SalmonGainIcon-1_png".visible = true
-	for i in range(1,15):
-		await get_tree().create_timer(0.05).timeout
-		$"SalmonGainIcon-1_png".position += Vector2(0,-5)
 	
-	$"SalmonGainIcon-1_png".visible = false
 	
 	fishing = false
