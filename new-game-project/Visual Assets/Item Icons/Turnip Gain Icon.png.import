@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmg7mqkjljb34"
-path="res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"
+uid="uid://dlfbbv36quqxs"
+path="res://.godot/imported/Turnip Gain Icon.png-034865e0e203db8c32e43362c5a22307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Water Background Texture Placeholder.png.png"
-dest_files=["res://.godot/imported/Water Background Texture Placeholder.png.png-8dc7aacd909f2ae20532ad1e584bfd26.ctex"]
+source_file="res://Visual Assets/Item Icons/Turnip Gain Icon.png"
+dest_files=["res://.godot/imported/Turnip Gain Icon.png-034865e0e203db8c32e43362c5a22307.ctex"]
 
 [params]
 

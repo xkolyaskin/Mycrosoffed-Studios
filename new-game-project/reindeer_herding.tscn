@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://x8ql7yrpxv3g"]
+
+[ext_resource type="PackedScene" uid="uid://eqgu1qy8uh0k" path="res://map.tscn" id="1_5kf8y"]
+[ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="2_sr4t7"]
+[ext_resource type="PackedScene" uid="uid://47537fa2mf68" path="res://Visual Assets/background.tscn" id="3_xt1qu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="map" parent="." instance=ExtResource("1_5kf8y")]
+position = Vector2(-103, -68)
+
+[node name="Player" parent="." instance=ExtResource("2_sr4t7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Node2D" parent="CanvasLayer" instance=ExtResource("3_xt1qu")]
+position = Vector2(120, -144)
