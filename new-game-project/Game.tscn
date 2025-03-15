@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://by3pqdi07jfji"]
+[gd_scene load_steps=3 format=3 uid="uid://copyelhcc1lnh"]
 
-[ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_wbfu4"]
+[ext_resource type="PackedScene" uid="uid://c7jixi3l206ot" path="res://player.tscn" id="1_wbfu4"]
 [ext_resource type="Texture2D" uid="uid://ba1coitaiomao" path="res://Visual Assets/Snow Background Texture-1.png - Copy.png" id="2_xkndl"]
 
 [node name="Node" type="Node"]
