@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://b86rxoth22b4r"]
+[gd_scene load_steps=13 format=4 uid="uid://4k45peewhy1g"]
 
 [ext_resource type="Script" uid="uid://gb22ai38itk3" path="res://fishing_minigame.gd" id="1_xd8tf"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="2_xd8tf"]
