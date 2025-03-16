@@ -8,8 +8,13 @@ func _ready():
 	fade_rect.visible = false
 	fade_rect.modulate = Color(0, 0, 0, 0)
 	$Label.modulate = Color(255,255,255,0)
+	$Label.text="In a small village, Khailino, in the Kamchatka Peninsula of eastern Russia…"
 
-func change_scene_with_fade(scene_path: String, duration := 1.0):
+func change_scene_with_fade(scene_path: String, credits, duration := 1.0):
+	if credits:
+		$Label.text=""
+	else:
+		$Label.text="In a small village, Khailino, in the Kamchatka Peninsula of eastern Russia…"
 	fade_rect.visible = true
 	fade_rect.modulate.a = 0.0
 

@@ -196,6 +196,7 @@ func _ready():
 			else:
 				await play_dialogue(dialogueEndBad_1)
 				await play_dialogue(dialogueEndBad_2)
+			FadeToBlackSpecial.change_scene_with_fade("res://credits.tscn",true)
 			await play_credits()
 			
 	scene+=1

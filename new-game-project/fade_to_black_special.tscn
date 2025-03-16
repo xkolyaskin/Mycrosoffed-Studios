@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3mik6ssq03dj"]
+[gd_scene load_steps=3 format=3 uid="uid://db36wq7gpko3v"]
 
 [ext_resource type="Script" uid="uid://8p8itkarkr21" path="res://fade_to_black_special.gd" id="1_ylp8e"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="2_ylp8e"]
