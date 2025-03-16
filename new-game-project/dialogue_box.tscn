@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cabbtqxnynl5b"]
+
+[ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="1_n23yb"]
+[ext_resource type="Texture2D" uid="uid://cd6gpmc5qcjbu" path="res://Visual Assets/Character Sprites/lore guy HEADSHOT LOW RES-1.png" id="2_0nste"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gwjdr"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.0691185, 0.449165, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="DialogueBox" type="Panel"]
+offset_left = 72.0
+offset_top = 440.0
+offset_right = 1080.0
+offset_bottom = 616.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gwjdr")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 24.0
+offset_right = 976.0
+offset_bottom = 451.0
+theme_override_fonts/font = ExtResource("1_n23yb")
+theme_override_font_sizes/font_size = 40
+text = "1st Round: While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. "
+autowrap_mode = 2
+
+[node name="LoreGuyHeadshotLowRes-1" type="Sprite2D" parent="."]
+position = Vector2(88, 88)
+texture = ExtResource("2_0nste")
