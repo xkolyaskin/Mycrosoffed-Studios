@@ -1,6 +1,11 @@
 extends CharacterBody2D
 var fishing = false
 var can_move = true
+var seed_holding = "c"
+
+signal plant_b
+signal plant_c
+signal plant_p
 
 @onready var _animatedBody = $PlayerSprite/AnimatedSprite2D
 
@@ -28,6 +33,10 @@ func _physics_process(delta):
 	if overlapping_bodies.size() > 0:
 		if overlapping_bodies[0].has_method("is_fishing") and overlapping_bodies[0].get_fished():
 			fish(overlapping_bodies[0])
+		elif overlapping_bodies[0].has_method("is_seed_bag") and Input.is_action_just_pressed("interact"):
+			pick_up_seed(overlapping_bodies[0].is_seed_bag())
+		elif overlapping_bodies[0].has_method("is_farmland") and Input.is_action_just_pressed("interact"):
+			plant_seed(overlapping_bodies[0])
 
 func fish(fishing_spot):
 	if fishing:
@@ -109,3 +118,11 @@ func fish(fishing_spot):
 	right_interval.queue_free()
 	
 	fishing = false
+
+
+func pick_up_seed(string):
+	seed_holding = string
+	print("seed holding: " + string)
+	
+func plant_seed(farmland):
+	farmland._on_plant(seed_holding)
