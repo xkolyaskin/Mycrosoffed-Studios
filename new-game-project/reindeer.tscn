@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://dd2hjbqpn0smw" path="res://happy.gd" id="10_dpdrw"]
 [ext_resource type="AudioStream" uid="uid://c1twfd05c4gkp" path="res://Audio Assets/Reindeer3.mp3" id="11_nlvay"]
 [ext_resource type="AudioStream" uid="uid://cv2t6vviieegg" path="res://Audio Assets/Reindeer2.mp3" id="12_8mawb"]
-[ext_resource type="AudioStream" uid="uid://6brxsujwmacw" path="res://Audio Assets/Reindeer1.mp3" id="13_3csxu"]
+[ext_resource type="AudioStream" uid="uid://d3tse8ivbaoqu" path="res://Audio Assets/Reindeer1.mp3" id="13_3csxu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t2la6"]
 radius = 126.753
