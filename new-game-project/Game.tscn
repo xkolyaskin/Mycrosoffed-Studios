@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://copyelhcc1lnh"]
+[gd_scene load_steps=31 format=4 uid="uid://by3pqdi07jfji"]
 
 [ext_resource type="Script" uid="uid://wdseijdxrxfj" path="res://dialogue.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_u44n3"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://b18t5ixdd12gr" path="res://Visual Assets/Character Sprites/Lore Guy.png" id="5_r0x5m"]
 [ext_resource type="Texture2D" uid="uid://b5epith20tq53" path="res://Visual Assets/Character Sprites/Character - Standing.png" id="6_2vekm"]
 [ext_resource type="Texture2D" uid="uid://ckscys362k60v" path="res://Visual Assets/Backgrounds/Snow Background With Lichen.png" id="6_cpsxm"]
-[ext_resource type="Script" path="res://lore_guy_reindeer.gd" id="6_joorw"]
+[ext_resource type="Script" uid="uid://dq8oiu0ybtfsw" path="res://lore_guy_reindeer.gd" id="6_joorw"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="7_2vekm"]
 [ext_resource type="Texture2D" uid="uid://dvj7rlhn737u0" path="res://Visual Assets/Backgrounds/Dirt Background Texture.png" id="7_cpsxm"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="8_yx171"]
@@ -292,5 +292,12 @@ texture = ExtResource("21_hmewc")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("22_7ged1")
 autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+z_index = 128
+offset_right = 1156.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="timeout" from="LoreGuyReindeer/Timer" to="LoreGuyReindeer" method="_on_timer_timeout"]

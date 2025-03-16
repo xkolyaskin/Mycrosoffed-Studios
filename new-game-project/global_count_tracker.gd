@@ -7,9 +7,9 @@ var farming_count = 0
 var reindeer_count = 5
 var lichen_count=8
 
-var reindeer_score = 0
-var fishing_score = 0
-var farming_score = 0
+var reindeer_score = 1110
+var fishing_score = 1110
+var farming_score = 1110
 
 var randomDialogue = [
 	"The Chawchu dance was one of my favorite things to watch and perform. I played the lalai drum, which I once broke by hitting it with my head.",
@@ -69,3 +69,6 @@ func get_random_dialogue():
 
 func set_random_dialogue(set):
 	randomDialogue=set
+	
+func score_is_good() -> bool:
+	return (fishing_score >= 25 and farming_score >= 150 and reindeer_score >= 150)
