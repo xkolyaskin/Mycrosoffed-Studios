@@ -1,5 +1,4 @@
 extends Node2D
-
 @onready var dialogue_box = $DialogueBox
 @onready var talking_audio = $Talking
 
@@ -60,6 +59,7 @@ var randomDialogue = [
 var usedDialogue = []
 
 func _ready():
+	$Fire/move.play("move")
 	await get_tree().create_timer(1).timeout
 	
 	match scene:
