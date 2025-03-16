@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://by3pqdi07jfji"]
+[gd_scene load_steps=20 format=4 uid="uid://by3pqdi07jfji"]
 
 [ext_resource type="Script" uid="uid://wdseijdxrxfj" path="res://dialogue.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_u44n3"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="7_2vekm"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="8_yx171"]
 [ext_resource type="PackedScene" uid="uid://cabbtqxnynl5b" path="res://dialogue_box.tscn" id="11_yhmtn"]
+[ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="12_yyih5"]
+[ext_resource type="Texture2D" uid="uid://bll1lb2rjpste" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Log.png" id="13_qjyg3"]
+[ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="14_elkpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t88pq"]
 texture = ExtResource("1_u44n3")
@@ -139,5 +142,33 @@ texture = ExtResource("8_yx171")
 autostart = true
 
 [node name="DialogueBox" parent="." instance=ExtResource("11_yhmtn")]
+visible = false
+
+[node name="Decoration-Cane2" type="Sprite2D" parent="."]
+position = Vector2(544, 392)
+texture = ExtResource("12_yyih5")
+
+[node name="Decoration-Log" type="Sprite2D" parent="."]
+position = Vector2(886.627, 166.627)
+texture = ExtResource("13_qjyg3")
+
+[node name="Decoration-Log2" type="Sprite2D" parent="."]
+position = Vector2(878.627, 142.627)
+rotation = 2.35619
+texture = ExtResource("13_qjyg3")
+flip_h = true
+
+[node name="Decoration-Log3" type="Sprite2D" parent="."]
+position = Vector2(854.627, 158.627)
+rotation = -2.35619
+texture = ExtResource("13_qjyg3")
+
+[node name="Decoration-Rock" type="Sprite2D" parent="."]
+position = Vector2(400, 256)
+texture = ExtResource("14_elkpi")
+
+[node name="Decoration-Rock2" type="Sprite2D" parent="."]
+position = Vector2(880, 216)
+texture = ExtResource("14_elkpi")
 
 [connection signal="timeout" from="LoreGuyReindeer/Timer" to="LoreGuyReindeer" method="_on_timer_timeout"]

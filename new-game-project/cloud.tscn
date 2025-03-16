@@ -22,9 +22,10 @@ animations = [{
 }]
 
 [node name="Cloud" type="Node2D"]
+z_index = 11
 
 [node name="am" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)
 sprite_frames = SubResource("SpriteFrames_rmn2t")
 animation = &"rain"
-frame_progress = 0.0266149
+frame_progress = 0.345876
