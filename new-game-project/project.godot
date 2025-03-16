@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 FadeToBlack="*res://fade_to_black.tscn"
+GlobalCountTracker="*res://global_count_tracker.gd"
 
 [display]
 

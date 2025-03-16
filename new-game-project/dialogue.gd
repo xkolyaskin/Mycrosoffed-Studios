@@ -2,7 +2,7 @@ extends Node2D
 @onready var dialogue_box = $DialogueBox
 @onready var talking_audio = $Talking
 
-var scene = 1
+var scene
 var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the village elders. We could use some help keeping our village fed."
 
 var dialogueFarm1_1 = "While we do love our meat, a balanced diet requires some veggies too. Can you help me in the garden this summer?"
@@ -59,6 +59,7 @@ var randomDialogue = [
 var usedDialogue = []
 
 func _ready():
+	scene = GlobalCountTracker.get_dialogue_count()
 	$Fire/move.play("move")
 	await get_tree().create_timer(1).timeout
 	
@@ -71,6 +72,7 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm1_2)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn")
 		2:
 			await play_dialogue(pickRandom())
 			
@@ -78,6 +80,8 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFish1_2)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn")
+
 		3:
 			await play_dialogue(pickRandom())
 			
@@ -87,6 +91,8 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueHerd1_3)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
+
 		4:
 			await play_dialogue(pickRandom())
 			
@@ -96,6 +102,8 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm2_3)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
+			
 		5:
 			await play_dialogue(pickRandom())
 			

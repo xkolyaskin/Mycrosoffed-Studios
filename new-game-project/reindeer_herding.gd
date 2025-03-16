@@ -21,6 +21,7 @@ func _ready() -> void:
 	beginRound(round)
 
 func beginRound(round):
+	round = GlobalCountTracker.get_reindeer_count() - 1
 	$CanvasLayer/Score.text="Score: "+str(score)
 	$map.position=Vector2(-103,-68)
 	$Player.position=Vector2(327,193)
@@ -89,6 +90,7 @@ func atEnd():
 	score=0
 	await get_tree().create_timer(5).timeout
 	$CanvasLayer/Done.hide()
+	FadeToBlack.change_scene_with_fade("res://Game.tscn")
 	#go back to lore guy
 	#if round<3:
 		#beginRound(round)

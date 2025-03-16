@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="14_elkpi"]
 [ext_resource type="Texture2D" uid="uid://bybabdxa4rh6x" path="res://Visual Assets/Backgrounds/Decorations/Tent.png" id="15_qjyg3"]
 [ext_resource type="AudioStream" uid="uid://bqt5t0tjf0lhu" path="res://Audio Assets/Talking.mp3" id="16_elkpi"]
-[ext_resource type="PackedScene" path="res://fire.tscn" id="17_0yprl"]
+[ext_resource type="PackedScene" uid="uid://usnwm1jwsrw6" path="res://fire.tscn" id="17_0yprl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t88pq"]
 texture = ExtResource("1_u44n3")

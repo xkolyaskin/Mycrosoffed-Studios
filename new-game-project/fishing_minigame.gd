@@ -2,8 +2,12 @@ extends Node2D
 
 var timer = 45
 var score = 0
+var game_number
+var speeds = [5, 3, 1.5]
 
 func _ready():
+	game_number = GlobalCountTracker.get_fishing_count() - 1
+	$CrackTimer.wait_time = speeds[game_number]
 	spawn_fishing_spot()
 	spawn_fishing_spot()
 	spawn_fishing_spot()
@@ -13,6 +17,7 @@ func _ready():
 	spawn_fishing_spot()
 	spawn_fishing_spot()
 	spawn_fishing_spot()
+	
 	
 func spawn_fishing_spot():
 	var new_spot = preload("res://fishing_spot.tscn").instantiate()
@@ -40,4 +45,4 @@ func _on_timeleft_inc():
 	timer -= 1
 	$CanvasLayer/TimeLeft.text = "Timer: " + str(timer)
 	if timer == 0:
-		emit_signal("end_fishing")
+		FadeToBlack.change_scene_with_fade("res://Game.tscn")
