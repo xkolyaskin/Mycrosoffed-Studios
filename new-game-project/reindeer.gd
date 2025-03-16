@@ -56,6 +56,8 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
+			if randi_range(0,100)==5:
+				$Reindeer3.play()
 			_animatedBody.play("feeding")
 			_animatedBody.set_frame_and_progress(3,0.5)
 	else:
@@ -84,3 +86,7 @@ func _on_timer_timeout():
 			score+=1
 			$Happy.go()
 			get_parent().incScore()
+			if randi_range(0,10)==5:
+				$Reindeer1.play()
+			if randi_range(0,10)==5:
+				$Reindeer2.play()
