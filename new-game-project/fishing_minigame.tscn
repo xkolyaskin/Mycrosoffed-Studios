@@ -221,7 +221,7 @@ stream = ExtResource("7_p2j5e")
 
 [node name="Heartbeat-of-freedom-shaman-folk-background-311544" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_e3jrk")
-volume_db = -14.054
+volume_db = -8.432
 autoplay = true
 
 [connection signal="timeout" from="CrackTimer" to="." method="_on_timer_timeout"]

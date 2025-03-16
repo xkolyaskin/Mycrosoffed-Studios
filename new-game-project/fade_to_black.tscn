@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmyvlhiwlk7b2"]
 
-[ext_resource type="Script" path="res://fade_to_black.gd" id="1_piqfx"]
+[ext_resource type="Script" uid="uid://d0t53r8ax5nmp" path="res://fade_to_black.gd" id="1_piqfx"]
 
 [node name="SceneTransition" type="CanvasLayer"]
 layer = 124
