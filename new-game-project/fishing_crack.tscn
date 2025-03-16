@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsxuff8fyfdar"]
+[gd_scene load_steps=3 format=3 uid="uid://bxvknypffo6h6"]
 
 [ext_resource type="Texture2D" uid="uid://b8150u3putemt" path="res://Visual Assets/Backgrounds/Ice With Cracks Background Texture.png" id="1_a2ao6"]
 
@@ -6,6 +6,7 @@
 size = Vector2(52, 50)
 
 [node name="FishingCrack" type="StaticBody2D"]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_a2ao6")
