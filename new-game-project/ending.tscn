@@ -1,8 +1,9 @@
-[gd_scene load_steps=35 format=4 uid="uid://bvi7cgol6ulel"]
+[gd_scene load_steps=40 format=4 uid="uid://bvi7cgol6ulel"]
 
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_sy8ce"]
 [ext_resource type="Texture2D" uid="uid://dck2ocisxiwrm" path="res://Visual Assets/Backgrounds/Tree border 128x128.png" id="2_uvbhr"]
 [ext_resource type="Texture2D" uid="uid://ckyy6v6hqsat4" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png - Copy (2).png" id="3_m7rhh"]
+[ext_resource type="Texture2D" uid="uid://cn12e6wsjvfvl" path="res://Visual Assets/Backgrounds/Burnt Grass Yellow.png" id="3_sxr6u"]
 [ext_resource type="Texture2D" uid="uid://cy6qxihunjvlb" path="res://Visual Assets/Backgrounds/Tree border 128x128 GREENpng.png" id="4_83rvv"]
 [ext_resource type="Texture2D" uid="uid://bpn8qvn01t6ir" path="res://Visual Assets/Backgrounds/Frozen Lichen Background Texture.png" id="4_e2dv3"]
 [ext_resource type="Texture2D" uid="uid://ckscys362k60v" path="res://Visual Assets/Backgrounds/Snow Background With Lichen.png" id="5_0t84q"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://b5epith20tq53" path="res://Visual Assets/Character Sprites/Character - Standing.png" id="9_83rvv"]
 [ext_resource type="Texture2D" uid="uid://bnx7bkninhkgo" path="res://Visual Assets/Backgrounds/Water New.png" id="9_m8mbc"]
 [ext_resource type="Script" path="res://lore_guy_reindeer.gd" id="10_m8mbc"]
+[ext_resource type="Texture2D" uid="uid://bcgdlujvfbhg" path="res://Visual Assets/Backgrounds/Burnt Grass Orange.png" id="11_lgkiu"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="11_sxr6u"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="12_lgkiu"]
 [ext_resource type="PackedScene" uid="uid://cabbtqxnynl5b" path="res://dialogue_box.tscn" id="13_wnvse"]
@@ -23,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://usnwm1jwsrw6" path="res://fire.tscn" id="19_boelh"]
 [ext_resource type="Texture2D" uid="uid://dgln6res1wwdv" path="res://Visual Assets/Backgrounds/Decorations/Rabbit.png" id="20_sd5ey"]
 [ext_resource type="AudioStream" uid="uid://b57rlq50c3u5h" path="res://Audio Assets/Dialogue Music.mp3" id="21_qcuk2"]
+[ext_resource type="PackedScene" uid="uid://cjrjwen04uaig" path="res://wildfire.tscn" id="26_lgkiu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujx65"]
 texture = ExtResource("1_sy8ce")
@@ -97,6 +100,13 @@ texture = ExtResource("2_uvbhr")
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_coum2"]
+texture = ExtResource("3_sxr6u")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_220av"]
 texture = ExtResource("3_m7rhh")
@@ -207,6 +217,13 @@ texture = ExtResource("9_m8mbc")
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6gk5"]
+texture = ExtResource("11_lgkiu")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_jjm3y"]
 sources/0 = SubResource("TileSetAtlasSource_ujx65")
 sources/1 = SubResource("TileSetAtlasSource_3740v")
@@ -217,6 +234,8 @@ sources/7 = SubResource("TileSetAtlasSource_vdtgj")
 sources/3 = SubResource("TileSetAtlasSource_sxr6u")
 sources/5 = SubResource("TileSetAtlasSource_lgkiu")
 sources/8 = SubResource("TileSetAtlasSource_wnvse")
+sources/9 = SubResource("TileSetAtlasSource_h6gk5")
+sources/10 = SubResource("TileSetAtlasSource_coum2")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auqov"]
 
@@ -374,5 +393,19 @@ texture = ExtResource("20_sd5ey")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("21_qcuk2")
 autoplay = true
+
+[node name="Wildfire" parent="." instance=ExtResource("26_lgkiu")]
+position = Vector2(613, 233)
+
+[node name="Wildfire2" parent="." instance=ExtResource("26_lgkiu")]
+position = Vector2(191, 145)
+scale = Vector2(2, 2.16)
+
+[node name="Wildfire2" parent="Wildfire2" instance=ExtResource("26_lgkiu")]
+position = Vector2(146.5, 0)
+scale = Vector2(2, 2.16)
+
+[node name="Wildfire3" parent="." instance=ExtResource("26_lgkiu")]
+position = Vector2(801, 281)
 
 [connection signal="timeout" from="LoreGuyReindeer/Timer" to="LoreGuyReindeer" method="_on_timer_timeout"]

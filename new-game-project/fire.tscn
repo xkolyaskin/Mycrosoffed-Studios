@@ -54,5 +54,6 @@ animations = [{
 [node name="move" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gi2fe")
 animation = &"move"
+autoplay = "move"
 frame = 1
 frame_progress = 0.509104
