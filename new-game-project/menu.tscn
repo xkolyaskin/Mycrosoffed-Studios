@@ -14,26 +14,26 @@ scale = Vector2(4.01235, 4.01235)
 texture = ExtResource("1_lti8b")
 
 [node name="Play" type="Button" parent="."]
-offset_left = 381.0
-offset_top = 319.0
-offset_right = 721.0
-offset_bottom = 394.0
+offset_left = 406.0
+offset_top = 290.0
+offset_right = 746.0
+offset_bottom = 365.0
 theme_override_fonts/font = ExtResource("2_ouk20")
 theme_override_font_sizes/font_size = 65
 text = "PLAY"
 
 [node name="Quit" type="Button" parent="."]
-offset_left = 462.0
-offset_top = 418.0
-offset_right = 640.0
-offset_bottom = 474.0
+offset_left = 488.0
+offset_top = 395.0
+offset_right = 666.0
+offset_bottom = 451.0
 theme_override_fonts/font = ExtResource("2_ouk20")
 theme_override_font_sizes/font_size = 35
 text = "QUIT"
 
 [node name="Khailino" type="Sprite2D" parent="."]
-position = Vector2(563, 142)
-scale = Vector2(1.49095, 1.49095)
+position = Vector2(576.727, 102.399)
+scale = Vector2(1.40663, 1.11738)
 texture = ExtResource("4_4hy44")
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
