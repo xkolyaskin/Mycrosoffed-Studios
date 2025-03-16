@@ -67,7 +67,7 @@ var usedDialogue = []
 
 func _ready():
 	scene = GlobalCountTracker.get_dialogue_count()
-	scene = 10
+	#scene = 10
 	if scene == 10:
 		$ColorRect.show()
 	print("dialogue number " + str(scene))
