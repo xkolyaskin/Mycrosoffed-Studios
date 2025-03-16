@@ -34,7 +34,7 @@ func _physics_process(delta):
 	for body in touching_bodies:
 		if body.has_method("is_lichen"):
 			l=true
-		if body == ice_lichen:
+		if body.has_method("is_ice_lichen"):
 			il = true
 	if il:
 		point.show()
@@ -56,9 +56,6 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
-		#happy.hide()
-		if !eating:
-			eating=true
 			_animatedBody.play("feeding")
 			_animatedBody.set_frame_and_progress(3,0.5)
 	else:

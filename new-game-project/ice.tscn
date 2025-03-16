@@ -1,0 +1,107 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0a6ymxislwbp"]
+
+[ext_resource type="Texture2D" uid="uid://b050qmp8k7tqg" path="res://Visual Assets/Backgrounds/Icy Snow Background Texture.png" id="1_mifcs"]
+
+[node name="ice" type="Node2D"]
+z_index = -3
+
+[node name="IcySnowBackgroundTexture" type="Sprite2D" parent="."]
+position = Vector2(-2, 1)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture2" type="Sprite2D" parent="."]
+position = Vector2(-33, 1)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture3" type="Sprite2D" parent="."]
+position = Vector2(29, 2)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture4" type="Sprite2D" parent="."]
+position = Vector2(-55, 1)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture5" type="Sprite2D" parent="."]
+position = Vector2(55, 1)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture6" type="Sprite2D" parent="."]
+position = Vector2(-2, -31)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture7" type="Sprite2D" parent="."]
+position = Vector2(-1, -53)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture8" type="Sprite2D" parent="."]
+position = Vector2(-2, 28)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture9" type="Sprite2D" parent="."]
+position = Vector2(-2, 54)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture10" type="Sprite2D" parent="."]
+position = Vector2(-51, 20)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture11" type="Sprite2D" parent="."]
+position = Vector2(-26, 46)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture12" type="Sprite2D" parent="."]
+position = Vector2(-42, 38)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture13" type="Sprite2D" parent="."]
+position = Vector2(-31, 24)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture14" type="Sprite2D" parent="."]
+position = Vector2(21, 46)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture15" type="Sprite2D" parent="."]
+position = Vector2(48, 21)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture16" type="Sprite2D" parent="."]
+position = Vector2(41, 39)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture17" type="Sprite2D" parent="."]
+position = Vector2(18, 22)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture18" type="Sprite2D" parent="."]
+position = Vector2(48, -14)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture19" type="Sprite2D" parent="."]
+position = Vector2(19, -46)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture20" type="Sprite2D" parent="."]
+position = Vector2(42, -40)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture21" type="Sprite2D" parent="."]
+position = Vector2(30, -23)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture22" type="Sprite2D" parent="."]
+position = Vector2(-47, -16)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture23" type="Sprite2D" parent="."]
+position = Vector2(-23, -46)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture24" type="Sprite2D" parent="."]
+position = Vector2(-40, -37)
+texture = ExtResource("1_mifcs")
+
+[node name="IcySnowBackgroundTexture25" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(-18, -26)
+texture = ExtResource("1_mifcs")
