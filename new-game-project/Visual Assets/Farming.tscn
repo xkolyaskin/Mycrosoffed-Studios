@@ -337,14 +337,6 @@ position = Vector2(285, 235)
 rotation = -1.35233
 texture = ExtResource("15_313di")
 
-[node name="HeldSeedLabel" type="Label" parent="."]
-z_index = 20
-offset_left = 44.0
-offset_top = 19.0
-offset_right = 103.0
-offset_bottom = 42.0
-theme_override_font_sizes/font_size = 10
-
 [node name="SeedText" type="Label" parent="."]
 offset_left = 7.0
 offset_top = 16.0

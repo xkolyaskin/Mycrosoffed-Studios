@@ -17,9 +17,6 @@ func _process(delta):
 			update_text_position($SeedText, Vector2(-70, 180))
 			return
 	hide_seed_text()
-	
-	if held_seed != null and $HeldSeedLabel and $HeldSeedLabel.visible:
-		update_text_position($HeldSeedLabel, Vector2(0, -50))
 
 func display_seed_text(seed_name):
 	var seed_type = seed_name.replace("SeedBag", "")
@@ -33,19 +30,3 @@ func hide_seed_text():
 func update_text_position(label: Label, offset: Vector2):
 	if label and player:
 		label.global_position = player.global_position + offset
-
-func pick_up_seed(seed_type):
-	held_seed = seed_type
-	print("Now holding:", seed_type)
-	if $HeldSeedLabel:
-		$HeldSeedLabel.text = "[" + seed_type + "]"
-		$HeldSeedLabel.visible = true
-		update_text_position($HeldSeedLabel, Vector2(0, -50))
-		print("Held seed label updated:", $HeldSeedLabel.text)
-
-func hide_held_seed_label():
-	if $HeldSeedLabel:
-		$HeldSeedLabel.visible = false
-		
-func handle_seed(tile_map_pos, level, atlas_coord, final_seed_level):
-	pass
