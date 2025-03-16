@@ -50,4 +50,5 @@ func _on_timeleft_inc():
 	timer -= 1
 	$CanvasLayer/TimeLeft.text = "Timer: " + str(timer)
 	if timer == 0:
+		GlobalCountTracker.inc_fishing_score(score)
 		FadeToBlack.change_scene_with_fade("res://Game.tscn")

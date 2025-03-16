@@ -7,6 +7,10 @@ var farming_count = 0
 var reindeer_count = 5
 var lichen_count=8
 
+var reindeer_score = 0
+var fishing_score = 0
+var farming_score = 0
+
 func get_dialogue_count():
 	dialogue_count += 1
 	return dialogue_count
@@ -35,5 +39,12 @@ func get_farming_count():
 	farming_count += 1
 	return farming_count
 
+func inc_farming_score(score):
+	farming_score += score
 
+func inc_fishing_score(score):
+	fishing_score += score
+	
+func inc_reindeer_score(score):
+	reindeer_score += score
 	
