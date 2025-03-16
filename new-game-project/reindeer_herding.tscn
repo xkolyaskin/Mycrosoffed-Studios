@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="6_a0ybq"]
 
 [node name="reindeer_herding" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_v3yhs")
 
 [node name="map" parent="." instance=ExtResource("1_5kf8y")]

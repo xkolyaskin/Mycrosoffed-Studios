@@ -1,5 +1,6 @@
-[gd_scene load_steps=0 format=3 uid="uid://cjrjwen04uaig"]
+[gd_scene format=3 uid="uid://155rq3ursptf"]
 
 [node name="Wildfire" type="Node2D"]
+texture_filter = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

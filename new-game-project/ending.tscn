@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://bvi7cgol6ulel"]
+[gd_scene load_steps=35 format=4 uid="uid://clbvqtf4jeue"]
 
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_sy8ce"]
 [ext_resource type="Texture2D" uid="uid://dck2ocisxiwrm" path="res://Visual Assets/Backgrounds/Tree border 128x128.png" id="2_uvbhr"]
@@ -14,13 +14,13 @@
 [ext_resource type="Script" path="res://lore_guy_reindeer.gd" id="10_m8mbc"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="11_sxr6u"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="12_lgkiu"]
-[ext_resource type="PackedScene" uid="uid://cabbtqxnynl5b" path="res://dialogue_box.tscn" id="13_wnvse"]
+[ext_resource type="PackedScene" uid="uid://dnfdbh2cfsmuw" path="res://dialogue_box.tscn" id="13_wnvse"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="14_coum2"]
 [ext_resource type="Texture2D" uid="uid://bll1lb2rjpste" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Log.png" id="15_h6gk5"]
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="16_nao3o"]
 [ext_resource type="Texture2D" uid="uid://bybabdxa4rh6x" path="res://Visual Assets/Backgrounds/Decorations/Tent.png" id="17_ufn1c"]
 [ext_resource type="AudioStream" uid="uid://bqt5t0tjf0lhu" path="res://Audio Assets/Talking.mp3" id="18_iotg1"]
-[ext_resource type="PackedScene" uid="uid://usnwm1jwsrw6" path="res://fire.tscn" id="19_boelh"]
+[ext_resource type="PackedScene" uid="uid://cu8jx118qwjkn" path="res://fire.tscn" id="19_boelh"]
 [ext_resource type="Texture2D" uid="uid://dgln6res1wwdv" path="res://Visual Assets/Backgrounds/Decorations/Rabbit.png" id="20_sd5ey"]
 [ext_resource type="AudioStream" uid="uid://b57rlq50c3u5h" path="res://Audio Assets/Dialogue Music.mp3" id="21_qcuk2"]
 
@@ -221,6 +221,7 @@ sources/8 = SubResource("TileSetAtlasSource_wnvse")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_auqov"]
 
 [node name="Ending" type="Node2D"]
+texture_filter = 1
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -10
