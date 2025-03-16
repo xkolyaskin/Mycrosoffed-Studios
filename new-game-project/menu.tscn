@@ -32,6 +32,9 @@ theme_override_font_sizes/font_size = 35
 text = "QUIT"
 
 [node name="Khailino" type="Sprite2D" parent="."]
-position = Vector2(558.422, 153.25)
-scale = Vector2(5.22414, 5.22414)
+position = Vector2(563, 142)
+scale = Vector2(1.49095, 1.49095)
 texture = ExtResource("4_4hy44")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
