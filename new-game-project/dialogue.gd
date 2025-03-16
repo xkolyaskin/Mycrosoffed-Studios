@@ -21,6 +21,7 @@ var randomDialogue = [
 	"There’s something to be said about a salmon hot dog that most people just don’t understand.",
 	"Where’s the fun in taking things one step at a time?"
 ]
+var usedDialogue = []
 
 func _ready():
 	
