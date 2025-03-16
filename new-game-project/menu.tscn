@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bfkbmxmcv45ee"]
+[gd_scene load_steps=5 format=3 uid="uid://dht6x2u7tw42v"]
 
 [ext_resource type="Texture2D" uid="uid://bwkmdg4erk6g3" path="res://Visual Assets/Splash Screen/Splash Screen.png" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://dbv4le7kf85wx" path="res://menu.gd" id="1_mae5d"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="2_ouk20"]
 [ext_resource type="Texture2D" uid="uid://cf88ilt0ywl0f" path="res://Visual Assets/Splash Screen/khailino.png" id="4_4hy44"]
-[ext_resource type="AudioStream" uid="uid://cdt4jcyc8k8ha" path="res://Audio Assets/Main Menu Music.mp3" id="5_ytr4m"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_mae5d")
@@ -36,10 +35,6 @@ text = "QUIT"
 position = Vector2(576.727, 102.399)
 scale = Vector2(1.40663, 1.11738)
 texture = ExtResource("4_4hy44")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_ytr4m")
-autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
