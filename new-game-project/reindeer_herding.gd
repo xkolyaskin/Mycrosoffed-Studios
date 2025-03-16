@@ -19,6 +19,8 @@ var iceLichen=[]
 var reindeer = preload("res://reindeer.tscn")
 var lich = preload("res://lichen.tscn")
 var iceLich = preload("res://ice_lichen.tscn")
+@onready
+var cloudAnim=$Cloud/am
 
 func _ready() -> void:
 	beginRound(round)
@@ -26,6 +28,8 @@ func _ready() -> void:
 func beginRound(round):
 	$map.position=Vector2(-103,-68)
 	$Player.position=Vector2(327,193)
+	$Cloud.hide()
+	cloudAnim.play("rain")
 	for i in range (0,numLichen):
 		var currentLichen = lich.instantiate()
 		currentLichen.position=lichenPositions[round][i]
