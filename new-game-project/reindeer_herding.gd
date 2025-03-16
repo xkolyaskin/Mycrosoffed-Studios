@@ -67,9 +67,7 @@ func incScore():
 	$CanvasLayer/Score.text="Score: "+str(score)
 
 func atEnd():
-	var score = 0
 	for d in deer:
-		score += d.score
 		d.queue_free()
 	for l in lichen:
 		l.queue_free()
@@ -82,7 +80,7 @@ func atEnd():
 	deer=[]
 	iceLichen=[]
 	round+=1
-	numDeer += 2
+	numDeer += 1
 	numLichen -= 1
 	print(score)
 	end_reindeer.emit(score)
