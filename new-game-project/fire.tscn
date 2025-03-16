@@ -1,0 +1,58 @@
+[gd_scene load_steps=12 format=3 uid="uid://cu8jx118qwjkn"]
+
+[ext_resource type="Texture2D" uid="uid://bmtt8tvyayjv7" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-27.png.png" id="1_bwgbv"]
+[ext_resource type="Texture2D" uid="uid://dywxl44cos02u" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-28.png.png" id="2_umj4n"]
+[ext_resource type="Texture2D" uid="uid://wy55u3cy0mw6" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-29.png.png" id="3_aiuiy"]
+[ext_resource type="Texture2D" uid="uid://dc2hlfxfknpve" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-30.png.png" id="4_2k5r8"]
+[ext_resource type="Texture2D" uid="uid://fh2tt64g23ev" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-31.png.png" id="5_6pvs2"]
+[ext_resource type="Texture2D" uid="uid://0gqv1gw2p3og" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-32.png.png" id="6_jd5mo"]
+[ext_resource type="Texture2D" uid="uid://b3ogbobblgk1e" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-33.png.png" id="7_gwkax"]
+[ext_resource type="Texture2D" uid="uid://bubududtwhj0u" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-34.png.png" id="8_7mbn0"]
+[ext_resource type="Texture2D" uid="uid://c2t6wfe8rl6g5" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-35.png.png" id="9_4dgd1"]
+[ext_resource type="Texture2D" uid="uid://cdhm4dx1h566f" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-36.png.png" id="10_e8bjs"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gi2fe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bwgbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_umj4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_aiuiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2k5r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6pvs2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jd5mo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gwkax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7mbn0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4dgd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e8bjs")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[node name="fire" type="Node2D"]
+
+[node name="move" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gi2fe")
+animation = &"move"
+frame = 1
+frame_progress = 0.509104
