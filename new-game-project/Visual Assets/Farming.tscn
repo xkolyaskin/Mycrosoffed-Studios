@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://lio6kakb3bdh"]
+[gd_scene load_steps=56 format=4 uid="uid://lio6kakb3bdh"]
 
 [ext_resource type="Script" uid="uid://drun88j4wnmls" path="res://Visual Assets/Farming.gd" id="1_7ejuu"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_gk8fp"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="16_vh7l4"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="17_d5xl1"]
 [ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
+[ext_resource type="Script" uid="uid://djgcmngtj7o25" path="res://Visual Assets/SeedBag.gd" id="26_vh7l4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gbk8"]
 texture = ExtResource("3_unytf")
@@ -226,6 +227,15 @@ sources/22 = SubResource("TileSetAtlasSource_ce182")
 sources/23 = SubResource("TileSetAtlasSource_k5t4t")
 sources/24 = SubResource("TileSetAtlasSource_fbjop")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vh7l4"]
+size = Vector2(36.4926, 60.1111)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5xl1"]
+size = Vector2(34.4795, 57.7042)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nq3v0"]
+size = Vector2(36.3883, 53.2444)
+
 [node name="Farming" type="Node2D"]
 z_index = -1
 script = ExtResource("1_7ejuu")
@@ -326,3 +336,52 @@ texture = ExtResource("15_313di")
 position = Vector2(285, 235)
 rotation = -1.35233
 texture = ExtResource("15_313di")
+
+[node name="SeedText" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 16.0
+offset_right = 140.0
+offset_bottom = 39.0
+theme_override_font_sizes/font_size = 15
+
+[node name="PotatoSeedBag" type="Node2D" parent="."]
+script = ExtResource("26_vh7l4")
+
+[node name="Sprite2D" type="Sprite2D" parent="PotatoSeedBag"]
+position = Vector2(36, 37)
+texture = ExtResource("14_vh7l4")
+
+[node name="Area2D" type="Area2D" parent="PotatoSeedBag"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PotatoSeedBag/Area2D"]
+position = Vector2(49, 37)
+rotation = -1.56521
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_vh7l4")
+
+[node name="BeetSeedBag" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="BeetSeedBag"]
+position = Vector2(35, 84)
+texture = ExtResource("11_kdp5k")
+
+[node name="Area2D" type="Area2D" parent="BeetSeedBag"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeetSeedBag/Area2D"]
+position = Vector2(47.1506, 84.9712)
+rotation = -1.57364
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_d5xl1")
+
+[node name="CabbageSeedBag" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CabbageSeedBag"]
+position = Vector2(36, 134)
+texture = ExtResource("10_nqy1b")
+
+[node name="Area2D" type="Area2D" parent="CabbageSeedBag"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CabbageSeedBag/Area2D"]
+position = Vector2(48, 134)
+rotation = -1.57451
+shape = SubResource("RectangleShape2D_nq3v0")

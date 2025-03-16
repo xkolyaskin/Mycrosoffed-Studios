@@ -1,9 +1,8 @@
 extends Node2D
 
-@onready var tile_map : TileMapLayer = $TileMapLayer
-var planted_crops = {} 
-var crop_growth_time = 5 
-var crop_stages = 3 
+@onready var seed_bags = [$PotatoSeedBag, $BeetSeedBag, $CabbageSeedBag]
+@onready var player = get_tree().get_first_node_in_group("player")
+@onready var floating_text = player.get_node("FloatingText") if player else null
 
 var crop_sprites = {  # Placeholder for different crop sprites
 	"potato": ["res://Visual Assets/Backgrounds/Potato Sprout Farmland Background Texture.png", "res://Visual Assets/Backgrounds/Potato Grown Farmland Background Texture.png"],
@@ -12,6 +11,22 @@ var crop_sprites = {  # Placeholder for different crop sprites
 }
 
 func _process(delta):
-	if Input.is_action_just_pressed("interact"):
-		var player = get_tree().get_first_node_in_group("player")
+	for seed_bag in seed_bags:
+		if seed_bag.get_node("Area2D").has_overlapping_bodies():
+			display_seed_text(seed_bag.name)
+			update_text_position()
+			return
+	hide_seed_text()
+
+func display_seed_text(seed_name):
+	var seed_type = seed_name.replace("SeedBag", "")
+	$SeedText.text = "[E] Take " + seed_type + " Seed"
+	$SeedText.visible = true
+
+func hide_seed_text():
+	if $SeedText:
+		$SeedText.visible = false
 		
+func update_text_position():
+	if $SeedText and player:
+		$SeedText.global_position = player.global_position + Vector2(-70, 180)

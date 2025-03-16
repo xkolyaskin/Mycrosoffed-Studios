@@ -1,4 +1,4 @@
-xtends Area2D
+extends Node2D
 
 @export var seed_type: String = "potato"  # Default seed type
 var player_nearby = false  # Track if the player is near
