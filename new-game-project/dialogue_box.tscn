@@ -21,6 +21,7 @@ offset_left = 72.0
 offset_top = 440.0
 offset_right = 1080.0
 offset_bottom = 616.0
+scale = Vector2(0.77, 0.77)
 theme_override_styles/panel = SubResource("StyleBoxFlat_gwjdr")
 script = ExtResource("1_0nste")
 
@@ -37,4 +38,5 @@ autowrap_mode = 2
 
 [node name="LoreGuyHeadshotLowRes-1" type="Sprite2D" parent="."]
 position = Vector2(88, 88)
+scale = Vector2(0.77, 0.77)
 texture = ExtResource("2_0nste")
