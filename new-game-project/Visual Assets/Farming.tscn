@@ -4,25 +4,27 @@
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_gk8fp"]
 [ext_resource type="Texture2D" uid="uid://7vntmcjajrr4" path="res://Visual Assets/Backgrounds/Dirt Background Texture Placeholder.png.png" id="2_f3a0o"]
 [ext_resource type="Texture2D" uid="uid://bg6bjvl8c5qsn" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png.png" id="3_unytf"]
-[ext_resource type="Texture2D" uid="uid://ctsi51o7o6rpa" path="res://Visual Assets/Backgrounds/Beet Bag Background Texture.png" id="3_wp2du"]
+[ext_resource type="Texture2D" uid="uid://bcq30snattl81" path="res://Visual Assets/Backgrounds/Beet Bag Background Texture.png" id="3_wp2du"]
 [ext_resource type="Texture2D" uid="uid://cxq5raq3btk7e" path="res://Visual Assets/Backgrounds/seed bag.png" id="4_7ejuu"]
 [ext_resource type="Texture2D" uid="uid://hsgx3u8va71i" path="res://Visual Assets/Backgrounds/farming guy textrue pls.png" id="4_f3a0o"]
-[ext_resource type="Texture2D" uid="uid://cdmkgv50q5dhp" path="res://Visual Assets/Backgrounds/Cabbage Bag Background Texture.png" id="4_vaucg"]
-[ext_resource type="Texture2D" uid="uid://de3jkiqs7o1dx" path="res://Visual Assets/Backgrounds/Beet Sprout Farmland Background Texture.png" id="5_qhx1n"]
-[ext_resource type="Texture2D" uid="uid://bpta7df4iw1ms" path="res://Visual Assets/Backgrounds/Beet Grown Farmland Background Texture.png" id="6_bw6p8"]
+[ext_resource type="Texture2D" uid="uid://emqdct23pa42" path="res://Visual Assets/Backgrounds/Cabbage Bag Background Texture.png" id="4_vaucg"]
+[ext_resource type="Texture2D" uid="uid://d0tr3bf1k2bcv" path="res://Visual Assets/Backgrounds/Beet Sprout Farmland Background Texture.png" id="5_qhx1n"]
+[ext_resource type="Texture2D" uid="uid://bjcig8lxuwusr" path="res://Visual Assets/Backgrounds/Beet Grown Farmland Background Texture.png" id="6_bw6p8"]
 [ext_resource type="Texture2D" uid="uid://dck2ocisxiwrm" path="res://Visual Assets/Backgrounds/Tree border 128x128.png" id="6_dw2f1"]
-[ext_resource type="Texture2D" uid="uid://jxrvquiedimh" path="res://Visual Assets/Backgrounds/Potato Sprout Farmland Background Texture.png" id="7_nqy1b"]
-[ext_resource type="Texture2D" uid="uid://b5b8jsq8rpq67" path="res://Visual Assets/Backgrounds/Potato Grown Farmland Background Texture.png" id="8_kdp5k"]
-[ext_resource type="Texture2D" uid="uid://dn2jiv8dihgyx" path="res://Visual Assets/Backgrounds/Potato Bag Background Texture.png" id="9_8xy50"]
-[ext_resource type="Texture2D" uid="uid://g385whv83yqe" path="res://Visual Assets/Backgrounds/Dirt Background Texture.png" id="14_313di"]
-[ext_resource type="Texture2D" uid="uid://cywv7kei8g8ni" path="res://Visual Assets/Backgrounds/Empty Farmland Background Texture.png" id="15_vh7l4"]
-[ext_resource type="Texture2D" uid="uid://b2336rb40qbn0" path="res://Visual Assets/Backgrounds/Cabbage Seeds Farmland Background Texture.png" id="16_d5xl1"]
-[ext_resource type="Texture2D" uid="uid://b2apnsqs2uvqn" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
+[ext_resource type="Texture2D" uid="uid://cia17q8s854l3" path="res://Visual Assets/Backgrounds/Potato Sprout Farmland Background Texture.png" id="7_nqy1b"]
+[ext_resource type="Texture2D" uid="uid://dfaf8nnrw41x4" path="res://Visual Assets/Backgrounds/Potato Grown Farmland Background Texture.png" id="8_kdp5k"]
+[ext_resource type="Texture2D" uid="uid://bouq3i6445035" path="res://Visual Assets/Backgrounds/Potato Bag Background Texture.png" id="9_8xy50"]
+[ext_resource type="Texture2D" uid="uid://dvj7rlhn737u0" path="res://Visual Assets/Backgrounds/Dirt Background Texture.png" id="14_313di"]
+[ext_resource type="Texture2D" uid="uid://5jmgfhxi3ipc" path="res://Visual Assets/Backgrounds/Empty Farmland Background Texture.png" id="15_vh7l4"]
+[ext_resource type="Texture2D" uid="uid://dt6wqu7kobe6" path="res://Visual Assets/Backgrounds/Cabbage Seeds Farmland Background Texture.png" id="16_d5xl1"]
+[ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mnjto"]
 texture = ExtResource("3_wp2du")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Beet"
+0:0/0/custom_data_3 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gbk8"]
 texture = ExtResource("3_unytf")
@@ -33,6 +35,8 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("4_vaucg")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Potato"
+0:0/0/custom_data_3 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8gytu"]
 texture = ExtResource("5_qhx1n")
@@ -51,6 +55,8 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("3_wp2du")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Beet"
+0:0/0/custom_data_3 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_06gvg"]
 texture = ExtResource("7_nqy1b")
@@ -69,6 +75,8 @@ texture_region_size = Vector2i(32, 32)
 texture = ExtResource("9_8xy50")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
+0:0/0/custom_data_2 = "Potato"
+0:0/0/custom_data_3 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2p100"]
 texture = ExtResource("4_7ejuu")
@@ -125,6 +133,8 @@ custom_data_layer_1/name = "Plantable"
 custom_data_layer_1/type = 1
 custom_data_layer_2/name = "Plant_Name"
 custom_data_layer_2/type = 4
+custom_data_layer_3/name = "Pick_Upable"
+custom_data_layer_3/type = 1
 sources/1 = SubResource("TileSetAtlasSource_6gbk8")
 sources/2 = SubResource("TileSetAtlasSource_2p100")
 sources/3 = SubResource("TileSetAtlasSource_unytf")

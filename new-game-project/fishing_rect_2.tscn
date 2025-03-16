@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dflrpmqwscvcv"]
+
+[node name="FishingRect" type="ColorRect"]
+z_index = -1
+z_as_relative = false
+offset_left = 1.0
+offset_top = -72.0
+offset_right = 31.0
+offset_bottom = -49.0
+color = Color(0, 0.756863, 0.054902, 1)
