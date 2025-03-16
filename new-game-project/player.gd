@@ -2,8 +2,7 @@ extends CharacterBody2D
 var fishing = false
 var can_move = true
 
-@onready
-var _animatedBody = $PlayerSprite/AnimatedSprite2D
+@onready var _animatedBody = $PlayerSprite/AnimatedSprite2D
 
 func _ready():
 	add_to_group("player")

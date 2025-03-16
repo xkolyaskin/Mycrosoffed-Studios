@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="16_vh7l4"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="17_d5xl1"]
 [ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
-[ext_resource type="Script" path="res://Visual Assets/SeedBag.gd" id="26_vh7l4"]
+[ext_resource type="Script" uid="uid://djgcmngtj7o25" path="res://Visual Assets/SeedBag.gd" id="26_vh7l4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gbk8"]
 texture = ExtResource("3_unytf")
@@ -336,6 +336,14 @@ texture = ExtResource("15_313di")
 position = Vector2(285, 235)
 rotation = -1.35233
 texture = ExtResource("15_313di")
+
+[node name="HeldSeedLabel" type="Label" parent="."]
+z_index = 20
+offset_left = 44.0
+offset_top = 19.0
+offset_right = 103.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 10
 
 [node name="SeedText" type="Label" parent="."]
 offset_left = 7.0
