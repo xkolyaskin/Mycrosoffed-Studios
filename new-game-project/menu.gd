@@ -7,4 +7,4 @@ func _on_quit_pressed() -> void:
 
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://Game.tscn")
+	FadeToBlack.change_scene_with_fade("res://Game.tscn")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://copyelhcc1lnh"]
+[gd_scene load_steps=22 format=4 uid="uid://by3pqdi07jfji"]
 
 [ext_resource type="Script" uid="uid://wdseijdxrxfj" path="res://dialogue.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_u44n3"]
@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://ckyy6v6hqsat4" path="res://Visual Assets/Backgrounds/Snow Background Texture-1.png - Copy (2).png" id="4_yx171"]
 [ext_resource type="Texture2D" uid="uid://b18t5ixdd12gr" path="res://Visual Assets/Character Sprites/Lore Guy.png" id="5_r0x5m"]
 [ext_resource type="Texture2D" uid="uid://b5epith20tq53" path="res://Visual Assets/Character Sprites/Character - Standing.png" id="6_2vekm"]
-[ext_resource type="Script" path="res://lore_guy_reindeer.gd" id="6_joorw"]
+[ext_resource type="Script" uid="uid://dq8oiu0ybtfsw" path="res://lore_guy_reindeer.gd" id="6_joorw"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="7_2vekm"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="8_yx171"]
-[ext_resource type="PackedScene" path="res://dialogue_box.tscn" id="11_yhmtn"]
+[ext_resource type="PackedScene" uid="uid://cabbtqxnynl5b" path="res://dialogue_box.tscn" id="11_yhmtn"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="12_yyih5"]
 [ext_resource type="Texture2D" uid="uid://bll1lb2rjpste" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Log.png" id="13_qjyg3"]
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="14_elkpi"]
