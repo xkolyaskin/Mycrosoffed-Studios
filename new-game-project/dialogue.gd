@@ -60,10 +60,12 @@ var usedDialogue = []
 
 func _ready():
 	scene = GlobalCountTracker.get_dialogue_count()
+	print("dialogue number " + str(scene))
 	$Fire/move.play("move")
 	await get_tree().create_timer(1).timeout
 	
 	match scene:
+		
 		1:
 			
 			await play_dialogue(dialogueIntro)
@@ -72,7 +74,7 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm1_2)
 			print("next_scene")
-			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn")
+			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn") #replace with fishing
 		2:
 			await play_dialogue(pickRandom())
 			
@@ -102,7 +104,7 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm2_3)
 			print("next_scene")
-			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
+			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn") # chane order, add rest
 			
 		5:
 			await play_dialogue(pickRandom())

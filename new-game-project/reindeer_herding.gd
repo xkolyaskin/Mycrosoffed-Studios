@@ -22,6 +22,7 @@ func _ready() -> void:
 
 func beginRound(round):
 	round = GlobalCountTracker.get_reindeer_count() - 1
+	print("herding " + str(round))
 	$CanvasLayer/Score.text="Score: "+str(score)
 	$map.position=Vector2(-103,-68)
 	$Player.position=Vector2(327,193)

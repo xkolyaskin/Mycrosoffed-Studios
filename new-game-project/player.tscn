@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=15 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://nat77olsf8mg" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 1.png" id="2_2hs0m"]
 [ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
@@ -34,6 +34,18 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dw050"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1jxqw"]
 bg_color = Color(1, 0.345098, 0.278431, 1)
 border_width_left = 2
@@ -56,7 +68,7 @@ corner_radius_bottom_left = 6
 
 [sub_resource type="Curve2D" id="Curve2D_onrkg"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -74, -63, 0, 0, 0, 0, 74, -62)
+"points": PackedVector2Array(0, 0, 0, 0, -74, -63, 0, 0, 0, 0, 74, -63)
 }
 point_count = 2
 
@@ -88,6 +100,17 @@ animation = &"walk"
 position = Vector2(0, 25)
 zoom = Vector2(1.5, 1.5)
 
+[node name="FishingBorder" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+z_index = 128
+z_as_relative = false
+offset_left = -75.0
+offset_top = -76.0
+offset_right = 75.0
+offset_bottom = -49.0
+theme_override_styles/background = SubResource("StyleBoxFlat_dw050")
+show_percentage = false
+
 [node name="FishingBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 visible = false
@@ -107,7 +130,6 @@ curve = SubResource("Curve2D_onrkg")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true
 position = Vector2(-74, -63)
-rotation = 0.00675665
 
 [node name="SalmonGainIcon-1_png" type="Sprite2D" parent="."]
 visible = false

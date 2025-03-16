@@ -40,27 +40,24 @@ func fish(fishing_spot):
 	
 	
 	#load interval
-	var fishing_rect = preload("res://fishing_rect.tscn")
+	var fishing_rect = preload("res://fishing_rect_2.tscn")
 	var right_interval = fishing_rect.instantiate()
-	var left_interval = fishing_rect.instantiate()
+	
 	
 	#make 2 rectangles for interval
 	%PathFollow2D.progress_ratio = interval_start
-	left_interval.global_position = %PathFollow2D.position  
+	right_interval.global_position = %PathFollow2D.position  
+	right_interval.global_position += Vector2(0,-14)
 
-	%PathFollow2D.progress_ratio = interval_end
-	right_interval.global_position = %PathFollow2D.position
 
-	%PathFollow2D.get_parent().add_child(left_interval)
 	%PathFollow2D.get_parent().add_child(right_interval)
-	left_interval.z_index = 100
+
 	right_interval.z_index = 100
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	#fishing sequence
 	while not has_caught:
 		overlapping_bodies = %HurtBox.get_overlapping_bodies()
 		if overlapping_bodies.size() == 0:
-			left_interval.queue_free()
 			right_interval.queue_free()
 			fishing = false
 			%FishingBar.visible = false
@@ -93,12 +90,12 @@ func fish(fishing_spot):
 			else:
 				$"Water-splash-46402".play()
 				has_caught = true  
+				get_parent().inc_score()
 	#has caught fish or failed
 	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
 	overlapping_bodies[0].set_fished()
 	
 	%FishingBar.visible = false
-	left_interval.queue_free()
 	right_interval.queue_free()
 	
 	fishing = false

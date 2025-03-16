@@ -3,10 +3,11 @@ extends Node2D
 var timer = 45
 var score = 0
 var game_number
-var speeds = [5, 3, 1.5]
+var speeds = [5, 2.5, 1.25]
 
 func _ready():
 	game_number = GlobalCountTracker.get_fishing_count() - 1
+	print("fishing round" + str(game_number))
 	$CrackTimer.wait_time = speeds[game_number]
 	spawn_fishing_spot()
 	spawn_fishing_spot()
