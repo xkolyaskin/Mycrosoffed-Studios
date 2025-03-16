@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var dialogue_box = $DialogueBox
+@onready var talking_audio = $Talking
 
 var scene = 1
 var dialogue1_1 = "While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. "
@@ -20,7 +21,9 @@ func _ready():
 func play_dialogue(string):
 	if not dialogue_box.is_typing():
 		dialogue_box.visible = true
-		dialogue_box.type_text(string)
+		talking_audio.playing = true
+		await dialogue_box.type_text(string)
+		talking_audio.playing = false
 	while(true):
 		await get_tree().create_timer(0.01).timeout
 		if Input.is_action_just_pressed("interact") and not dialogue_box.is_typing(): 

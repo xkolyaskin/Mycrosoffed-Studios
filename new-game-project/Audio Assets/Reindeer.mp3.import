@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqccoe0nlvo8v"
+path="res://.godot/imported/Reindeer.mp3-639bd43c3d37e2e552cb564ef9425ed6.mp3str"
+
+[deps]
+
+source_file="res://Audio Assets/Reindeer.mp3"
+dest_files=["res://.godot/imported/Reindeer.mp3-639bd43c3d37e2e552cb564ef9425ed6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
