@@ -60,8 +60,7 @@ var randomDialogue = [
 var usedDialogue = []
 
 func _ready():
-	if get_tree().paused:
-		await get_tree().tree_unpaused
+	await get_tree().create_timer(1).timeout
 	if scene == 1:
 		await play_dialogue(dialogueIntro)
 		print("next")
