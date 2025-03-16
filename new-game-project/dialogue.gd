@@ -4,8 +4,10 @@ extends Node2D
 @onready var talking_audio = $Talking
 
 var scene = 1
+var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the village elders.  We could use some help keeping our village fed."
+
 var dialogueFarm1_1 = "While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. "
-var dialogueFarm1_2 = "Once they are planted, wait for them to grow and harvest your crops before they go bad. Pick up/place using SPACE or E."
+var dialogueFarm1_2 = "Once they are planted, wait for them to grow and harvest your crops before they go bad. Pick up/place using SPACE or E. WASD to move"
 
 var dialogueFish1_1 = "Salmon is one of the most important foods here, but fishing is no easy work."
 var dialogueFish1_2 = "Walk up to the fishing hole and when indicated, press SPACE or E at the right time to catch a fish.  Catch enough fish and you will succeed."
@@ -61,12 +63,21 @@ var usedDialogue = []
 func _ready():
 	
 	if scene == 1:
+		await play_dialogue(dialogueIntro)
+		print("next")
 		await play_dialogue(dialogueFarm1_1)
 		print("next")
 		await play_dialogue(dialogueFarm1_2)
 		print("next_scene")
 		
 		
+
+func pickRandom():
+	var ind = randi_range(0,len(randomDialogue)-1)
+	var line = randomDialogue[ind]
+	randomDialogue.remove_at(ind)
+	usedDialogue.add(line)
+	return line
 
 func play_dialogue(string):
 	if not dialogue_box.is_typing():
