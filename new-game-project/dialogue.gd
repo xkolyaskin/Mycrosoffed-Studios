@@ -16,7 +16,7 @@ var dialogueHerd1_2 = "A favorite of theirs is lichen, which grows under the sno
 var dialogueHerd1_3 = "Guide them to the green lichen patches and make sure they don’t wander too far."
 
 var dialogueFarm2_1 = "One of the best things the Russians brought was telnoye."
-var dialogueFarm2_2 = "This amazing dish consists of a mashed potato base covered with a mixture of salmon, eggs, flour, onions, dried porcini mushrooms and other plants."
+var dialogueFarm2_2 = "This amazing dish consists of a mashed potato base with a mixture of salmon, eggs, flour, onions, dried porcini mushrooms and other plants."
 var dialogueFarm2_3 = "Mmmm, actually, can you spare a few potatoes once you’re done?"
 
 var dialogueFish2_1 = "I could really go for some yukola right now."
