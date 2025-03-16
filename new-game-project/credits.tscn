@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0naeox7kacdi"]
+
+[ext_resource type="Script" uid="uid://du0smph1hpw1" path="res://credits.gd" id="1_g4wvt"]
+[ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="1_nm7lk"]
+[ext_resource type="Script" path="res://scroll.gd" id="3_pjc1l"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_g4wvt")
+
+[node name="Scroll" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1.0
+offset_top = -1896.0
+offset_right = 1164.0
+theme_override_fonts/font = ExtResource("1_nm7lk")
+theme_override_font_sizes/font_size = 60
+text = "Concept Design
+Thomas Ashcraft, Luke Kastner, Alex Kolyaskin, 
+Grant Miller, William Serhal
+
+Narrative 
+Thomas Ashcraft, Luke Kastner, Alex Kolyaskin, 
+Grant Miller, William Serhal
+
+Programming
+Thomas Ashcraft, Luke Kastner, Alex Kolyaskin
+
+Sound Design 
+William Serhal
+
+Voice Acting
+Grant Miller
+
+Art Design
+Grant Miller
+
+Support
+Viashnavi Raparthi
+
+Acknowledgements
+Dr. Katie Jarriel
+C3 Game Jam
+Purdue John Martinson Honors College
+"
+horizontal_alignment = 1
+script = ExtResource("3_pjc1l")
