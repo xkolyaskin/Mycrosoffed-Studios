@@ -60,17 +60,67 @@ var randomDialogue = [
 var usedDialogue = []
 
 func _ready():
-	await get_tree().create_timer(1).timeout
-	if scene == 1:
-		await play_dialogue(dialogueIntro)
-		print("next")
-		await play_dialogue(dialogueFarm1_1)
-		print("next")
-		await play_dialogue(dialogueFarm1_2)
-		print("next_scene")
-		
-		
-
+	if get_tree().paused:
+		await get_tree().tree_unpaused
+	
+	match scene:
+		1:
+			await play_dialogue(dialogueIntro)
+			print("next")
+			await play_dialogue(dialogueFarm1_1)
+			print("next")
+			await play_dialogue(dialogueFarm1_2)
+			print("next_scene")
+		2:
+			await play_dialogue(dialogueFish1_1)
+			print("next")
+			await play_dialogue(dialogueFish1_2)
+			print("next_scene")
+		3:
+			await play_dialogue(dialogueHerd1_1)
+			print("next")
+			await play_dialogue(dialogueHerd1_2)
+			print("next")
+			await play_dialogue(dialogueHerd1_3)
+			print("next_scene")
+		4:
+			await play_dialogue(dialogueFarm2_1)
+			print("next")
+			await play_dialogue(dialogueFarm2_2)
+			print("next")
+			await play_dialogue(dialogueFarm2_3)
+			print("next_scene")
+		5:
+			await play_dialogue(dialogueFish2_1)
+			print("next")
+			await play_dialogue(dialogueFish2_2)
+			print("next_scene")
+		6:
+			await play_dialogue(dialogueHerd2_1)
+			print("next")
+			await play_dialogue(dialogueHerd2_2)
+			print("next_scene")
+		7:
+			await play_dialogue(dialogueFarm3_1)
+			print("next")
+			await play_dialogue(dialogueFarm3_2)
+			print("next_scene")
+		8:
+			await play_dialogue(dialogueFish3_1)
+			print("next")
+			await play_dialogue(dialogueFish3_2)
+			print("next_scene")
+		9:
+			await play_dialogue(dialogueHerd3_1)
+			print("next")
+			await play_dialogue(dialogueHerd3_2)
+			print("next")
+			await play_dialogue(dialogueHerd3_2)
+			print("next_scene")
+		10:
+			await play_dialogue(dialogueEnd_1)
+			#add good and bad
+	scene+=1
 func pickRandom():
 	var ind = randi_range(0,len(randomDialogue)-1)
 	var line = randomDialogue[ind]
