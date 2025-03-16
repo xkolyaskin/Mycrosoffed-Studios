@@ -344,6 +344,7 @@ offset_top = 19.0
 offset_right = 103.0
 offset_bottom = 42.0
 theme_override_font_sizes/font_size = 10
+text = "hey pls item"
 
 [node name="SeedText" type="Label" parent="."]
 offset_left = 7.0

@@ -2,11 +2,23 @@ extends CharacterBody2D
 var fishing = false
 var can_move = true
 
-@onready
-var _animatedBody = $PlayerSprite/AnimatedSprite2D
+@onready var _animatedBody = $PlayerSprite/AnimatedSprite2D
+@onready var farming = get_tree().get_first_node_in_group("farming")
 
 func _ready():
 	add_to_group("player")
+	
+func _process(delta):
+	if Input.is_action_just_pressed("interact"):
+		print("Interact key pressed!")
+		for body in %HurtBox.get_overlapping_bodies():
+			if body.is_in_group("seed_bag"):
+				print("Seed bag found:", body.seed_type)
+				if farming:
+					farming.pick_up_seed(body.seed_type)
+				else:
+					print("Error: Farming node not found!")
+				return 
 
 func _physics_process(delta):	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
