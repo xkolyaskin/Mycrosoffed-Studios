@@ -18,6 +18,8 @@ var revy = 1
 var eating = false
 var timeleft = 100
 var score = 0
+var wait = false
+var walking = false
 
 func _physics_process(delta):	
 	velocity=Vector2(0,0)
@@ -44,10 +46,10 @@ func _physics_process(delta):
 		#happy.show()
 		if !eating:
 			eating=true
-			_animatedBody.play("feeding")
-			_animatedBody.set_frame_and_progress(3,0.5)
+			animate("feeding")
 	elif p:
-		_animatedBody.play("walk")
+		walk()
+		animate("walk")
 		var direction = global_position.direction_to(player.global_position)
 		velocity = direction * speed * -1
 		move_and_slide()
@@ -56,13 +58,24 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
-			if randi_range(0,100)==5:
-				$Reindeer3.play()
-			_animatedBody.play("feeding")
-			_animatedBody.set_frame_and_progress(3,0.5)
+		if randi_range(0,100)==5:
+			$Reindeer3.play()
+		animate("feeding")
 	else:
-		_animatedBody.play("idle")
-		_animatedBody.set_frame_and_progress(3,0.5)
+		animate("idle")
+
+func animate(cycle):
+	if !wait:
+		wait = true
+		await get_tree().create_timer(0.5).timeout
+		wait = false
+	_animatedBody.play(cycle)
+	#_animatedBody.set_frame_and_progress(3,0.5)
+	
+func walk():
+	walking = true
+	await get_tree().create_timer(1).timeout
+	walking = false
 
 func _on_timer_timeout():
 	count+=1
@@ -76,8 +89,9 @@ func _on_timer_timeout():
 		else:
 			revy=1
 		count=0
-	velocity=Vector2(revx*randi_range(0,50),revy*randi_range(0,50))
-	move_and_slide()
+	if !walking:
+		velocity=Vector2(revx*randi_range(0,50),revy*randi_range(0,50))
+		move_and_slide()
 	if eating:
 		timeleft-=1
 		if timeleft==0:

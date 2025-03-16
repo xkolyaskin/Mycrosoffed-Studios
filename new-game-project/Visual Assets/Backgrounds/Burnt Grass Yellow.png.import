@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pisnmlowcvc"
-path="res://.godot/imported/Decoration - Bush.png-cfa805489dde603a6b4663b79d7a8916.ctex"
+uid="uid://cn12e6wsjvfvl"
+path="res://.godot/imported/Burnt Grass Yellow.png-3b577c14445f65bd6ee750277598d4a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Decorations/Decoration - Bush.png"
-dest_files=["res://.godot/imported/Decoration - Bush.png-cfa805489dde603a6b4663b79d7a8916.ctex"]
+source_file="res://Visual Assets/Backgrounds/Burnt Grass Yellow.png"
+dest_files=["res://.godot/imported/Burnt Grass Yellow.png-3b577c14445f65bd6ee750277598d4a7.ctex"]
 
 [params]
 

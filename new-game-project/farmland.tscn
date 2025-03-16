@@ -1,0 +1,84 @@
+[gd_scene load_steps=10 format=3 uid="uid://bu2k6utm6ng7v"]
+
+[ext_resource type="Script" uid="uid://cq4iveaqiecvg" path="res://farmland.gd" id="1_337p4"]
+[ext_resource type="Texture2D" uid="uid://5jmgfhxi3ipc" path="res://Visual Assets/Backgrounds/Empty Farmland Background Texture.png" id="1_kaipa"]
+[ext_resource type="Texture2D" uid="uid://dt6wqu7kobe6" path="res://Visual Assets/Backgrounds/Cabbage Seeds Farmland Background Texture.png" id="3_jit8g"]
+[ext_resource type="Texture2D" uid="uid://d0tr3bf1k2bcv" path="res://Visual Assets/Backgrounds/Beet Sprout Farmland Background Texture.png" id="4_7ew22"]
+[ext_resource type="Texture2D" uid="uid://cia17q8s854l3" path="res://Visual Assets/Backgrounds/Potato Sprout Farmland Background Texture.png" id="5_kjr6f"]
+[ext_resource type="Texture2D" uid="uid://dfaf8nnrw41x4" path="res://Visual Assets/Backgrounds/Potato Grown Farmland Background Texture.png" id="6_7ew22"]
+[ext_resource type="Texture2D" uid="uid://bjcig8lxuwusr" path="res://Visual Assets/Backgrounds/Beet Grown Farmland Background Texture.png" id="7_kjr6f"]
+[ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="8_kjr6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r62q1"]
+size = Vector2(54, 20)
+
+[node name="Farmland" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource("1_337p4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r62q1")
+
+[node name="EmptyFarmlandBackgroundTexture" type="Sprite2D" parent="."]
+position = Vector2(-16, 0)
+texture = ExtResource("1_kaipa")
+
+[node name="EmptyFarmlandBackgroundTexture2" type="Sprite2D" parent="."]
+position = Vector2(16, 0)
+texture = ExtResource("1_kaipa")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="CabbageSeeds" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(16, 0)
+texture = ExtResource("3_jit8g")
+
+[node name="CabbageSeedsFarmlandBackgroundTexture" type="Sprite2D" parent="CabbageSeeds"]
+position = Vector2(-32, 0)
+texture = ExtResource("3_jit8g")
+
+[node name="BeetSeeds" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-16, 0)
+texture = ExtResource("4_7ew22")
+
+[node name="BeetSproutFarmlandBackgroundTexture" type="Sprite2D" parent="BeetSeeds"]
+position = Vector2(32, 0)
+texture = ExtResource("4_7ew22")
+
+[node name="PotatoSeeds" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-16, 0)
+texture = ExtResource("5_kjr6f")
+
+[node name="PotatoSproutFarmlandBackgroundTexture" type="Sprite2D" parent="PotatoSeeds"]
+position = Vector2(32, 0)
+texture = ExtResource("5_kjr6f")
+
+[node name="PotatoGrown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-16, 0)
+texture = ExtResource("6_7ew22")
+
+[node name="PotatoGrownFarmlandBackgroundTexture" type="Sprite2D" parent="PotatoGrown"]
+position = Vector2(32, 0)
+texture = ExtResource("6_7ew22")
+
+[node name="BeetGrown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-16, 0)
+texture = ExtResource("7_kjr6f")
+
+[node name="BeetGrownFarmlandBackgroundTexture" type="Sprite2D" parent="BeetGrown"]
+position = Vector2(32, 0)
+texture = ExtResource("7_kjr6f")
+
+[node name="CabbageGrown" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-16, 0)
+texture = ExtResource("8_kjr6f")
+
+[node name="CabbageGrownFarmlandBackgroundTexture" type="Sprite2D" parent="CabbageGrown"]
+position = Vector2(32, 0)
+texture = ExtResource("8_kjr6f")

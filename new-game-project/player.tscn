@@ -149,3 +149,5 @@ texture = ExtResource("6_2hs0m")
 
 [node name="Water-splash-46402" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_1jxqw")
+
+[connection signal="plant_b" from="." to="." method="_on_plant_b"]
