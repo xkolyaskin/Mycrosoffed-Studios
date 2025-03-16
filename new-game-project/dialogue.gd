@@ -53,7 +53,6 @@ var randomDialogue = [
 	"I once saw a reindeer so big I thought that even I could ride it. The reindeer thought otherwise.",
 	"There was once a terrible blizzard that dumped so much snow it covered my entire house. It took me an entire day to dig myself out.",
 	"I’ve heard rumors of a wild Purdue Pete fish in the rivers nearby…",
-	"A recent visitor informed me of a tree that didn’t seem quite right.",
 	"People often ask how I survive without my sight, let's just say I’m a really good elder.",
 	"There’s something to be said about a salmon hot dog that most people just don’t understand.",
 	"Where’s the fun in taking things one step at a time?"
