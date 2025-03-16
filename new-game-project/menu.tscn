@@ -63,7 +63,21 @@ offset_right = 1045.0
 offset_bottom = 561.0
 theme_override_fonts/font = ExtResource("2_ouk20")
 theme_override_font_sizes/font_size = 27
-text = "Click to Return to Menu"
+text = "Resources:
+
+Indigenous Climate Initiatives:
+Cultural Survival (culturalsurvival.org)
+Arctic Council Indigenous Peoples' Secretariat (arcticpeoples.com)
+International Work Group for Indigenous Affairs (iwgia.org)
+
+Reducing Your Carbon Footprint:
+Reduce meat and dairy consumption to lower emissions.
+Fly less and use trains, buses, and carpooling.
+Reduce energy consumption or switch to a renewable energy source.
+Buy less. Recycle more. Choose sustainable products.
+Support climate policies and spread awareness in your community.
+
+Click to Return to Menu"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

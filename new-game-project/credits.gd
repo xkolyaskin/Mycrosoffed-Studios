@@ -9,4 +9,5 @@ func _ready() -> void:
 	for i in range(0,time*10):
 		await get_tree().create_timer(0.1).timeout
 		position=position+Vector2(0,0-pms)
-	print("End")
+	GlobalCountTracker.reset()
+	FadeToBlack.change_scene_with_fade("res://menu.tscn")

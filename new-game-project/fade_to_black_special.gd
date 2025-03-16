@@ -12,7 +12,18 @@ func _ready():
 
 func change_scene_with_fade(scene_path: String, credits, duration := 1.0):
 	if credits:
-		$Label.text=""
+		if GlobalCountTracker.score_is_good():
+			$Label.text="Due to your help herding reindeer, planting crops,\n
+			 and fishing, this village will be able to rebuild.\n
+			But in real life, many Indigenous communities, including the Koryak people,\n
+			 are facing similar difficulties as a result of climate change. You can help.\n
+			 Click the Resources button on the menu to learn more."
+		else:
+			$Label.text="You weren’t able to gain enough resources through herding reindeer,\n
+			planting crops, or fishing, so this village will not be able to rebuild.\n
+			But in real life, many Indigenous communities, including the Koryak people,\n
+			are facing similar difficulties as a result of climate change.\n
+			You can help. Click the Resources button on the menu to learn more."
 	else:
 		$Label.text="In a small village, Khailino, in the Kamchatka Peninsula of eastern Russia…"
 	fade_rect.visible = true
