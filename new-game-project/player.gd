@@ -14,8 +14,12 @@ func _physics_process(delta):
 		_animatedBody.play("walk")
 		if velocity.x < 0:
 			_animatedBody.flip_h=true
+			%FishingRod.flip_h = true
+			%FishingRod.global_position = global_position + Vector2(-18,0)
 		elif velocity.x > 0:
+			%FishingRod.flip_h = false
 			_animatedBody.flip_h=false
+			%FishingRod.global_position = global_position + Vector2(18,0)
 	else:
 		_animatedBody.stop()
 		_animatedBody.set_frame_and_progress(3,0.5)
@@ -27,12 +31,15 @@ func _physics_process(delta):
 
 func fish(fishing_spot):
 	if fishing:
+		%FishingRod.visible = true
 		return
 	fishing = true
 	var fishing_interval = 0.2
 	var interval_start = randf_range(0,0.8)
 	var interval_end = interval_start + fishing_interval
 	%FishingBar.visible = true
+	%FishingBorder.visible = true
+	
 	var increasing = true
 	var has_caught = false
 	var speed = 3
@@ -46,8 +53,7 @@ func fish(fishing_spot):
 	#make 2 rectangles for interval
 	%PathFollow2D.progress_ratio = interval_start
 	right_interval.global_position = %PathFollow2D.position  
-	right_interval.global_position += Vector2(0,-14)
-
+	right_interval.global_position += Vector2(0,-12)
 
 	%PathFollow2D.get_parent().add_child(right_interval)
 
@@ -59,6 +65,8 @@ func fish(fishing_spot):
 		if overlapping_bodies.size() == 0:
 			right_interval.queue_free()
 			fishing = false
+			%FishingBorder.visible = false
+			%FishingRod.visible = false
 			%FishingBar.visible = false
 			return
 		await get_tree().create_timer(0.01).timeout
@@ -86,14 +94,17 @@ func fish(fishing_spot):
 					$"SalmonGainIcon-1_png".position += Vector2(0,-5)
 				
 				$"SalmonGainIcon-1_png".visible = false
+				get_parent().inc_score()
 			else:
 				$"Water-splash-46402".play()
 				has_caught = true  
-				get_parent().inc_score()
+				
 	#has caught fish or failed
 	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
 	overlapping_bodies[0].set_fished()
 	
+	%FishingRod.visible = false
+	%FishingBorder.visible = false
 	%FishingBar.visible = false
 	right_interval.queue_free()
 	

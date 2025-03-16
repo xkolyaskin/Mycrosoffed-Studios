@@ -4,7 +4,7 @@
 z_index = -1
 z_as_relative = false
 offset_left = 1.0
-offset_top = -72.0
+offset_top = -71.0
 offset_right = 31.0
-offset_bottom = -49.0
+offset_bottom = -46.0
 color = Color(0, 0.756863, 0.054902, 1)
