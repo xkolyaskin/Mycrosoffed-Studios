@@ -89,7 +89,6 @@ func atEnd():
 	score=0
 	await get_tree().create_timer(5).timeout
 	$CanvasLayer/Done.hide()
-	if round<3:
-		beginRound(round)
-	else:
-		print("game end")
+	#go back to lore guy
+	#if round<3:
+		#beginRound(round)
