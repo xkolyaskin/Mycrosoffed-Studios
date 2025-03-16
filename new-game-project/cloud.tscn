@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddswu1d1i2jtc"]
+
+[ext_resource type="Texture2D" uid="uid://bniqsw1kwj7hv" path="res://Visual Assets/Item Icons/Cloud-1.png" id="1_qaedo"]
+[ext_resource type="Texture2D" uid="uid://ds42eikl3qngq" path="res://Visual Assets/Item Icons/Cloud-2.png" id="2_fcyt7"]
+[ext_resource type="Texture2D" uid="uid://bu4li4d0joqw2" path="res://Visual Assets/Item Icons/Cloud-3.png" id="3_sytix"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rmn2t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qaedo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fcyt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sytix")
+}],
+"loop": true,
+"name": &"rain",
+"speed": 5.0
+}]
+
+[node name="Cloud" type="Node2D"]
+
+[node name="am" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -32)
+sprite_frames = SubResource("SpriteFrames_rmn2t")
+animation = &"rain"
+frame_progress = 0.0266149

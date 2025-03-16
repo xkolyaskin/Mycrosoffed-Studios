@@ -85,6 +85,7 @@ sprite_frames = SubResource("SpriteFrames_nvl01")
 animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 25)
 zoom = Vector2(1.5, 1.5)
 
 [node name="FishingBar" type="ProgressBar" parent="."]

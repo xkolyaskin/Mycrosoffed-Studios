@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl1sgskdmudr8"]
+[gd_scene load_steps=15 format=3 uid="uid://bl1sgskdmudr8"]
 
 [ext_resource type="Script" uid="uid://dag78cfxg0cp8" path="res://reindeer.gd" id="1_3sw0h"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="1_t2la6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nrgd5rilugpa" path="res://Visual Assets/Item Icons/Lichen Gain Icon.png" id="5_ia5g7"]
 [ext_resource type="Texture2D" uid="uid://cunud7qtkwxkr" path="res://Visual Assets/Animals/Reindeer Running Frame-3.png.png" id="6_dpdrw"]
 [ext_resource type="Texture2D" uid="uid://cuufed82nn1xk" path="res://Visual Assets/Animals/Reindeer Running Frame-4.png.png" id="7_30yed"]
+[ext_resource type="Script" uid="uid://dd2hjbqpn0smw" path="res://happy.gd" id="10_dpdrw"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t2la6"]
 radius = 126.753
@@ -89,6 +90,7 @@ offset = Vector2(-1.45, -32.59)
 [node name="Happy" type="Sprite2D" parent="."]
 texture = ExtResource("5_ia5g7")
 offset = Vector2(0, -26.86)
+script = ExtResource("10_dpdrw")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.01
