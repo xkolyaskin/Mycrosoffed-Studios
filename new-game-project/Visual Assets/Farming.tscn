@@ -282,15 +282,17 @@ layer = 5
 offset_left = 7.0
 offset_right = 84.0
 offset_bottom = 33.0
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("2_8gytu")
 theme_override_font_sizes/font_size = 32
-text = "Score: 0"
+text = "Score: 0/100"
 
 [node name="TimerLabel" type="Label" parent="CanvasLayer"]
 offset_left = 6.0
-offset_top = 28.0
-offset_right = 83.0
-offset_bottom = 61.0
+offset_top = 38.0
+offset_right = 121.0
+offset_bottom = 71.0
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("2_8gytu")
 theme_override_font_sizes/font_size = 32
 text = "Timer: 45"

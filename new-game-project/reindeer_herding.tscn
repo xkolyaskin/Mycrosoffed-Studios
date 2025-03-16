@@ -36,10 +36,11 @@ offset_left = 13.0
 offset_top = 11.0
 offset_right = 261.0
 offset_bottom = 78.0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_a0ybq")
 theme_override_font_sizes/font_size = 31
-text = "Score: "
+text = "Score: 0/50"
 
 [node name="Done" type="Label" parent="CanvasLayer"]
 z_index = 10
@@ -55,9 +56,10 @@ text = "You did it!"
 [node name="Time" type="Label" parent="CanvasLayer"]
 z_index = 10
 offset_left = 13.0
-offset_top = 38.0
+offset_top = 49.0
 offset_right = 261.0
-offset_bottom = 105.0
+offset_bottom = 116.0
+scale = Vector2(1.5, 1.5)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_a0ybq")
 theme_override_font_sizes/font_size = 31

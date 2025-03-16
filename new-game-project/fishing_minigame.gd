@@ -38,7 +38,7 @@ func create_crack():
 	
 func inc_score():
 	score += 1
-	$CanvasLayer/ScoreCount.text = ": " + str(score)
+	$CanvasLayer/ScoreCount.text = ": " + str(score) + "/7"
 
 func _on_timer_timeout():
 	create_crack();

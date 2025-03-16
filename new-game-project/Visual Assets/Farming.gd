@@ -26,4 +26,4 @@ func _on_timer_timeout():
 
 func inc_score(num):
 	score += num
-	$"CanvasLayer/ScoreLabel".text = "Score: " + str(score) 
+	$"CanvasLayer/ScoreLabel".text = "Score: " + str(score) + "/100"

@@ -26,7 +26,7 @@ func beginRound(round):
 	numDeer=GlobalCountTracker.get_reindeer_count()
 	numLichen=GlobalCountTracker.get_lichen_count()
 	print("herding " + str(round))
-	$CanvasLayer/Score.text="Score: "+str(score)
+	$CanvasLayer/Score.text="Score: "+str(score) + "/50"
 	$map.position=Vector2(-103,-68)
 	$Player.position=Vector2(327,193)
 	$Cloud.hide()
@@ -75,7 +75,7 @@ func cloudGo():
 
 func incScore():
 	score+=1
-	$CanvasLayer/Score.text="Score: "+str(score)
+	$CanvasLayer/Score.text="Score: "+str(score) + "/50"
 
 func atEnd():
 	for d in deer:
