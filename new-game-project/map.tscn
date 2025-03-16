@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=4 uid="uid://eqgu1qy8uh0k"]
+[gd_scene load_steps=11 format=4 uid="uid://eqgu1qy8uh0k"]
 
 [ext_resource type="Texture2D" uid="uid://c1tnxw2vllgie" path="res://Visual Assets/Water Background Texture Placeholder.png-imageonline.co-merged.png" id="1_c7s6e"]
 [ext_resource type="Texture2D" uid="uid://dcxfvg5enxvqs" path="res://Visual Assets/TileTemplate.png" id="2_wijl4"]
 [ext_resource type="Texture2D" uid="uid://bll1lb2rjpste" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Log.png" id="3_p5pve"]
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="4_urblq"]
+[ext_resource type="Texture2D" uid="uid://dp6yrim8qbglq" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Ice Clump.png" id="5_iw27f"]
+[ext_resource type="Texture2D" uid="uid://dgln6res1wwdv" path="res://Visual Assets/Backgrounds/Decorations/Rabbit.png" id="6_71pa8"]
+[ext_resource type="Texture2D" uid="uid://bybabdxa4rh6x" path="res://Visual Assets/Backgrounds/Decorations/Tent.png" id="7_71pa8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wijl4"]
 texture = ExtResource("1_c7s6e")
@@ -204,4 +207,96 @@ texture = ExtResource("4_urblq")
 
 [node name="Decoration-Log15" type="Sprite2D" parent="."]
 position = Vector2(-317, 765)
+texture = ExtResource("3_p5pve")
+
+[node name="Decoration-IceClump" type="Sprite2D" parent="."]
+position = Vector2(84, 158)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump2" type="Sprite2D" parent="."]
+position = Vector2(535, 376)
+texture = ExtResource("5_iw27f")
+
+[node name="Rabbit" type="Sprite2D" parent="."]
+position = Vector2(182, -449)
+texture = ExtResource("6_71pa8")
+
+[node name="Decoration-Rock16" type="Sprite2D" parent="."]
+position = Vector2(1359, 87)
+texture = ExtResource("4_urblq")
+
+[node name="Decoration-IceClump3" type="Sprite2D" parent="."]
+position = Vector2(-470, -178)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump4" type="Sprite2D" parent="."]
+position = Vector2(623, -65)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump5" type="Sprite2D" parent="."]
+position = Vector2(872, 192)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump6" type="Sprite2D" parent="."]
+position = Vector2(1597, 280)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump7" type="Sprite2D" parent="."]
+position = Vector2(-174, -499)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump8" type="Sprite2D" parent="."]
+position = Vector2(-235, 839)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump9" type="Sprite2D" parent="."]
+position = Vector2(463, 672)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-IceClump10" type="Sprite2D" parent="."]
+position = Vector2(81, 689)
+texture = ExtResource("5_iw27f")
+
+[node name="Rabbit2" type="Sprite2D" parent="."]
+position = Vector2(334, 666)
+texture = ExtResource("6_71pa8")
+
+[node name="Rabbit3" type="Sprite2D" parent="."]
+position = Vector2(1420, 567)
+texture = ExtResource("6_71pa8")
+
+[node name="Rabbit4" type="Sprite2D" parent="."]
+position = Vector2(1147, -410)
+texture = ExtResource("6_71pa8")
+
+[node name="Rabbit5" type="Sprite2D" parent="."]
+position = Vector2(-359, -73)
+texture = ExtResource("6_71pa8")
+
+[node name="Tent" type="Sprite2D" parent="."]
+position = Vector2(-1790, -919)
+texture = ExtResource("7_71pa8")
+
+[node name="Decoration-IceClump11" type="Sprite2D" parent="."]
+position = Vector2(545, 137)
+texture = ExtResource("5_iw27f")
+
+[node name="Decoration-Rock17" type="Sprite2D" parent="."]
+position = Vector2(334, 263)
+texture = ExtResource("4_urblq")
+
+[node name="Decoration-Rock18" type="Sprite2D" parent="."]
+position = Vector2(724, 80)
+texture = ExtResource("4_urblq")
+
+[node name="Decoration-Log16" type="Sprite2D" parent="."]
+position = Vector2(374, -50)
+texture = ExtResource("3_p5pve")
+
+[node name="Decoration-Log17" type="Sprite2D" parent="."]
+position = Vector2(296, 461)
+texture = ExtResource("3_p5pve")
+
+[node name="Decoration-Log18" type="Sprite2D" parent="."]
+position = Vector2(731, 293)
 texture = ExtResource("3_p5pve")
