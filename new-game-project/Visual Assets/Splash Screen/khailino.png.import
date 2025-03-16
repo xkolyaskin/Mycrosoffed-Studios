@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwkmdg4erk6g3"
-path="res://.godot/imported/Splash Screen.png-e927a715558e03d2fdf62533e34106b3.ctex"
+uid="uid://cf88ilt0ywl0f"
+path="res://.godot/imported/khailino.png-c426779ade56c363edc4512d5ad7e1d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Splash Screen/Splash Screen.png"
-dest_files=["res://.godot/imported/Splash Screen.png-e927a715558e03d2fdf62533e34106b3.ctex"]
+source_file="res://Visual Assets/Splash Screen/khailino.png"
+dest_files=["res://.godot/imported/khailino.png-c426779ade56c363edc4512d5ad7e1d6.ctex"]
 
 [params]
 
