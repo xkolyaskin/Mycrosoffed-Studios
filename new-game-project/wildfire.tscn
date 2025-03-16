@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjrjwen04uaig"]
+[gd_scene load_steps=13 format=3 uid="uid://cjrjwen04uaig"]
 
 [ext_resource type="Texture2D" uid="uid://50bxl0h3ksam" path="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-29.png.png" id="1_qxt6s"]
 [ext_resource type="Texture2D" uid="uid://cl1wk6ueh3c1l" path="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-30.png.png" id="2_sospr"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cmi8isffxc7lx" path="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-36.png.png" id="8_o365m"]
 [ext_resource type="Texture2D" uid="uid://x2r15rx86ihh" path="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-37.png.png" id="9_jcoow"]
 [ext_resource type="Texture2D" uid="uid://r557nbgc54n" path="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-38.png.png" id="10_gs4i8"]
+[ext_resource type="Script" uid="uid://cdhqmufcmxdaq" path="res://animated_sprite_2d.gd" id="11_sospr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kukx3"]
 animations = [{
@@ -55,3 +56,4 @@ animations = [{
 sprite_frames = SubResource("SpriteFrames_kukx3")
 autoplay = "default"
 frame_progress = 0.368901
+script = ExtResource("11_sospr")
