@@ -6,7 +6,7 @@ var timer = 45
 var round
 
 func _ready():
-	round = GlobalCountTracker.get_farming_count() + 1
+	round = GlobalCountTracker.get_farming_count() - 1
 	await get_tree().create_timer(0.1).timeout
 	if round == 1:
 		$Farmland7.hide()
