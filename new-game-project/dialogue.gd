@@ -148,10 +148,12 @@ func _ready():
 			#add good and bad
 	scene+=1
 func pickRandom():
-	var ind = randi_range(0,len(randomDialogue)-1)
+	randomDialogue=GlobalCountTracker.get_random_dialogue()
+	var ind = randi_range(0,len(randomDialogue)-1)   
 	var line = randomDialogue[ind]
 	randomDialogue.remove_at(ind)
 	usedDialogue.append(line)
+	GlobalCountTracker.set_random_dialogue(randomDialogue)
 	return line
 
 func play_dialogue(string):
