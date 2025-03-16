@@ -41,6 +41,8 @@ func change_scene_with_fade(scene_path: String, credits, duration := 1.0):
 	
 	fade.tween_property($Label, "modulate:a", 1.0, duration)
 	await fade.finished
+	if credits:
+		await get_tree().create_timer(7).timeout
 	await get_tree().create_timer(5).timeout
 	
 	var fadeagain = get_tree().create_tween().set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
