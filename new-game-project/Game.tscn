@@ -9,17 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://b18t5ixdd12gr" path="res://Visual Assets/Character Sprites/Lore Guy.png" id="5_r0x5m"]
 [ext_resource type="Texture2D" uid="uid://b5epith20tq53" path="res://Visual Assets/Character Sprites/Character - Standing.png" id="6_2vekm"]
 [ext_resource type="Texture2D" uid="uid://ckscys362k60v" path="res://Visual Assets/Backgrounds/Snow Background With Lichen.png" id="6_cpsxm"]
-[ext_resource type="Script" uid="uid://dq8oiu0ybtfsw" path="res://lore_guy_reindeer.gd" id="6_joorw"]
+[ext_resource type="Script" path="res://lore_guy_reindeer.gd" id="6_joorw"]
 [ext_resource type="Texture2D" uid="uid://65018yutcqm8" path="res://Visual Assets/Animals/Reindeer-1.png.png" id="7_2vekm"]
 [ext_resource type="Texture2D" uid="uid://dvj7rlhn737u0" path="res://Visual Assets/Backgrounds/Dirt Background Texture.png" id="7_cpsxm"]
 [ext_resource type="Texture2D" uid="uid://dgn8al7ouamdk" path="res://Visual Assets/Animals/Reindeer Eating Placeholder.png" id="8_yx171"]
-[ext_resource type="PackedScene" uid="uid://cabbtqxnynl5b" path="res://dialogue_box.tscn" id="11_yhmtn"]
+[ext_resource type="PackedScene" uid="uid://dnfdbh2cfsmuw" path="res://dialogue_box.tscn" id="11_yhmtn"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="12_yyih5"]
 [ext_resource type="Texture2D" uid="uid://bll1lb2rjpste" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Log.png" id="13_qjyg3"]
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="14_elkpi"]
 [ext_resource type="Texture2D" uid="uid://bybabdxa4rh6x" path="res://Visual Assets/Backgrounds/Decorations/Tent.png" id="15_qjyg3"]
 [ext_resource type="AudioStream" uid="uid://bqt5t0tjf0lhu" path="res://Audio Assets/Talking.mp3" id="16_elkpi"]
-[ext_resource type="PackedScene" uid="uid://usnwm1jwsrw6" path="res://fire.tscn" id="17_0yprl"]
+[ext_resource type="PackedScene" uid="uid://cu8jx118qwjkn" path="res://fire.tscn" id="17_0yprl"]
 [ext_resource type="Texture2D" uid="uid://dgln6res1wwdv" path="res://Visual Assets/Backgrounds/Decorations/Rabbit.png" id="21_hmewc"]
 [ext_resource type="AudioStream" uid="uid://b57rlq50c3u5h" path="res://Audio Assets/Dialogue Music.mp3" id="22_7ged1"]
 
@@ -132,6 +132,7 @@ sources/7 = SubResource("TileSetAtlasSource_0mevm")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yhmtn"]
 
 [node name="Dialogue" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_2vekm")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
