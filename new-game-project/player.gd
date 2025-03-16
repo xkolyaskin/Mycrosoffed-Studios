@@ -5,18 +5,10 @@ var can_move = true
 @onready
 var _animatedBody = $PlayerSprite/AnimatedSprite2D
 
-func set_can_move(tf):
-	can_move = tf
-
-func get_can_move() -> bool:
-	return can_move
-
 func _ready():
 	add_to_group("player")
 
-func _physics_process(delta):
-	if not can_move:
-		_animatedBody.flip_h=true
+func _physics_process(delta):	
 	var direction = Input.get_vector("move_left","move_right","move_up","move_down")
 	velocity = direction * 200
 	if velocity != Vector2.ZERO:
@@ -34,11 +26,7 @@ func _physics_process(delta):
 		if overlapping_bodies[0].has_method("is_fishing") and overlapping_bodies[0].get_fished():
 			fish(overlapping_bodies[0])
 
-
-
-
 func fish(fishing_spot):
-	
 	if fishing:
 		return
 	fishing = true
@@ -51,21 +39,29 @@ func fish(fishing_spot):
 	var speed = 3
 	
 	
-	var fishing_rect_2 = preload("res://fishing_rect_2.tscn").instantiate()
+	#load interval
+	var fishing_rect = preload("res://fishing_rect.tscn")
+	var right_interval = fishing_rect.instantiate()
+	var left_interval = fishing_rect.instantiate()
+	
+	#make 2 rectangles for interval
 	%PathFollow2D.progress_ratio = interval_start
-	fishing_rect_2.global_position = %PathFollow2D.position
-	fishing_rect_2.global_position += Vector2(0,-11)
-	%PathFollow2D.get_parent().add_child(fishing_rect_2)
-	fishing_rect_2.z_index = 100
-	
-	
-	
+	left_interval.global_position = %PathFollow2D.position  
+
+	%PathFollow2D.progress_ratio = interval_end
+	right_interval.global_position = %PathFollow2D.position
+
+	%PathFollow2D.get_parent().add_child(left_interval)
+	%PathFollow2D.get_parent().add_child(right_interval)
+	left_interval.z_index = 100
+	right_interval.z_index = 100
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
 	#fishing sequence
 	while not has_caught:
 		overlapping_bodies = %HurtBox.get_overlapping_bodies()
 		if overlapping_bodies.size() == 0:
-			fishing_rect_2.queue_free()
+			left_interval.queue_free()
+			right_interval.queue_free()
 			fishing = false
 			%FishingBar.visible = false
 			return
@@ -94,7 +90,6 @@ func fish(fishing_spot):
 					$"SalmonGainIcon-1_png".position += Vector2(0,-5)
 				
 				$"SalmonGainIcon-1_png".visible = false
-				get_parent().inc_score()
 			else:
 				$"Water-splash-46402".play()
 				has_caught = true  
@@ -102,8 +97,8 @@ func fish(fishing_spot):
 	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
 	overlapping_bodies[0].set_fished()
 	
-	
 	%FishingBar.visible = false
-	fishing_rect_2.queue_free()
+	left_interval.queue_free()
+	right_interval.queue_free()
 	
 	fishing = false
