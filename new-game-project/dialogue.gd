@@ -4,13 +4,13 @@ extends Node2D
 @onready var talking_audio = $Talking
 
 var scene = 1
-var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the village elders.  We could use some help keeping our village fed."
+var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the village elders. We could use some help keeping our village fed."
 
 var dialogueFarm1_1 = "While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. "
 var dialogueFarm1_2 = "Once they are planted, wait for them to grow and harvest your crops before they go bad. Pick up/place using SPACE or E. WASD to move"
 
 var dialogueFish1_1 = "Salmon is one of the most important foods here, but fishing is no easy work."
-var dialogueFish1_2 = "Walk up to the fishing hole and when indicated, press SPACE or E at the right time to catch a fish.  Catch enough fish and you will succeed."
+var dialogueFish1_2 = "Walk up to the fishing hole and when indicated, press SPACE or E at the right time to catch a fish. Catch enough fish and you will succeed."
 
 var dialogueHerd1_1 = "Reindeer herding has sustained our culture for thousands of years, and over this time we have learned to find spots with lots of food for them."
 var dialogueHerd1_2 = "A favorite of theirs is lichen, which grows under the snow around these parts."
@@ -26,8 +26,8 @@ var dialogueFish2_2 = "The heavenly mixture of crushed dried salmon, red caviar,
 var dialogueHerd2_1 = "Oh, how I sometimes miss the good old days.  When I was a young man, I could take my reindeer to the same place every year to find food."
 var dialogueHerd2_2 = "Nowadays you youngins have to keep moving to new spots when rainfall freezes the snow above the lichen."
 
-var dialogueFarm3_1 = "Back in my day, farming was collectivized under the rule of the Soviet Union.  We had to rotate crops in order to feed ourselves every year."
-var dialogueFarm3_2 = "I remember having a third of my  family’s best potato crop taken by the state to feed soldiers fighting in uh, where was it, ah yes, Afghanistan."
+var dialogueFarm3_1 = "Back in my day, farming was collectivized under the rule of the Soviet Union. We had to rotate crops in order to feed ourselves every year."
+var dialogueFarm3_2 = "I remember having a third of my family’s best potato crop taken by the state to feed soldiers fighting in uh, where was it, ah yes, Afghanistan."
 
 var dialogueFish3_1 = "Everything is so warm nowadays, even the ice isn’t as sturdy as it once was."
 var dialogueFish3_2 = "Our fishermen have to keep moving if they don’t want to end up in the river. But don’t worry, the river isn’t too deep (I hope)."
@@ -64,6 +64,7 @@ func _ready():
 	
 	match scene:
 		1:
+			
 			await play_dialogue(dialogueIntro)
 			print("next")
 			await play_dialogue(dialogueFarm1_1)
@@ -71,11 +72,15 @@ func _ready():
 			await play_dialogue(dialogueFarm1_2)
 			print("next_scene")
 		2:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueFish1_1)
 			print("next")
 			await play_dialogue(dialogueFish1_2)
 			print("next_scene")
 		3:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueHerd1_1)
 			print("next")
 			await play_dialogue(dialogueHerd1_2)
@@ -83,6 +88,8 @@ func _ready():
 			await play_dialogue(dialogueHerd1_3)
 			print("next_scene")
 		4:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueFarm2_1)
 			print("next")
 			await play_dialogue(dialogueFarm2_2)
@@ -90,26 +97,36 @@ func _ready():
 			await play_dialogue(dialogueFarm2_3)
 			print("next_scene")
 		5:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueFish2_1)
 			print("next")
 			await play_dialogue(dialogueFish2_2)
 			print("next_scene")
 		6:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueHerd2_1)
 			print("next")
 			await play_dialogue(dialogueHerd2_2)
 			print("next_scene")
 		7:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueFarm3_1)
 			print("next")
 			await play_dialogue(dialogueFarm3_2)
 			print("next_scene")
 		8:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueFish3_1)
 			print("next")
 			await play_dialogue(dialogueFish3_2)
 			print("next_scene")
 		9:
+			await play_dialogue(pickRandom())
+			
 			await play_dialogue(dialogueHerd3_1)
 			print("next")
 			await play_dialogue(dialogueHerd3_2)
@@ -124,7 +141,7 @@ func pickRandom():
 	var ind = randi_range(0,len(randomDialogue)-1)
 	var line = randomDialogue[ind]
 	randomDialogue.remove_at(ind)
-	usedDialogue.add(line)
+	usedDialogue.append(line)
 	return line
 
 func play_dialogue(string):
