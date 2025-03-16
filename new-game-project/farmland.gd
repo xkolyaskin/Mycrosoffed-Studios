@@ -11,6 +11,8 @@ func is_farmland():
 	return true
 
 func _on_plant(plant):
+	if grown:
+		return
 	plant_type = plant
 	
 	plantable = false
@@ -41,3 +43,13 @@ func _on_plant(plant):
 			$PotatoGrown.show()
 	prev_plant = plant_type
 	grown = true
+	
+func on_harvest() -> String:
+	if grown:
+		$PotatoGrown.hide()
+		$BeetGrown.hide()
+		$CabbageGrown.hide()
+	grown = false
+	plantable = true
+	return plant_type
+	
