@@ -11,6 +11,6 @@ script = ExtResource("1_v3yhs")
 position = Vector2(-103, -68)
 
 [node name="Player" parent="." instance=ExtResource("2_sr4t7")]
-position = Vector2(327, 193)
+position = Vector2(863, 35)
 
 [connection signal="end_reindeer" from="." to="Player" method="_on_End"]
