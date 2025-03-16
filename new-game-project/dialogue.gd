@@ -24,7 +24,8 @@ var randomDialogue = [
 var usedDialogue = []
 
 func _ready():
-	
+	if get_tree().paused:
+		await get_tree().tree_unpaused
 	if scene == 1:
 		await play_dialogue(dialogue1_1)
 		print("next")

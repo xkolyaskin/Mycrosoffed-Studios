@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d0t53r8ax5nmp" path="res://fade_to_black.gd" id="1_piqfx"]
 
 [node name="SceneTransition" type="CanvasLayer"]
-layer = 128
+layer = 124
 script = ExtResource("1_piqfx")
 
 [node name="FadeRect" type="ColorRect" parent="."]
