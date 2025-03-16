@@ -159,6 +159,7 @@ _data = {
 point_count = 18
 
 [node name="FishingMinigame" type="Node2D"]
+texture_filter = 1
 script = ExtResource("1_xd8tf")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -180,6 +181,7 @@ text = ": 0"
 
 [node name="SalmonIconPlusless" type="Sprite2D" parent="CanvasLayer"]
 z_index = 11
+texture_filter = 1
 position = Vector2(42, 34)
 scale = Vector2(2.6875, 2.6875)
 texture = ExtResource("5_xd8tf")

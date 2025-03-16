@@ -23,6 +23,7 @@ animations = [{
 
 [node name="Cloud" type="Node2D"]
 z_index = 11
+texture_filter = 1
 
 [node name="am" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -32)

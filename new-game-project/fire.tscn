@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://usnwm1jwsrw6"]
+[gd_scene load_steps=12 format=3 uid="uid://cu8jx118qwjkn"]
 
 [ext_resource type="Texture2D" uid="uid://bmtt8tvyayjv7" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-27.png.png" id="1_bwgbv"]
 [ext_resource type="Texture2D" uid="uid://dywxl44cos02u" path="res://Visual Assets/Backgrounds/Decorations/Fire Frames/Fire-28.png.png" id="2_umj4n"]
@@ -50,6 +50,7 @@ animations = [{
 }]
 
 [node name="fire" type="Node2D"]
+texture_filter = 1
 
 [node name="move" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gi2fe")

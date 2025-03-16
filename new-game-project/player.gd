@@ -3,6 +3,7 @@ var fishing = false
 var can_move = true
 var seed_holding = "c"
 
+
 signal plant_b
 signal plant_c
 signal plant_p
@@ -37,6 +38,7 @@ func _physics_process(delta):
 			pick_up_seed(overlapping_bodies[0].is_seed_bag())
 		elif overlapping_bodies[0].has_method("is_farmland") and Input.is_action_just_pressed("interact"):
 			plant_seed(overlapping_bodies[0])
+			harvest_seed(overlapping_bodies[0])
 
 func fish(fishing_spot):
 	if fishing:
@@ -126,3 +128,13 @@ func pick_up_seed(string):
 	
 func plant_seed(farmland):
 	farmland._on_plant(seed_holding)
+	
+func harvest_seed(farmland):
+	var plant_harvested = farmland.on_harvest()
+	match plant_harvested:
+		"c":
+			get_parent().inc_score(5)
+		"b":
+			get_parent().inc_score(4)
+		"p":
+			get_parent().inc_score(6)

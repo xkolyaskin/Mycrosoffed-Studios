@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyjjnbqkswlon"]
+[gd_scene load_steps=3 format=3 uid="uid://dy303bgnr4tna"]
 
-[ext_resource type="Script" uid="uid://15f60222thh8" path="res://SeedBag.gd" id="1_8ikyu"]
+[ext_resource type="Script" path="res://SeedBag.gd" id="1_8ikyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnh"]
 
 [node name="SeedBag" type="Area2D"]
+texture_filter = 1
 script = ExtResource("1_8ikyu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vgcnh")
