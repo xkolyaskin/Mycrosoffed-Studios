@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bn5g7t7usbk4m" path="res://reindeer_herding.gd" id="1_v3yhs"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="2_sr4t7"]
 [ext_resource type="PackedScene" uid="uid://ddswu1d1i2jtc" path="res://cloud.tscn" id="4_b7c21"]
-[ext_resource type="Script" uid="uid://cfdcfh3f6oh2f" path="res://cloud.gd" id="5_l0cmq"]
+[ext_resource type="Script" path="res://cloud.gd" id="5_l0cmq"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="6_a0ybq"]
 [ext_resource type="AudioStream" uid="uid://5vdyi1lfmq3k" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="6_v3yhs"]
 
