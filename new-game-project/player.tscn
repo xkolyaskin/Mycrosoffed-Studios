@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=16 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://nat77olsf8mg" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 1.png" id="2_2hs0m"]
 [ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://0ddlaikqkp5f" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 4.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://cj4h6wh0ujq7s" path="res://Visual Assets/Item Icons/Salmon Gain Icon-1.png.png" id="6_2hs0m"]
 [ext_resource type="AudioStream" uid="uid://cx2l0cn8fobwa" path="res://Audio Assets/water-splash-46402.mp3" id="7_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://d2ys5rngxchfh" path="res://Visual Assets/Character Sprites/Fishing Rod.png" id="8_dw050"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(20, 44)
@@ -96,12 +97,20 @@ debug_color = Color(0.858824, 0.0941176, 0.0392157, 0.172549)
 sprite_frames = SubResource("SpriteFrames_nvl01")
 animation = &"walk"
 
+[node name="FishingRod" type="Sprite2D" parent="PlayerSprite/AnimatedSprite2D"]
+unique_name_in_owner = true
+visible = false
+z_index = 13
+position = Vector2(20, -2)
+texture = ExtResource("8_dw050")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, 25)
 zoom = Vector2(1.5, 1.5)
 
 [node name="FishingBorder" type="ProgressBar" parent="."]
 unique_name_in_owner = true
+visible = false
 z_index = 128
 z_as_relative = false
 offset_left = -75.0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djidgls7m0ly8"
+path="res://.godot/imported/ice-cracking-field-recording-06-139709.mp3-9fe2c742f1a7f3ce45e582bd9cb07dd9.mp3str"
+
+[deps]
+
+source_file="res://Audio Assets/ice-cracking-field-recording-06-139709.mp3"
+dest_files=["res://.godot/imported/ice-cracking-field-recording-06-139709.mp3-9fe2c742f1a7f3ce45e582bd9cb07dd9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

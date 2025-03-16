@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="16_vh7l4"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="17_d5xl1"]
 [ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
-[ext_resource type="Script" path="res://Visual Assets/SeedBag.gd" id="26_vh7l4"]
+[ext_resource type="Script" uid="uid://djgcmngtj7o25" path="res://Visual Assets/SeedBag.gd" id="26_vh7l4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6gbk8"]
 texture = ExtResource("3_unytf")
@@ -382,5 +382,4 @@ texture = ExtResource("10_nqy1b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CabbageSeedBag/Area2D"]
 position = Vector2(48, 134)
 rotation = -1.57451
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_nq3v0")

@@ -2,6 +2,7 @@ extends Node2D
 
 var timer = 45
 var score = 0
+var crack_count = 0
 var game_number
 var speeds = [5, 2.5, 1.25]
 
@@ -41,6 +42,9 @@ func inc_score():
 
 func _on_timer_timeout():
 	create_crack();
+	crack_count += 1
+	if crack_count % 3 == 0:
+		$"Ice-cracking-field-recording-06-139709".play()
 	
 func _on_timeleft_inc():
 	timer -= 1
