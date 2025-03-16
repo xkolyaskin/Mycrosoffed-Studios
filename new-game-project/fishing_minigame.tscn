@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="4_l1kbx"]
 [ext_resource type="Texture2D" uid="uid://crns7i6bp4q5f" path="res://Visual Assets/Item Icons/Salmon Icon Plusless.png" id="5_xd8tf"]
 [ext_resource type="AudioStream" uid="uid://dyga8x6t1tpc2" path="res://Audio Assets/ice-cracking-field-recording-06-139709.mp3" id="7_p2j5e"]
-[ext_resource type="AudioStream" uid="uid://bdw2n2ysfuwk8" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="8_e3jrk"]
+[ext_resource type="AudioStream" uid="uid://5vdyi1lfmq3k" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="8_e3jrk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2j5e"]
 texture = ExtResource("2_xd8tf")
