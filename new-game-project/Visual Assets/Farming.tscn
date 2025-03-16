@@ -284,78 +284,82 @@ visibility_layer = 129
 z_index = 10
 position = Vector2(72, 64)
 
-[node name="Decoration-Log" type="Sprite2D" parent="."]
+[node name="Deco" type="Node2D" parent="."]
+
+[node name="Decoration-Log" type="Sprite2D" parent="Deco"]
 position = Vector2(333, -60)
 rotation = 0.134551
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log2" type="Sprite2D" parent="."]
+[node name="Decoration-Log2" type="Sprite2D" parent="Deco"]
 position = Vector2(341, -66)
 rotation = -1.86162
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Rock" type="Sprite2D" parent="."]
+[node name="Decoration-Rock" type="Sprite2D" parent="Deco"]
 position = Vector2(6.99999, 229)
 rotation = -0.884123
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Rock2" type="Sprite2D" parent="."]
+[node name="Decoration-Rock2" type="Sprite2D" parent="Deco"]
 position = Vector2(304, 101)
 rotation = 0.346604
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Rock3" type="Sprite2D" parent="."]
+[node name="Decoration-Rock3" type="Sprite2D" parent="Deco"]
 position = Vector2(397, 259)
 rotation = 2.4296
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Rock4" type="Sprite2D" parent="."]
+[node name="Decoration-Rock4" type="Sprite2D" parent="Deco"]
 position = Vector2(157, 335)
 rotation = 0.658998
+scale = Vector2(1, 1)
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Rock5" type="Sprite2D" parent="."]
+[node name="Decoration-Rock5" type="Sprite2D" parent="Deco"]
 position = Vector2(-84, 9)
 rotation = 0.7759
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Log3" type="Sprite2D" parent="."]
+[node name="Decoration-Log3" type="Sprite2D" parent="Deco"]
 position = Vector2(96, 313)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log4" type="Sprite2D" parent="."]
+[node name="Decoration-Log4" type="Sprite2D" parent="Deco"]
 position = Vector2(442, 112)
 rotation = 0.402556
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log5" type="Sprite2D" parent="."]
+[node name="Decoration-Log5" type="Sprite2D" parent="Deco"]
 position = Vector2(-3, -117)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Rock6" type="Sprite2D" parent="."]
+[node name="Decoration-Rock6" type="Sprite2D" parent="Deco"]
 position = Vector2(-11, 230)
 rotation = 0.716135
 scale = Vector2(1.36, 1.48)
 texture = ExtResource("16_vh7l4")
 
-[node name="Decoration-Log6" type="Sprite2D" parent="."]
+[node name="Decoration-Log6" type="Sprite2D" parent="Deco"]
 position = Vector2(88, 320)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log7" type="Sprite2D" parent="."]
+[node name="Decoration-Log7" type="Sprite2D" parent="Deco"]
 position = Vector2(-11, -111)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log8" type="Sprite2D" parent="."]
+[node name="Decoration-Log8" type="Sprite2D" parent="Deco"]
 position = Vector2(324, -54)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log9" type="Sprite2D" parent="."]
+[node name="Decoration-Log9" type="Sprite2D" parent="Deco"]
 position = Vector2(280, 226)
 rotation = -1.40045
+scale = Vector2(1, 1)
 texture = ExtResource("15_313di")
 
-[node name="Decoration-Log10" type="Sprite2D" parent="."]
+[node name="Decoration-Log10" type="Sprite2D" parent="Deco"]
 position = Vector2(285, 235)
 rotation = -1.35233
 texture = ExtResource("15_313di")

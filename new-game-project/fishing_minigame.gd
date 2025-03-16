@@ -1,6 +1,6 @@
 extends Node2D
 
-var timer = 5
+var timer = 45
 var score = 0
 var crack_count = 0
 var game_number
