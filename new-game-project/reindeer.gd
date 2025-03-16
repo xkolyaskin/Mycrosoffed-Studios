@@ -83,3 +83,4 @@ func _on_timer_timeout():
 			timeleft=100
 			score+=1
 			$Happy.go()
+			get_parent().incScore()
