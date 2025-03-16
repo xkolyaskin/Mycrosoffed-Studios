@@ -3,7 +3,7 @@ signal end_reindeer
 var numDeer = 5
 var numLichen = 8
 var round = 0
-var deerPositions = [Vector2(496,-71),Vector2(-2,273),Vector2(310,365),Vector2(533,110),Vector2(832,99),Vector2(),Vector2(),Vector2(),Vector2()]
+var deerPositions = [Vector2(496,-71),Vector2(-2,273),Vector2(310,365),Vector2(533,110),Vector2(832,99),Vector2(-84,-111),Vector2(597,410),Vector2(-25,377),Vector2(465,139)]
 var deer=[]
 var lichenPositions = [Vector2(617,281),Vector2(2,1),Vector2(-164,389),Vector2(574,-34),Vector2(269,359),Vector2(286,-187),Vector2(897,97),Vector2(319,80)]
 var lichen=[]
@@ -15,11 +15,13 @@ var iceLich = preload("res://ice_lichen.tscn")
 var ice = preload("res://ice.tscn")
 @onready
 var cloudAnim=$Cloud/am
+var score=0
 
 func _ready() -> void:
 	beginRound(round)
 
 func beginRound(round):
+	$CanvasLayer/Score.text="Score: "+str(score)
 	$map.position=Vector2(-103,-68)
 	$Player.position=Vector2(327,193)
 	$Cloud.hide()
@@ -42,6 +44,7 @@ func beginRound(round):
 	
 
 func cloudGo():
+	$CanvasLayer/Done.hide()
 	var index = randi_range(0,len(lichen)-1)
 	var pos=lichen[index].position
 	$Cloud.position=pos
@@ -59,10 +62,12 @@ func cloudGo():
 	add_child(il)
 	$Cloud.hide()
 
+func incScore():
+	score+=1
+	$CanvasLayer/Score.text="Score: "+str(score)
+
 func atEnd():
-	var score = 0
 	for d in deer:
-		score += d.score
 		d.queue_free()
 	for l in lichen:
 		l.queue_free()
@@ -75,12 +80,15 @@ func atEnd():
 	deer=[]
 	iceLichen=[]
 	round+=1
-	numDeer += 2
+	numDeer += 1
 	numLichen -= 1
 	print(score)
 	end_reindeer.emit(score)
+	$CanvasLayer/Done.text="You did it!\nScore: "+str(score)
+	$CanvasLayer/Done.show()
 	score=0
 	await get_tree().create_timer(5).timeout
+	$CanvasLayer/Done.hide()
 	if round<3:
 		beginRound(round)
 	else:

@@ -7,7 +7,7 @@ var typing = false
 func is_typing():
 	return typing
 
-func type_text(text: String, speed: float = 0.05) -> void:
+func type_text(text: String, speed: float = 0.03) -> void:
 	typing = true
 	dialogue_label.text = ""
 	for i in text.length():
