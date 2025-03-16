@@ -43,13 +43,12 @@ func _physics_process(delta):
 	else:
 		point.hide()
 	if l:
-		walking = false
 		#happy.show()
 		if !eating:
 			eating=true
 			animate("feeding")
 	elif p:
-		walking = true
+		walk()
 		animate("walk")
 		var direction = global_position.direction_to(player.global_position)
 		velocity = direction * speed * -1
@@ -59,12 +58,10 @@ func _physics_process(delta):
 		elif velocity.x > 0:
 			_animatedBody.flip_h=false
 	elif il: 
-		walking = false
 		if randi_range(0,100)==5:
 			$Reindeer3.play()
 		animate("feeding")
 	else:
-		walking = false
 		animate("idle")
 
 func animate(cycle):
@@ -72,8 +69,13 @@ func animate(cycle):
 		wait = true
 		await get_tree().create_timer(0.5).timeout
 		wait = false
-		_animatedBody.play(cycle)
+	_animatedBody.play(cycle)
 	#_animatedBody.set_frame_and_progress(3,0.5)
+	
+func walk():
+	walking = true
+	await get_tree().create_timer(1).timeout
+	walking = false
 
 func _on_timer_timeout():
 	count+=1
