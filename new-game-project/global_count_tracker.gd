@@ -100,4 +100,4 @@ func set_random_dialogue(set):
 	randomDialogue=set
 	
 func score_is_good() -> bool:
-	return (fishing_score >= 25 and farming_score >= 150 and reindeer_score >= 150)
+	return (fishing_score >= 18 and farming_score >= 300 and reindeer_score >= 150)

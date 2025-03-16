@@ -8,7 +8,7 @@ var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the villag
 var dialogueFarm1_1 = "While we do love our meat, a balanced diet requires some veggies too. Can you help me in the garden this summer?"
 var dialogueFarm1_2 = "Choose your seeds, plant them, and wait for them to grow. Harvest your crops before they go bad. Use WASD to move and E/SPACE to pick up/plant."
 
-var dialogueFish1_1 = "Salmon is one of the most important foods here, but fishing is no easy work."
+var dialogueFish1_1 = "Salmon is one of the most important foods here, but fishing is not an easy task."
 var dialogueFish1_2 = "Walk up to the fishing hole and when indicated, press SPACE or E at the right time to catch a fish. Catch enough fish and you will succeed."
 
 var dialogueHerd1_1 = "Reindeer herding has sustained our culture for thousands of years, and over this time we have learned to find spots with lots of food for them."
@@ -20,7 +20,7 @@ var dialogueFarm2_2 = "This amazing dish consists of a mashed potato base with a
 var dialogueFarm2_3 = "Mmmm, actually, can you spare a few potatoes once you’re done?"
 
 var dialogueFish2_1 = "I could really go for some yukola right now."
-var dialogueFish2_2 = "The heavenly mixture of crushed dried salmon, red caviar, shiksha, pine, nuts, red bilberries, and other medicinal herbs always brightens my day."
+var dialogueFish2_2 = "That heavenly mixture of crushed dried salmon, red caviar, shiksha, pine, nuts, red bilberries, and medicinal herbs always brightens my day."
 var dialogueFish2_3 = "Unfortunately, it's been harder to fish with such unstable ice nowadays...  It's getting too hot too early in the year."
 
 var dialogueHerd2_1 = "Oh, how I sometimes miss the good old days.  When I was a young man, I could take my reindeer to the same place every year to find food."

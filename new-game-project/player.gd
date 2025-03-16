@@ -97,14 +97,24 @@ func fish(fishing_spot):
 			(%FishingBar.value / 100) <= interval_end):
 				$"Water-splash-46402".play()
 				has_caught = true
-				#show fish collection icon
-				$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
-				$"SalmonGainIcon-1_png".visible = true
-				for i in range(1,15):
-					await get_tree().create_timer(0.05).timeout
-					$"SalmonGainIcon-1_png".position += Vector2(0,-5)
-				
-				$"SalmonGainIcon-1_png".visible = false
+				if randf() < 0.01:
+					$PurduePeteGainIcon.global_position = global_position + Vector2(0,-100)
+						#show fish collection icon
+					$PurduePeteGainIcon.global_position = global_position + Vector2(0,-100)
+					$PurduePeteGainIcon.visible = true
+					for i in range(1,15):
+						await get_tree().create_timer(0.05).timeout
+						$PurduePeteGainIcon.position += Vector2(0,-5)
+					$PurduePeteGainIcon.visible = false
+				else:
+					#show fish collection icon
+					$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
+					$"SalmonGainIcon-1_png".visible = true
+					for i in range(1,15):
+						await get_tree().create_timer(0.05).timeout
+						$"SalmonGainIcon-1_png".position += Vector2(0,-5)
+					
+					$"SalmonGainIcon-1_png".visible = false
 				get_parent().inc_score()
 			else:
 				$"Water-splash-46402".play()
