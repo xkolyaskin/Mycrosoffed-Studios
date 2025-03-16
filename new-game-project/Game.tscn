@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://by3pqdi07jfji"]
+[gd_scene load_steps=31 format=4 uid="uid://copyelhcc1lnh"]
 
 [ext_resource type="Script" uid="uid://wdseijdxrxfj" path="res://dialogue.gd" id="1_2vekm"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="1_u44n3"]
