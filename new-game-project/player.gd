@@ -94,13 +94,14 @@ func fish(fishing_spot):
 					$"SalmonGainIcon-1_png".position += Vector2(0,-5)
 				
 				$"SalmonGainIcon-1_png".visible = false
+				get_parent().inc_score()
 			else:
 				$"Water-splash-46402".play()
 				has_caught = true  
 	#has caught fish or failed
 	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
 	overlapping_bodies[0].set_fished()
-	get_parent().inc_score()
+	
 	
 	%FishingBar.visible = false
 	fishing_rect_2.queue_free()

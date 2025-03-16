@@ -159,14 +159,15 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_gwjdr")
 
 [node name="Label" type="Label" parent="DialogueBox"]
 layout_mode = 0
-offset_left = 184.0
+offset_left = 168.0
 offset_top = 24.0
-offset_right = 904.0
-offset_bottom = 144.0
+offset_right = 976.0
+offset_bottom = 451.0
 theme_override_fonts/font = ExtResource("11_yhmtn")
 theme_override_font_sizes/font_size = 40
-text = "text text text
-more text pee pee poo poo farting stinky
-more text"
+text = "1st Round: While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. Once they are planted, wait for them to grow and harvest your crops before they go bad (or something else happens to them).
+Pick up/place using SPACE or E.
+"
+autowrap_mode = 2
 
 [connection signal="timeout" from="LoreGuyReindeer/Timer" to="LoreGuyReindeer" method="_on_timer_timeout"]
