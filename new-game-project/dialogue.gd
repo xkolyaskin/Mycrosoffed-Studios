@@ -21,19 +21,23 @@ var dialogueFarm2_3 = "Mmmm, actually, can you spare a few potatoes once you’r
 
 var dialogueFish2_1 = "I could really go for some yukola right now."
 var dialogueFish2_2 = "The heavenly mixture of crushed dried salmon, red caviar, shiksha, pine, nuts, red bilberries, and other medicinal herbs always brightens my day."
+var dialogueFish2_3 = "Unfortunately, it's been harder to fish with such unstable ice nowadays...  It's getting too hot too early in the year."
 
 var dialogueHerd2_1 = "Oh, how I sometimes miss the good old days.  When I was a young man, I could take my reindeer to the same place every year to find food."
-var dialogueHerd2_2 = "Nowadays you youngins have to keep moving to new spots when rainfall freezes the snow above the lichen."
+var dialogueHerd2_2 = "Everything’s been so hot the past few years… We’ve seen more rain than ever before. No good when it rains right after a good snowstorm."
+var dialogueHerd2_3 = "Nowadays you youngins have to keep moving the reindeer to new spots when rainfall freezes the snow above the lichen."
 
 var dialogueFarm3_1 = "Back in my day, farming was collectivized under the rule of the Soviet Union. We had to rotate crops in order to feed ourselves every year."
-var dialogueFarm3_2 = "I remember having a third of my family’s best potato crop taken by the state to feed soldiers fighting in uh, where was it, ah yes, Afghanistan."
+var dialogueFarm3_2 = "Nowadays they tell me that the climate has been worsening, and there have been freezes that destroy our entire crop in late summer."
+var dialogueFarm3_3 = "Make sure to plant a different crop after harvesting to make your crops healthier and your soil more nutritious."
 
 var dialogueFish3_1 = "Everything is so warm nowadays, even the ice isn’t as sturdy as it once was."
 var dialogueFish3_2 = "Our fishermen have to keep moving if they don’t want to end up in the river. But don’t worry, the river isn’t too deep (I hope)."
 
 var dialogueHerd3_1 = "While I do love caring for reindeer, their hide is amazingly warm."
 var dialogueHerd3_2 = "Every once in a while I would have to kill one of my reindeer for the village to use its meat and hide."
-var dialogueHerd3_3 = "Those were always sad days, but the reindeer’s lives were not in vain."
+var dialogueHerd3_3 = "I met a reindeer herder the other day who said their village burned down due to a wildfire. "
+var dialogueHerd3_4 = "Never thought it could happen. The times really are changing."
 
 var dialogueEnd_1 = "This is the worst (and only) wildfire I’ve ever seen!"
 
@@ -54,8 +58,11 @@ var randomDialogue = [
 	"I’ve heard rumors of a wild Purdue Pete fish in the rivers nearby…",
 	"People often ask how I survive without my sight, let's just say I’m a really good elder.",
 	"There’s something to be said about a salmon hot dog that most people just don’t understand.",
-	"Where’s the fun in taking things one step at a time?"
+	"Where’s the fun in taking things one step at a time?",
+	"We used to get enough snow to build a city when I was young. There’s only enough for a town these days.",
+	"We get our power from oil, which I’ve been told is ‘not cool anymore’."
 ]
+
 var usedDialogue = []
 
 func _ready():
@@ -74,7 +81,7 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm1_2)
 			print("next_scene")
-			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn") #replace with fishing
+			FadeToBlack.change_scene_with_fade("res://Visual Assets/Farming.tscn")
 		2:
 			await play_dialogue(pickRandom())
 			
@@ -104,7 +111,8 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFarm2_3)
 			print("next_scene")
-			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn") # chane order, add rest
+			FadeToBlack.change_scene_with_fade("res://Visual Assets/Farming.tscn")
+
 			
 		5:
 			await play_dialogue(pickRandom())
@@ -112,6 +120,9 @@ func _ready():
 			await play_dialogue(dialogueFish2_1)
 			print("next")
 			await play_dialogue(dialogueFish2_2)
+			await play_dialogue(dialogueFish2_3)
+			
+			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn")
 			print("next_scene")
 		6:
 			await play_dialogue(pickRandom())
@@ -119,13 +130,17 @@ func _ready():
 			await play_dialogue(dialogueHerd2_1)
 			print("next")
 			await play_dialogue(dialogueHerd2_2)
+			await play_dialogue(dialogueHerd2_3)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
 		7:
 			await play_dialogue(pickRandom())
 			
 			await play_dialogue(dialogueFarm3_1)
 			print("next")
 			await play_dialogue(dialogueFarm3_2)
+			await play_dialogue(dialogueFarm3_3)
+			FadeToBlack.change_scene_with_fade("res://Visual Assets/Farming.tscn")
 			print("next_scene")
 		8:
 			await play_dialogue(pickRandom())
@@ -134,6 +149,7 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueFish3_2)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://fishing_minigame.tscn")
 		9:
 			await play_dialogue(pickRandom())
 			
@@ -141,8 +157,9 @@ func _ready():
 			print("next")
 			await play_dialogue(dialogueHerd3_2)
 			print("next")
-			await play_dialogue(dialogueHerd3_2)
+			await play_dialogue(dialogueHerd3_3)
 			print("next_scene")
+			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
 		10:
 			await play_dialogue(dialogueEnd_1)
 			#add good and bad

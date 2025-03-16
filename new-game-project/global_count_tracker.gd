@@ -22,7 +22,9 @@ var randomDialogue = [
 	"I’ve heard rumors of a wild Purdue Pete fish in the rivers nearby…",
 	"People often ask how I survive without my sight, let's just say I’m a really good elder.",
 	"There’s something to be said about a salmon hot dog that most people just don’t understand.",
-	"Where’s the fun in taking things one step at a time?"
+	"Where’s the fun in taking things one step at a time?",
+	"We used to get enough snow to build a city when I was young. There’s only enough for a town these days.",
+	"We get our power from oil, which I’ve been told is ‘not cool anymore’."
 ]
 
 func get_dialogue_count():
