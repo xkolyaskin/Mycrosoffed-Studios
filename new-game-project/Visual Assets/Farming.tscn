@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=4 uid="uid://lio6kakb3bdh"]
+[gd_scene load_steps=66 format=4 uid="uid://lio6kakb3bdh"]
 
 [ext_resource type="Script" uid="uid://drun88j4wnmls" path="res://Visual Assets/Farming.gd" id="1_7ejuu"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_gk8fp"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="16_vh7l4"]
 [ext_resource type="Texture2D" uid="uid://rm3ub7jb72a0" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Cane.png" id="17_d5xl1"]
 [ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="17_nq3v0"]
+[ext_resource type="Texture2D" uid="uid://c6pisnmlowcvc" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Bush.png" id="20_06gvg"]
 [ext_resource type="Script" uid="uid://djuj01o8j4rrs" path="res://Visual Assets/potato_seed_bag.gd" id="27_nq3v0"]
 [ext_resource type="AudioStream" uid="uid://5vdyi1lfmq3k" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="28_58vqp"]
 [ext_resource type="Script" uid="uid://brb2gajwk2h21" path="res://Visual Assets/beet_seed_bag.gd" id="28_mnjto"]
@@ -178,6 +179,11 @@ texture = ExtResource("17_d5xl1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rq61a"]
+texture = ExtResource("20_06gvg")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_unytf"]
 texture = ExtResource("4_f3a0o")
 texture_region_size = Vector2i(32, 32)
@@ -255,6 +261,7 @@ sources/22 = SubResource("TileSetAtlasSource_ce182")
 sources/23 = SubResource("TileSetAtlasSource_k5t4t")
 sources/24 = SubResource("TileSetAtlasSource_fbjop")
 sources/0 = SubResource("TileSetAtlasSource_188ps")
+sources/25 = SubResource("TileSetAtlasSource_rq61a")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vh7l4"]
 size = Vector2(36.4926, 32.0555)
@@ -378,6 +385,7 @@ texture = ExtResource("15_313di")
 
 [node name="Heartbeat-of-freedom-shaman-folk-background-311544" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_58vqp")
+volume_db = -6.559
 autoplay = true
 
 [node name="SeedText" type="Label" parent="."]
@@ -473,5 +481,21 @@ texture = ExtResource("33_06gvg")
 [node name="TreeBorder128x128GreeNpng" type="Sprite2D" parent="."]
 position = Vector2(710, -324)
 texture = ExtResource("3_d5xl1")
+
+[node name="Decoration-Bush" type="Sprite2D" parent="."]
+position = Vector2(436, 235)
+texture = ExtResource("20_06gvg")
+
+[node name="Decoration-Bush2" type="Sprite2D" parent="."]
+position = Vector2(-7, 188)
+texture = ExtResource("20_06gvg")
+
+[node name="Decoration-Bush3" type="Sprite2D" parent="."]
+position = Vector2(205, -15)
+texture = ExtResource("20_06gvg")
+
+[node name="Decoration-Bush4" type="Sprite2D" parent="."]
+position = Vector2(470, 82)
+texture = ExtResource("20_06gvg")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

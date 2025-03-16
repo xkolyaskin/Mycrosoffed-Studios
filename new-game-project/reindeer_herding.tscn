@@ -25,6 +25,7 @@ script = ExtResource("5_l0cmq")
 
 [node name="Heartbeat-of-freedom-shaman-folk-background-311544" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_v3yhs")
+volume_db = -8.432
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
