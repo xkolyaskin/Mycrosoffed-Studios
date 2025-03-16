@@ -41,11 +41,11 @@ var dialogueHerd3_4 = "Never thought it could happen. The times really are chang
 
 var dialogueEnd_1 = "This is the worst (and only) wildfire I’ve ever seen!"
 
-var dialogueEndGood_1 = "The village is in ruins but due to your help we have enough resources to rebuild and recover!"
-var dialogueEndGood_2 = "If you are willing to continue helping, we will make sure you are rewarded appropriately."
+var dialogueEndGood_1 = "The village is in ruins, but we will survive. We Karyak are strong."
+var dialogueEndGood_2 = "Due to your help, we have enough resources to rebuild and recover, though much was lost."
 
-var dialogueEndBad_1 = "The village is in ruins and we don’t have enough resources to rebuild."
-var dialogueEndBad_2 = "Regional officials have been called and our people will be relocated to a safer location for the time being."
+var dialogueEndBad_1 = "The village is in ruins, but we will survive. We Karyak are strong."
+var dialogueEndBad_2 = "We don’t have enough resources to rebuild. Our people will have to be relocated to a safer location for the time being."
 
 var randomDialogue = [
 	"The Chawchu dance was one of my favorite things to watch and perform. I played the lalai drum, which I once broke by hitting it with my head.",
@@ -67,6 +67,9 @@ var usedDialogue = []
 
 func _ready():
 	scene = GlobalCountTracker.get_dialogue_count()
+	#scene = 10
+	if scene == 10:
+		$ColorRect.show()
 	print("dialogue number " + str(scene))
 	$Fire/move.play("move")
 	await get_tree().create_timer(1).timeout
@@ -161,8 +164,40 @@ func _ready():
 			print("next_scene")
 			FadeToBlack.change_scene_with_fade("res://reindeer_herding.tscn")
 		10:
+			
+			var burning_scene = preload("res://ending.tscn").instantiate()
+			burning_scene.z_index = 120
+			add_child(burning_scene)
+			$DialogueBox.z_index = 127
+			$ColorRect.modulate.a = 0.95
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.9
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.85
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.8
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.7
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.5
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.3
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.modulate.a = 0.1
+			await get_tree().create_timer(0.5).timeout
+			$ColorRect.hide()
+			
+
+			
 			await play_dialogue(dialogueEnd_1)
-			#add good and bad
+			if GlobalCountTracker.score_is_good():
+				await play_dialogue(dialogueEndGood_1)
+				await play_dialogue(dialogueEndGood_2)
+			else:
+				await play_dialogue(dialogueEndBad_1)
+				await play_dialogue(dialogueEndBad_2)
+			await play_credits()
+			
 	scene+=1
 func pickRandom():
 	randomDialogue=GlobalCountTracker.get_random_dialogue()
@@ -184,3 +219,7 @@ func play_dialogue(string):
 		if Input.is_action_just_pressed("interact") and not dialogue_box.is_typing(): 
 			dialogue_box.visible = false
 			return
+
+func play_credits():
+	print("play credits")
+	return
