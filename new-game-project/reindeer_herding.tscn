@@ -16,7 +16,7 @@ position = Vector2(-103, -68)
 position = Vector2(863, 35)
 
 [node name="Cloud" parent="." instance=ExtResource("4_b7c21")]
-position = Vector2(334, 123)
+position = Vector2(293, 534)
 scale = Vector2(3, 3)
 script = ExtResource("5_l0cmq")
 

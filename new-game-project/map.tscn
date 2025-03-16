@@ -74,6 +74,7 @@ sources/2 = SubResource("TileSetAtlasSource_wijl4")
 sources/3 = SubResource("TileSetAtlasSource_e0an3")
 
 [node name="Node2D" type="Node2D"]
+z_index = -10
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 z_index = -2
