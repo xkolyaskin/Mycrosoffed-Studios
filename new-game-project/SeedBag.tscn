@@ -4,12 +4,10 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnh"]
 
-[node name="SeedBag" type="Node2D"]
+[node name="SeedBag" type="Area2D"]
 script = ExtResource("1_8ikyu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vgcnh")
