@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6pisnmlowcvc"
-path="res://.godot/imported/Decoration - Bush.png-cfa805489dde603a6b4663b79d7a8916.ctex"
+uid="uid://wwfrmkee42gt"
+path="res://.godot/imported/Wildfire-33.png.png-b5f1a8972fb4ac45ac785434bd150938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visual Assets/Backgrounds/Decorations/Decoration - Bush.png"
-dest_files=["res://.godot/imported/Decoration - Bush.png-cfa805489dde603a6b4663b79d7a8916.ctex"]
+source_file="res://Visual Assets/Backgrounds/Decorations/Wildfire Frames/Wildfire-33.png.png"
+dest_files=["res://.godot/imported/Wildfire-33.png.png-b5f1a8972fb4ac45ac785434bd150938.ctex"]
 
 [params]
 

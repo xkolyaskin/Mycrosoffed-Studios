@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhlf44ypdkc3t"
+path="res://.godot/imported/roaring-house-fire-wall-fall-in-7022.mp3-666001e220c807639f0be03b45696192.mp3str"
+
+[deps]
+
+source_file="res://Audio Assets/roaring-house-fire-wall-fall-in-7022.mp3"
+dest_files=["res://.godot/imported/roaring-house-fire-wall-fall-in-7022.mp3-666001e220c807639f0be03b45696192.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
