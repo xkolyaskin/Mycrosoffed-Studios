@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://di6ppsuwvtj57" path="res://Visual Assets/Backgrounds/Decorations/Decoration - Rock.png" id="14_elkpi"]
 [ext_resource type="Texture2D" uid="uid://bybabdxa4rh6x" path="res://Visual Assets/Backgrounds/Decorations/Tent.png" id="15_qjyg3"]
 [ext_resource type="AudioStream" uid="uid://bqt5t0tjf0lhu" path="res://Audio Assets/Talking.mp3" id="16_elkpi"]
-[ext_resource type="PackedScene" uid="uid://usnwm1jwsrw6" path="res://fire.tscn" id="17_0yprl"]
+[ext_resource type="PackedScene" path="res://fire.tscn" id="17_0yprl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t88pq"]
 texture = ExtResource("1_u44n3")
@@ -189,6 +189,7 @@ texture = ExtResource("13_qjyg3")
 
 [node name="Decoration-Rock3" type="Sprite2D" parent="."]
 position = Vector2(608, 176)
+rotation = -3.14159
 texture = ExtResource("14_elkpi")
 flip_v = true
 
@@ -205,7 +206,6 @@ stream = ExtResource("16_elkpi")
 parameters/looping = true
 
 [node name="Fire" parent="." instance=ExtResource("17_0yprl")]
-position = Vector2(557, 360)
-scale = Vector2(1.5, 1.5)
+position = Vector2(554, 350)
 
 [connection signal="timeout" from="LoreGuyReindeer/Timer" to="LoreGuyReindeer" method="_on_timer_timeout"]
