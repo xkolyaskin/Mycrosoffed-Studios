@@ -21,7 +21,10 @@ func _ready() -> void:
 	beginRound(round)
 
 func beginRound(round):
-	round = GlobalCountTracker.get_reindeer_count() - 1
+	score=0
+	round = GlobalCountTracker.get_reindeer_round_count() - 1
+	numDeer=GlobalCountTracker.get_reindeer_count()
+	numLichen=GlobalCountTracker.get_lichen_count()
 	print("herding " + str(round))
 	$CanvasLayer/Score.text="Score: "+str(score)
 	$map.position=Vector2(-103,-68)
@@ -39,11 +42,17 @@ func beginRound(round):
 		add_child(currentDeer)
 		deer.append(currentDeer)
 	var cloudTime = 60/(round+1)
+	timer()
 	for i in range (0,round+1):
 		cloudGo()
 		await get_tree().create_timer(cloudTime).timeout
 	atEnd()
 	
+	
+func timer():
+	for i in range(0,60):
+		await get_tree().create_timer(1).timeout
+		$CanvasLayer/Time.text="Time: "+str(60-i)
 
 func cloudGo():
 	$CanvasLayer/Done.hide()
@@ -81,14 +90,10 @@ func atEnd():
 	lichen=[]
 	deer=[]
 	iceLichen=[]
-	round+=1
-	numDeer += 1
-	numLichen -= 1
-	print(score)
-	end_reindeer.emit(score)
+	GlobalCountTracker.set_reindeer_count(numDeer + 1)
+	GlobalCountTracker.set_lichen_count(numLichen - 1)
 	$CanvasLayer/Done.text="You did it!\nScore: "+str(score)
 	$CanvasLayer/Done.show()
-	score=0
 	await get_tree().create_timer(5).timeout
 	$CanvasLayer/Done.hide()
 	FadeToBlack.change_scene_with_fade("res://Game.tscn")
