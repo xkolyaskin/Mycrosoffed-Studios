@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dht6x2u7tw42v"]
+[gd_scene load_steps=5 format=3 uid="uid://dht6x2u7tw42v"]
 
 [ext_resource type="Texture2D" uid="uid://bwkmdg4erk6g3" path="res://Visual Assets/Splash Screen/Splash Screen.png" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://dbv4le7kf85wx" path="res://menu.gd" id="1_mae5d"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="2_ouk20"]
+[ext_resource type="Texture2D" uid="uid://cf88ilt0ywl0f" path="res://Visual Assets/Splash Screen/khailino.png" id="4_4hy44"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_mae5d")
@@ -21,15 +22,6 @@ theme_override_fonts/font = ExtResource("2_ouk20")
 theme_override_font_sizes/font_size = 65
 text = "PLAY"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 315.0
-offset_top = 83.0
-offset_right = 814.0
-offset_bottom = 239.0
-theme_override_fonts/font = ExtResource("2_ouk20")
-theme_override_font_sizes/font_size = 150
-text = "Khailino"
-
 [node name="Quit" type="Button" parent="."]
 offset_left = 462.0
 offset_top = 418.0
@@ -38,3 +30,8 @@ offset_bottom = 474.0
 theme_override_fonts/font = ExtResource("2_ouk20")
 theme_override_font_sizes/font_size = 35
 text = "QUIT"
+
+[node name="Khailino" type="Sprite2D" parent="."]
+position = Vector2(558.422, 153.25)
+scale = Vector2(5.22414, 5.22414)
+texture = ExtResource("4_4hy44")
