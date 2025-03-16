@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://4k45peewhy1g"]
+[gd_scene load_steps=13 format=4 uid="uid://4k45peewhy1g"]
 
 [ext_resource type="Script" uid="uid://gb22ai38itk3" path="res://fishing_minigame.gd" id="1_xd8tf"]
 [ext_resource type="Texture2D" uid="uid://bc8gssfnyiylq" path="res://Visual Assets/Backgrounds/Ice Background Texture.png" id="2_xd8tf"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dck2ocisxiwrm" path="res://Visual Assets/Backgrounds/Tree border 128x128.png" id="3_l1kbx"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="4_l1kbx"]
 [ext_resource type="Texture2D" uid="uid://crns7i6bp4q5f" path="res://Visual Assets/Item Icons/Salmon Icon Plusless.png" id="5_xd8tf"]
-[ext_resource type="AudioStream" uid="uid://djidgls7m0ly8" path="res://Audio Assets/ice-cracking-field-recording-06-139709.mp3" id="7_p2j5e"]
+[ext_resource type="AudioStream" uid="uid://dyga8x6t1tpc2" path="res://Audio Assets/ice-cracking-field-recording-06-139709.mp3" id="7_p2j5e"]
+[ext_resource type="AudioStream" uid="uid://bdw2n2ysfuwk8" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="8_e3jrk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2j5e"]
 texture = ExtResource("2_xd8tf")
@@ -215,6 +216,11 @@ autostart = true
 
 [node name="Ice-cracking-field-recording-06-139709" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_p2j5e")
+
+[node name="Heartbeat-of-freedom-shaman-folk-background-311544" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_e3jrk")
+volume_db = -14.054
+autoplay = true
 
 [connection signal="timeout" from="CrackTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="TimeLeftTimer" to="." method="_on_timeleft_inc"]
