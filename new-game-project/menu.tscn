@@ -9,6 +9,7 @@
 script = ExtResource("1_mae5d")
 
 [node name="SplashScreen" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(575.222, 325)
 scale = Vector2(4.01235, 4.01235)
 texture = ExtResource("1_lti8b")
