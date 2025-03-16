@@ -33,7 +33,8 @@ offset_right = 976.0
 offset_bottom = 451.0
 theme_override_fonts/font = ExtResource("1_n23yb")
 theme_override_font_sizes/font_size = 40
-text = "1st Round: While we do love our meat, a balanced diet requires some veggies too. Walk over to those seeds and choose which one to plant. "
+text = "test text peepee pooopoo fardddd im pooping alex pooped his panntssss
+"
 autowrap_mode = 2
 
 [node name="LoreGuyHeadshotLowRes-1" type="Sprite2D" parent="."]
