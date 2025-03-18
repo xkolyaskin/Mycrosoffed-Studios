@@ -210,6 +210,7 @@ rotation = 0.00450854
 
 [node name="Player" parent="." instance=ExtResource("3_edgh5")]
 position = Vector2(563, 320)
+input_pickable = true
 
 [node name="CrackTimer" type="Timer" parent="."]
 wait_time = 1.988
