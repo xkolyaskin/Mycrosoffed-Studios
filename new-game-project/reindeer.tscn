@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://nrgd5rilugpa" path="res://Visual Assets/Item Icons/Lichen Gain Icon.png" id="5_ia5g7"]
 [ext_resource type="Texture2D" uid="uid://cunud7qtkwxkr" path="res://Visual Assets/Animals/Reindeer Running Frame-3.png.png" id="6_dpdrw"]
 [ext_resource type="Texture2D" uid="uid://cuufed82nn1xk" path="res://Visual Assets/Animals/Reindeer Running Frame-4.png.png" id="7_30yed"]
-[ext_resource type="Script" uid="uid://dd2hjbqpn0smw" path="res://happy.gd" id="10_dpdrw"]
+[ext_resource type="Script" path="res://happy.gd" id="10_dpdrw"]
 [ext_resource type="AudioStream" uid="uid://c1twfd05c4gkp" path="res://Audio Assets/Reindeer3.mp3" id="11_nlvay"]
 [ext_resource type="AudioStream" uid="uid://cv2t6vviieegg" path="res://Audio Assets/Reindeer2.mp3" id="12_8mawb"]
 [ext_resource type="AudioStream" uid="uid://d3tse8ivbaoqu" path="res://Audio Assets/Reindeer1.mp3" id="13_3csxu"]
