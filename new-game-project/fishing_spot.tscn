@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cx8yrum6vi5ul" path="res://Visual Assets/Item Icons/Blue Exclamation Mark.png" id="3_34d6c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_voq3y"]
-size = Vector2(42, 39)
+size = Vector2(41.951, 40)
 
 [node name="FishingSpot" type="StaticBody2D"]
 collision_layer = 3
@@ -13,7 +13,8 @@ collision_mask = 3
 script = ExtResource("1_0rqpe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 7.5)
+position = Vector2(-1.02337, 6)
+scale = Vector2(0.810049, 0.848568)
 shape = SubResource("RectangleShape2D_voq3y")
 
 [node name="IceWithHoleBackgroundTexture" type="Sprite2D" parent="."]
