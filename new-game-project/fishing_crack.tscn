@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8150u3putemt" path="res://Visual Assets/Backgrounds/Ice With Cracks Background Texture.png" id="1_a2ao6"]
 [ext_resource type="Script" uid="uid://c8wep6fbjb6ab" path="res://fishing_crack.gd" id="1_rq8iw"]
-[ext_resource type="Texture2D" uid="uid://cx75h4nynfjqq" path="res://Visual Assets/Backgrounds/Ice With Hole Background Texture.png" id="3_yhcfi"]
+[ext_resource type="Texture2D" uid="uid://bnx7bkninhkgo" path="res://Visual Assets/Backgrounds/Water New.png" id="3_yhcfi"]
 [ext_resource type="AudioStream" uid="uid://cx2l0cn8fobwa" path="res://Audio Assets/water-splash-46402.mp3" id="4_yhcfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mlmew"]
