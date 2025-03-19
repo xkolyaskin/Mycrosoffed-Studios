@@ -92,10 +92,10 @@ func atEnd():
 	iceLichen=[]
 	GlobalCountTracker.set_reindeer_count(numDeer + 1)
 	GlobalCountTracker.set_lichen_count(numLichen - 1)
-	$CanvasLayer/Done.text="Score: "+str(score)
-	$CanvasLayer/Done.show()
-	await get_tree().create_timer(3).timeout
-	$CanvasLayer/Done.hide()
+	#$CanvasLayer/Done.text="Score: "+str(score)
+	#$CanvasLayer/Done.show()
+	#await get_tree().create_timer(3).timeout
+	#$CanvasLayer/Done.hide()
 	GlobalCountTracker.inc_reindeer_score(score)
 	FadeToBlack.change_scene_with_fade("res://Game.tscn")
 	#go back to lore guy
