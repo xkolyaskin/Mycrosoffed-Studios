@@ -79,6 +79,10 @@ Support climate policies and spread awareness in your community.
 
 Click to Return to Menu"
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 324)
+zoom = Vector2(1.67, 1.67)
+
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Resources" to="." method="_on_resources_pressed"]
