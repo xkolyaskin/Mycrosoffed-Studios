@@ -181,8 +181,26 @@ func harvest_seed(farmland):
 	var plant_harvested = farmland.on_harvest()
 	match plant_harvested:
 		"c":
+			$CabbageGainIcon.global_position = global_position + Vector2(0,-50)
+			$CabbageGainIcon.visible = true
+			for i in range(1,10):
+				await get_tree().create_timer(0.05).timeout
+				$CabbageGainIcon.position += Vector2(0,-3)
+			$CabbageGainIcon.visible = false
 			get_parent().inc_score(5)
 		"b":
+			$TurnipGainIcon.global_position = global_position + Vector2(0,-50)
+			$TurnipGainIcon.visible = true
+			for i in range(1,10):
+				await get_tree().create_timer(0.05).timeout
+				$TurnipGainIcon.position += Vector2(0,-3)
+			$TurnipGainIcon.visible = false
 			get_parent().inc_score(4)
 		"p":
+			$PotatoGainIcon.global_position = global_position + Vector2(0,-50)
+			$PotatoGainIcon.visible = true
+			for i in range(1,10):
+				await get_tree().create_timer(0.05).timeout
+				$PotatoGainIcon.position += Vector2(0,-3)
+			$PotatoGainIcon.visible = false
 			get_parent().inc_score(6)
