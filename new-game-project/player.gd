@@ -70,6 +70,7 @@ func fish(fishing_spot):
 
 	right_interval.z_index = 100
 	var overlapping_bodies = %HurtBox.get_overlapping_bodies()
+	var needs_to_fish_again = false
 	#fishing sequence
 	while not has_caught:
 		overlapping_bodies = %HurtBox.get_overlapping_bodies()
@@ -96,8 +97,16 @@ func fish(fishing_spot):
 			if (interval_start <= (%FishingBar.value / 100) and 
 			(%FishingBar.value / 100) <= interval_end):
 				$"Water-splash-46402".play()
+				var refish_chance = randf()
+				if refish_chance < 0.3:
+					needs_to_fish_again = true
+					break
 				has_caught = true
-				if randf() < 0.01:
+				# fishing sequence
+				
+				var fish_value = randf()
+				
+				if fish_value < 0.01: #purdue pete
 					$PurduePeteGainIcon.global_position = global_position + Vector2(0,-100)
 						#show fish collection icon
 					$PurduePeteGainIcon.global_position = global_position + Vector2(0,-100)
@@ -106,7 +115,9 @@ func fish(fishing_spot):
 						await get_tree().create_timer(0.05).timeout
 						$PurduePeteGainIcon.position += Vector2(0,-5)
 					$PurduePeteGainIcon.visible = false
-				else:
+					get_parent().inc_score(10)
+					
+				elif fish_value < 0.10: #tiamen 
 					#show fish collection icon
 					$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
 					$"SalmonGainIcon-1_png".visible = true
@@ -114,22 +125,49 @@ func fish(fishing_spot):
 						await get_tree().create_timer(0.05).timeout
 						$"SalmonGainIcon-1_png".position += Vector2(0,-5)
 					
+					get_parent().inc_score(5)
 					$"SalmonGainIcon-1_png".visible = false
-				get_parent().inc_score()
+				elif fish_value < 0.70: #salmon
+					$SalmonIcon.global_position = global_position + Vector2(0,-100)
+					$SalmonIcon.visible = true
+					for i in range(1,15):
+						await get_tree().create_timer(0.05).timeout
+						$SalmonIcon.position += Vector2(0,-5)
+					
+					get_parent().inc_score(3)
+					$SalmonIcon.visible = false
+				elif fish_value < 0.85: # grayling
+					$Grayling.global_position = global_position + Vector2(0,-100)
+					$Grayling.visible = true
+					for i in range(1,15):
+						await get_tree().create_timer(0.05).timeout
+						$Grayling.position += Vector2(0,-5)
+					
+					get_parent().inc_score()
+					$Grayling.visible = false
+				else: #trash
+					$Trash.global_position = global_position + Vector2(0,-100)
+					$Trash.visible = true
+					for i in range(1,15):
+						await get_tree().create_timer(0.05).timeout
+						$Trash.position += Vector2(0,-5)
+					$Trash.visible = false
 			else:
 				$"Water-splash-46402".play()
 				has_caught = true  
 				
-	#has caught fish or failed
-	overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
-	overlapping_bodies[0].set_fished()
-	
-	%FishingRod.visible = false
-	%FishingBorder.visible = false
-	%FishingBar.visible = false
+	if not needs_to_fish_again:
+		#has caught fish or failed
+		overlapping_bodies[0].get_node("BlueExclamationMark").visible = false
+		overlapping_bodies[0].set_fished()
+		
+		%FishingRod.visible = false
+		%FishingBorder.visible = false
+		%FishingBar.visible = false
 	right_interval.queue_free()
 	
 	fishing = false
+	
 
 
 func pick_up_seed(string):

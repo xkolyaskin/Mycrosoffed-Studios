@@ -4,7 +4,7 @@ var timer = 45
 var score = 0
 var crack_count = 0
 var game_number
-var speeds = [4, 1.5, 0.8]
+var speeds = [3, 1.2, 0.8]
 
 
 const WIDTH = 18
@@ -59,9 +59,9 @@ func create_crack():
 	new_spot.global_position = get_random_empty_tile()
 	add_child(new_spot)
 	
-func inc_score():
-	score += 1
-	$CanvasLayer/ScoreCount.text = ": " + str(score) + "/7"
+func inc_score(x: int = 1):
+	score += x
+	$CanvasLayer/ScoreCount.text = ": " + str(score) + "/20"
 
 func _on_timer_timeout():
 	create_crack();

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=20 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://nat77olsf8mg" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 1.png" id="2_2hs0m"]
 [ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://0ddlaikqkp5f" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 4.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://cj4h6wh0ujq7s" path="res://Visual Assets/Item Icons/Salmon Gain Icon-1.png.png" id="6_2hs0m"]
 [ext_resource type="AudioStream" uid="uid://cx2l0cn8fobwa" path="res://Audio Assets/water-splash-46402.mp3" id="7_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://y4uukwd0l7ak" path="res://Visual Assets/Item Icons/Taimen Gain Icon.png" id="7_ivps1"]
 [ext_resource type="Texture2D" uid="uid://d2ys5rngxchfh" path="res://Visual Assets/Character Sprites/Fishing Rod.png" id="8_dw050"]
 [ext_resource type="Texture2D" uid="uid://cwx7n7xtcecyo" path="res://Visual Assets/Item Icons/Purdue Pete Gain Icon.png" id="9_b26j0"]
+[ext_resource type="Texture2D" uid="uid://cqa6fduddqll4" path="res://Visual Assets/Item Icons/Artic Grayling.png" id="11_urp6f"]
+[ext_resource type="Texture2D" uid="uid://cttlpel0hgb6y" path="res://Visual Assets/Item Icons/Cabbage Gain Icon.png" id="12_bwjto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(20, 12)
@@ -150,14 +153,33 @@ visible = false
 z_index = 15
 position = Vector2(1, -51)
 scale = Vector2(1.875, 1.5625)
-texture = ExtResource("6_2hs0m")
+texture = ExtResource("7_ivps1")
 
 [node name="Water-splash-46402" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_1jxqw")
 
 [node name="PurduePeteGainIcon" type="Sprite2D" parent="."]
 visible = false
+z_index = 15
 position = Vector2(-1, -44)
 texture = ExtResource("9_b26j0")
+
+[node name="SalmonIcon" type="Sprite2D" parent="."]
+visible = false
+z_index = 15
+position = Vector2(0, -34)
+texture = ExtResource("6_2hs0m")
+
+[node name="Grayling" type="Sprite2D" parent="."]
+visible = false
+z_index = 15
+position = Vector2(1, -32)
+texture = ExtResource("11_urp6f")
+
+[node name="Trash" type="Sprite2D" parent="."]
+visible = false
+z_index = 15
+position = Vector2(1, -35)
+texture = ExtResource("12_bwjto")
 
 [connection signal="plant_b" from="." to="." method="_on_plant_b"]
