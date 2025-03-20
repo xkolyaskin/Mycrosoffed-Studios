@@ -10,10 +10,14 @@ func _ready():
 	await get_tree().create_timer(0.1).timeout
 	if round == 1:
 		$Farmland7.hide()
+		$Farmland7.set_plantable(false)
 	if round == 2:
 		$Farmland7.hide()
+		$Farmland7.set_plantable(false)
 		$Farmland4.hide()
+		$Farmland4.set_plantable(false)
 		$Farmland.hide()
+		$Farmland.set_plantable(false)
 		
 
 func _on_timer_timeout():

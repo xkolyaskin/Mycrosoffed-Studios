@@ -7,6 +7,9 @@ var prev_plant
 var grown = false
 var plantable = true
 
+func set_plantable(boo):
+	plantable = boo
+
 func is_farmland():
 	return true
 
