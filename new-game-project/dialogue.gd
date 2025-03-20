@@ -6,7 +6,7 @@ var scene
 var dialogueIntro = "Hey there, how are you doing? I’m Otap, one of the village elders. We could use some help keeping our village fed."
 
 var dialogueFarm1_1 = "While we do love our meat, a balanced diet requires some veggies too. Can you help me in the garden this summer?"
-var dialogueFarm1_2 = "Choose your seeds, plant them, and wait for them to grow. Harvest your crops before they go bad. Use WASD to move and E/SPACE to pick up/plant."
+var dialogueFarm1_2 = "Choose your seeds, plant them, and wait for them to grow. After they're grown, harvest them. Use WASD to move and E/SPACE to pick up/plant."
 
 var dialogueFish1_1 = "Salmon is one of the most important foods here, but fishing is not an easy task."
 var dialogueFish1_2 = "Walk up to the fishing hole and when indicated, press SPACE or E at the right time to catch a fish. Catch enough fish and you will succeed."
@@ -35,16 +35,16 @@ var dialogueFish3_1 = "Everything is so warm nowadays, even the ice isn’t as s
 var dialogueFish3_2 = "Our fishermen have to keep moving if they don’t want to end up in the river. But don’t worry, the river isn’t too deep (I hope)."
 
 var dialogueHerd3_1 = "While I do love caring for reindeer, their hide is amazingly warm."
-var dialogueHerd3_2 = "Every once in a while I would have to kill one of my reindeer for the village to use its meat and hide."
+var dialogueHerd3_2 = "They are an essential resource for us. We use their hide and meat to sustain us and shield us from the harsh weather."
 var dialogueHerd3_3 = "I met a reindeer herder the other day who said their village burned down due to a wildfire. "
 var dialogueHerd3_4 = "Never thought it could happen. The times really are changing."
 
 var dialogueEnd_1 = "This is the worst (and only) wildfire I’ve ever seen!"
 
-var dialogueEndGood_1 = "The village is in ruins, but we will survive. We Karyak are strong."
+var dialogueEndGood_1 = "The village is in ruins, but we will survive. We Koryak are strong."
 var dialogueEndGood_2 = "Due to your help, we have enough resources to rebuild and recover, though much was lost."
 
-var dialogueEndBad_1 = "The village is in ruins, but we will survive. We Karyak are strong."
+var dialogueEndBad_1 = "The village is in ruins, but we will survive. We Koryak are strong."
 var dialogueEndBad_2 = "We don’t have enough resources to rebuild. Our people will have to be relocated to a safer location for the time being."
 
 var randomDialogue = [
