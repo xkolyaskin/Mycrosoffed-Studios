@@ -11,7 +11,7 @@ var ice_lichen = get_node("/root/reindeer_herding/iceLichen")
 var point = $Point
 @onready
 var happy = $Happy
-var speed = 150
+var speed = 120
 var count = 0
 var revx = 1
 var revy = 1
