@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0naeox7kacdi"]
+[gd_scene load_steps=6 format=3 uid="uid://b0naeox7kacdi"]
 
 [ext_resource type="Script" uid="uid://du0smph1hpw1" path="res://credits.gd" id="1_g4wvt"]
 [ext_resource type="FontFile" uid="uid://cvrnr1m33hwai" path="res://Fonts/VT323-Regular.ttf" id="1_nm7lk"]
-[ext_resource type="Script" path="res://scroll.gd" id="3_pjc1l"]
 [ext_resource type="Texture2D" uid="uid://dvfa4ioxow8gy" path="res://Visual Assets/Splash Screen/khailino white.png" id="4_pjc1l"]
 
 [sub_resource type="Gradient" id="Gradient_pjc1l"]
@@ -12,14 +11,15 @@ offsets = PackedFloat32Array(0.961039, 1)
 gradient = SubResource("Gradient_pjc1l")
 
 [node name="Credits" type="Node2D"]
+position = Vector2(400, 0)
 script = ExtResource("1_g4wvt")
 
 [node name="Scroll" type="Label" parent="."]
 texture_filter = 1
-offset_left = -1.0
-offset_top = 647.0
-offset_right = 1162.0
-offset_bottom = 2184.0
+offset_left = -390.0
+offset_top = 1114.0
+offset_right = 2252.0
+offset_bottom = 3240.0
 theme_override_fonts/font = ExtResource("1_nm7lk")
 theme_override_font_sizes/font_size = 51
 text = "Concept Design
@@ -51,12 +51,12 @@ C3 Game Jam
 Purdue John Martinson Honors College
 "
 horizontal_alignment = 1
-script = ExtResource("3_pjc1l")
 
 [node name="KhailinoWhite" type="Sprite2D" parent="."]
-position = Vector2(574, 309)
+position = Vector2(928.04, 309)
 scale = Vector2(1.59868, 1.59868)
 texture = ExtResource("4_pjc1l")
+offset = Vector2(0, 145)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -8

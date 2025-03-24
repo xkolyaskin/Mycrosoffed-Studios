@@ -32,7 +32,7 @@
 [ext_resource type="AudioStream" uid="uid://5vdyi1lfmq3k" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="28_58vqp"]
 [ext_resource type="Script" uid="uid://brb2gajwk2h21" path="res://Visual Assets/beet_seed_bag.gd" id="28_mnjto"]
 [ext_resource type="Script" uid="uid://c7cn34bhd5flg" path="res://Visual Assets/cabbage_seed_bag.gd" id="29_mnjto"]
-[ext_resource type="PackedScene" uid="uid://nadol8gp1p4o" path="res://farmland.tscn" id="30_gbymm"]
+[ext_resource type="PackedScene" uid="uid://bu2k6utm6ng7v" path="res://farmland.tscn" id="30_gbymm"]
 [ext_resource type="Texture2D" uid="uid://cwx7n7xtcecyo" path="res://Visual Assets/Item Icons/Purdue Pete Gain Icon.png" id="33_06gvg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_188ps"]
@@ -379,7 +379,7 @@ rotation = -1.40045
 texture = ExtResource("15_313di")
 
 [node name="Decoration-Log10" type="Sprite2D" parent="Deco"]
-position = Vector2(285, 235)
+position = Vector2(337, 244)
 rotation = -1.35233
 texture = ExtResource("15_313di")
 

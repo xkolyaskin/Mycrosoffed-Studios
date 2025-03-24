@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy303bgnr4tna"]
+[gd_scene load_steps=3 format=3 uid="uid://cyjjnbqkswlon"]
 
-[ext_resource type="Script" path="res://SeedBag.gd" id="1_8ikyu"]
+[ext_resource type="Script" uid="uid://15f60222thh8" path="res://SeedBag.gd" id="1_8ikyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgcnh"]
 
