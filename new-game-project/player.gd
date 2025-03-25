@@ -117,18 +117,21 @@ func fish(fishing_spot):
 					$PurduePeteGainIcon.visible = false
 					get_parent().inc_score(10)
 					
-				elif fish_value < 0.10: #tiamen 
+				elif fish_value < 0.10: #taimen 
 					#show fish collection icon
 					$"SalmonGainIcon-1_png".global_position = global_position + Vector2(0,-100)
+					$"SalmonGainIcon-1_png".scale = Vector2(2, 2)
 					$"SalmonGainIcon-1_png".visible = true
+					
 					for i in range(1,15):
 						await get_tree().create_timer(0.05).timeout
 						$"SalmonGainIcon-1_png".position += Vector2(0,-5)
-					
+						
 					get_parent().inc_score(5)
 					$"SalmonGainIcon-1_png".visible = false
 				elif fish_value < 0.70: #salmon
 					$SalmonIcon.global_position = global_position + Vector2(0,-100)
+					$SalmonIcon.scale = Vector2(1.2, 1.2)
 					$SalmonIcon.visible = true
 					for i in range(1,15):
 						await get_tree().create_timer(0.05).timeout
@@ -136,7 +139,7 @@ func fish(fishing_spot):
 					
 					get_parent().inc_score(3)
 					$SalmonIcon.visible = false
-				elif fish_value < 0.85: # grayling
+				elif fish_value < 0.90: # grayling
 					$Grayling.global_position = global_position + Vector2(0,-100)
 					$Grayling.visible = true
 					for i in range(1,15):
