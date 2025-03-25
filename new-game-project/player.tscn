@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d0h7s2b3qj6hu"]
+[gd_scene load_steps=26 format=3 uid="uid://d0h7s2b3qj6hu"]
 
 [ext_resource type="Texture2D" uid="uid://nat77olsf8mg" path="res://Visual Assets/Character Sprites/Character - Walk Cycle 1.png" id="2_2hs0m"]
 [ext_resource type="Script" uid="uid://dq5tr0ll4cm75" path="res://player.gd" id="2_onrkg"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://cttlpel0hgb6y" path="res://Visual Assets/Item Icons/Cabbage Gain Icon.png" id="12_bwjto"]
 [ext_resource type="Texture2D" uid="uid://gmwikxhectk2" path="res://Visual Assets/Item Icons/Potato Gain Icon.png.png" id="13_bwjto"]
 [ext_resource type="Texture2D" uid="uid://dlfbbv36quqxs" path="res://Visual Assets/Item Icons/Turnip Gain Icon.png" id="14_606se"]
+[ext_resource type="AudioStream" uid="uid://djhpb78xicbux" path="res://Audio Assets/FarmingSound1.mp3" id="15_q13i1"]
+[ext_resource type="AudioStream" uid="uid://xw4syvke5d2n" path="res://Audio Assets/FarmingSound2.mp3" id="16_pylmc"]
+[ext_resource type="AudioStream" uid="uid://0nwab6l2iw6i" path="res://Audio Assets/FarmingSound3.mp3" id="17_pbfsw"]
+[ext_resource type="AudioStream" uid="uid://vxvsvwhk884s" path="res://Audio Assets/FarmingSound4.mp3" id="18_5tmop"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sweqy"]
 size = Vector2(20, 12)
@@ -198,5 +202,17 @@ texture = ExtResource("13_bwjto")
 visible = false
 position = Vector2(1, -34)
 texture = ExtResource("14_606se")
+
+[node name="FarmingSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_q13i1")
+
+[node name="FarmingSound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_pylmc")
+
+[node name="FarmingSound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_pbfsw")
+
+[node name="FarmingSound4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_5tmop")
 
 [connection signal="plant_b" from="." to="." method="_on_plant_b"]

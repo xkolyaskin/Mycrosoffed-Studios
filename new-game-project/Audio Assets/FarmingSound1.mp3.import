@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djhpb78xicbux"
+path="res://.godot/imported/FarmingSound1.mp3-4f46f10ffda064e385b6a428f170f7d0.mp3str"
+
+[deps]
+
+source_file="res://Audio Assets/FarmingSound1.mp3"
+dest_files=["res://.godot/imported/FarmingSound1.mp3-4f46f10ffda064e385b6a428f170f7d0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

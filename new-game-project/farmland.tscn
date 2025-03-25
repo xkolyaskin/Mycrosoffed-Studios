@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bu2k6utm6ng7v"]
+[gd_scene load_steps=14 format=3 uid="uid://bu2k6utm6ng7v"]
 
 [ext_resource type="Script" uid="uid://cq4iveaqiecvg" path="res://farmland.gd" id="1_337p4"]
 [ext_resource type="Texture2D" uid="uid://5jmgfhxi3ipc" path="res://Visual Assets/Backgrounds/Empty Farmland Background Texture.png" id="1_kaipa"]
@@ -8,6 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dfaf8nnrw41x4" path="res://Visual Assets/Backgrounds/Potato Grown Farmland Background Texture.png" id="6_7ew22"]
 [ext_resource type="Texture2D" uid="uid://bjcig8lxuwusr" path="res://Visual Assets/Backgrounds/Beet Grown Farmland Background Texture.png" id="7_kjr6f"]
 [ext_resource type="Texture2D" uid="uid://d33fvemh3k4qu" path="res://Visual Assets/Backgrounds/Cabbage Grown Farmland Background Texture.png" id="8_kjr6f"]
+[ext_resource type="AudioStream" uid="uid://djhpb78xicbux" path="res://Audio Assets/FarmingSound1.mp3" id="9_v5cj4"]
+[ext_resource type="AudioStream" uid="uid://xw4syvke5d2n" path="res://Audio Assets/FarmingSound2.mp3" id="10_yl8vc"]
+[ext_resource type="AudioStream" uid="uid://0nwab6l2iw6i" path="res://Audio Assets/FarmingSound3.mp3" id="11_h1k1d"]
+[ext_resource type="AudioStream" uid="uid://vxvsvwhk884s" path="res://Audio Assets/FarmingSound4.mp3" id="12_a3x16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r62q1"]
 size = Vector2(54, 58)
@@ -86,3 +90,15 @@ texture = ExtResource("8_kjr6f")
 [node name="CabbageGrownFarmlandBackgroundTexture" type="Sprite2D" parent="CabbageGrown"]
 position = Vector2(32, 0)
 texture = ExtResource("8_kjr6f")
+
+[node name="FarmingSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_v5cj4")
+
+[node name="FarmingSound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_yl8vc")
+
+[node name="FarmingSound3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_h1k1d")
+
+[node name="FarmingSound4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_a3x16")

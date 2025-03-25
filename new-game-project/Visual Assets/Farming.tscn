@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://lio6kakb3bdh"]
+[gd_scene load_steps=70 format=4 uid="uid://lio6kakb3bdh"]
 
 [ext_resource type="Script" uid="uid://drun88j4wnmls" path="res://Visual Assets/Farming.gd" id="1_7ejuu"]
 [ext_resource type="PackedScene" uid="uid://d0h7s2b3qj6hu" path="res://player.tscn" id="1_gk8fp"]
@@ -32,8 +32,12 @@
 [ext_resource type="AudioStream" uid="uid://5vdyi1lfmq3k" path="res://Audio Assets/heartbeat-of-freedom-shaman-folk-background-311544.mp3" id="28_58vqp"]
 [ext_resource type="Script" uid="uid://brb2gajwk2h21" path="res://Visual Assets/beet_seed_bag.gd" id="28_mnjto"]
 [ext_resource type="Script" uid="uid://c7cn34bhd5flg" path="res://Visual Assets/cabbage_seed_bag.gd" id="29_mnjto"]
+[ext_resource type="AudioStream" uid="uid://djhpb78xicbux" path="res://Audio Assets/FarmingSound1.mp3" id="30_1hv3e"]
 [ext_resource type="PackedScene" uid="uid://bu2k6utm6ng7v" path="res://farmland.tscn" id="30_gbymm"]
+[ext_resource type="AudioStream" uid="uid://xw4syvke5d2n" path="res://Audio Assets/FarmingSound2.mp3" id="31_k1uf6"]
+[ext_resource type="AudioStream" uid="uid://0nwab6l2iw6i" path="res://Audio Assets/FarmingSound3.mp3" id="32_1jjc6"]
 [ext_resource type="Texture2D" uid="uid://cwx7n7xtcecyo" path="res://Visual Assets/Item Icons/Purdue Pete Gain Icon.png" id="33_06gvg"]
+[ext_resource type="AudioStream" uid="uid://vxvsvwhk884s" path="res://Audio Assets/FarmingSound4.mp3" id="33_686oy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_188ps"]
 texture = ExtResource("3_d5xl1")
@@ -275,6 +279,19 @@ size = Vector2(36.3883, 29.6296)
 [node name="Farming" type="Node2D"]
 script = ExtResource("1_7ejuu")
 
+[node name="FarmingSound1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("30_1hv3e")
+
+[node name="FarmingSound2" type="AudioStreamPlayer" parent="FarmingSound1"]
+stream = ExtResource("31_k1uf6")
+volume_db = -10.852
+
+[node name="FarmingSound3" type="AudioStreamPlayer" parent="FarmingSound1"]
+stream = ExtResource("32_1jjc6")
+
+[node name="FarmingSound4" type="AudioStreamPlayer" parent="FarmingSound1"]
+stream = ExtResource("33_686oy")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 5
 
@@ -385,7 +402,7 @@ texture = ExtResource("15_313di")
 
 [node name="Heartbeat-of-freedom-shaman-folk-background-311544" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_58vqp")
-volume_db = -6.559
+volume_db = -25.0
 autoplay = true
 
 [node name="SeedText" type="Label" parent="."]
