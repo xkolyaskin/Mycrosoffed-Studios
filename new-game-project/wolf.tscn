@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://5cygy5jbhu7v"]
+
+[ext_resource type="Script" uid="uid://b6qtgpdrii4ky" path="res://wolf.gd" id="1_6trwa"]
+[ext_resource type="Texture2D" uid="uid://cdquew8qak6sp" path="res://Visual Assets/Splash Screen/Lore Guy Head Logo Transparent.png" id="1_fv4gx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fv4gx"]
+radius = 107.019
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fv4gx"]
+size = Vector2(75.5, 65)
+
+[node name="wolf" type="CharacterBody2D"]
+collision_layer = 5
+collision_mask = 69
+script = ExtResource("1_6trwa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.00001, -0.999992)
+scale = Vector2(0.466667, 0.466667)
+texture = ExtResource("1_fv4gx")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_fv4gx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_fv4gx")

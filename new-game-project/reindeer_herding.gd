@@ -2,6 +2,7 @@ extends Node2D
 signal end_reindeer
 var numDeer = 5
 var numLichen = 8
+var numWolves = 1
 var round = 0
 var deerPositions = [Vector2(496,-71),Vector2(-2,273),Vector2(310,365),Vector2(533,110),Vector2(832,99),Vector2(-84,-111),Vector2(597,410),Vector2(-25,377),Vector2(465,139)]
 var deer=[]
@@ -9,10 +10,13 @@ var lichenPositions = [Vector2(617,281),Vector2(2,1),Vector2(-164,389),Vector2(5
 var lichen=[]
 var iceLichen=[]
 var iceList=[]
+var wolves = []
+var wolfPositions = [Vector2(706,-197)]
 var reindeer = preload("res://reindeer.tscn")
 var lich = preload("res://lichen.tscn")
 var iceLich = preload("res://ice_lichen.tscn")
 var ice = preload("res://ice.tscn")
+var wolf = preload("res://wolf.tscn")
 @onready
 var cloudAnim=$Cloud/am
 var score=0
@@ -31,6 +35,11 @@ func beginRound(round):
 	$Player.position=Vector2(327,193)
 	$Cloud.hide()
 	cloudAnim.play("rain")
+	for i in range(0,numWolves):
+		var currentwolf = wolf.instantiate()
+		add_child(currentwolf)
+		wolves.append(currentwolf)
+		currentwolf.position=wolfPositions[0]
 	for i in range (0,numLichen):
 		var currentLichen = lich.instantiate()
 		currentLichen.position=lichenPositions[i]
@@ -41,7 +50,7 @@ func beginRound(round):
 		currentDeer.position=deerPositions[i]
 		add_child(currentDeer)
 		deer.append(currentDeer)
-	var cloudTime = 60/(round+1)
+	var cloudTime = 30/(round+1)
 	timer()
 	for i in range (0,round+1):
 		cloudGo()
@@ -50,9 +59,9 @@ func beginRound(round):
 	
 	
 func timer():
-	for i in range(0,60):
+	for i in range(0,30):
 		await get_tree().create_timer(1).timeout
-		$CanvasLayer/Time.text="Time: "+str(60-i)
+		$CanvasLayer/Time.text="Time: "+str(30-i)
 
 func cloudGo():
 	$CanvasLayer/Done.hide()
@@ -86,6 +95,8 @@ func atEnd():
 		il.queue_free()
 	for i in iceList:
 		i.queue_free()
+	for w in wolves:
+		w.queue_free()
 	iceList=[]
 	lichen=[]
 	deer=[]
